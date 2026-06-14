@@ -1,0 +1,2612 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Zorix","url":"https://zorix.com","description":"Worldwide eCommerce marketplace","potentialAction":{"@type":"SearchAction","target":"https://zorix.com/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Zorix — Shop Smarter. Live Better. | Worldwide Marketplace</title>
+<meta name="description" content="Zorix is a worldwide eCommerce marketplace. Shop millions of products in USDT and EUR. Buy electronics, fashion, home goods and more. Delivered to 50+ countries.">
+<meta name="keywords" content="Zorix, online shopping, worldwide marketplace, buy online, USDT shopping, electronics, fashion, home goods">
+<meta name="author" content="Zorix Inc.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Zorix — Shop Smarter. Live Better.">
+<meta property="og:description" content="Worldwide marketplace with millions of products. Shop in USDT and EUR. Fast delivery to 50+ countries.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zorix.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zorix — Shop Smarter. Live Better.">
+<meta name="theme-color" content="#0D1B2A">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0D1B2A;--navy2:#162236;--navy3:#1E3A5F;
+  --gold:#FFD814;--gold2:#F0C000;--gold3:#C9A227;
+  --orange:#FF6B35;--orange2:#E85D2A;
+  --white:#FFFFFF;--offwhite:#F8F9FA;--light:#EFF2F5;
+  --border:#E2E8F0;--border2:#CBD5E1;
+  --green:#059669;--red:#DC2626;--blue:#2563EB;--purple:#7C3AED;
+  --text:#0F172A;--text2:#475569;--text3:#94A3B8;
+  --r:10px;--r2:16px;--shadow:0 2px 12px rgba(13,27,42,.1);--shadow2:0 8px 32px rgba(13,27,42,.15);
+}
+body{font-family:'Inter',sans-serif;background:var(--light);color:var(--text);font-size:14px;min-height:100vh}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:#f1f1f1}
+::-webkit-scrollbar-thumb{background:var(--navy3);border-radius:3px}
+
+/* ===== VIEWS ===== */
+.view{display:none}.view.active{display:block}
+#adminView{display:none}#adminView.active{display:block}
+#sellerView{display:none}#sellerView.active{display:block}
+
+/* ===== TOPBAR ===== */
+#topbar{background:var(--navy);padding:0 20px;display:flex;align-items:center;gap:12px;height:64px;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+
+/* LOGO */
+.gm-logo{display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0;text-decoration:none}
+.logo-icon{width:38px;height:38px;flex-shrink:0}
+.logo-text-wrap{line-height:1}
+.logo-name{font-family:'Poppins',sans-serif;font-size:20px;font-weight:800;color:var(--white);letter-spacing:-.5px;display:block}
+.logo-name span{color:var(--gold)}
+.logo-tag{font-size:9px;color:var(--gold3);letter-spacing:2px;text-transform:uppercase;display:block;margin-top:1px}
+
+/* Country switcher */
+.country-btn{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:var(--white);padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:500;flex-shrink:0;transition:background .15s}
+.country-btn:hover{background:rgba(255,255,255,.14)}
+.country-flag{font-size:16px}
+
+/* Search */
+#searchBar{flex:1;display:flex;height:42px;border-radius:8px;overflow:hidden;max-width:640px;box-shadow:0 0 0 2px transparent;transition:.15s}
+#searchBar:focus-within{box-shadow:0 0 0 2px var(--gold)}
+#sCat{background:#e8eaed;border:none;padding:0 10px;font-size:11px;color:#333;border-right:1px solid #ccc;cursor:pointer;min-width:80px;font-family:'Inter',sans-serif}
+#sInp{flex:1;border:none;padding:0 14px;font-size:13px;outline:none;color:#111;font-family:'Inter',sans-serif}
+#sBtn{background:var(--gold);border:none;padding:0 16px;cursor:pointer;flex-shrink:0;transition:background .15s}
+#sBtn:hover{background:var(--gold2)}
+.tb-nav{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.tb-btn{color:var(--white);font-size:11px;padding:6px 10px;border-radius:6px;cursor:pointer;line-height:1.3;white-space:nowrap;transition:background .15s}
+.tb-btn:hover{background:rgba(255,255,255,.1)}
+.tb-btn small{font-size:10px;color:rgba(255,255,255,.72);display:block}
+.cart-tb{display:flex;align-items:center;gap:5px;color:var(--white);font-size:12px;font-weight:600;padding:6px 10px;border-radius:6px;cursor:pointer;position:relative;transition:background .15s}
+.cart-tb:hover{background:rgba(255,255,255,.1)}
+#cartBadge{background:var(--orange);color:var(--white);border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;position:absolute;top:-2px;right:2px}
+
+/* ===== NAV2 ===== */
+#nav2{background:var(--navy2);padding:0 20px;display:flex;align-items:center;gap:0;height:38px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid rgba(255,255,255,.06)}
+#nav2::-webkit-scrollbar{display:none}
+.n2{color:rgba(255,255,255,.8);font-size:12px;padding:6px 12px;cursor:pointer;white-space:nowrap;border-radius:4px;transition:all .15s;font-weight:500}
+.n2:hover,.n2.active{color:var(--white);background:rgba(255,255,255,.1)}
+.n2.hot{color:var(--gold)}
+.n2.sell-btn{background:var(--gold);color:var(--navy);font-weight:700;border-radius:6px;margin-left:4px}
+.n2.sell-btn:hover{background:var(--gold2)}
+
+/* ===== COUNTRY MODAL ===== */
+#countryModal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:3000;padding:20px;overflow-y:auto}
+#countryModal.open{display:flex;align-items:flex-start;justify-content:center;padding-top:80px}
+.cm-box{background:var(--white);border-radius:var(--r2);max-width:700px;width:100%;padding:24px;max-height:80vh;overflow-y:auto}
+.cm-title{font-size:18px;font-weight:700;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center}
+.cm-close{background:none;border:none;font-size:20px;cursor:pointer;color:#888;line-height:1}
+.cm-search{width:100%;padding:9px 12px;border:1px solid var(--border);border-radius:8px;font-size:13px;margin-bottom:14px;outline:none}
+.cm-search:focus{border-color:var(--gold)}
+.cm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.cm-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--border);border-radius:8px;cursor:pointer;font-size:12px;font-weight:500;transition:all .15s}
+.cm-item:hover,.cm-item.active{border-color:var(--gold);background:#FFFBEA;color:var(--navy)}
+.cm-flag{font-size:18px}
+
+/* ===== HOME ===== */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy3) 50%,#1a3a6e 100%);padding:40px 24px;position:relative;overflow:hidden}
+.hero-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;z-index:2}
+.hero-text h1{font-family:'Poppins',sans-serif;font-size:36px;font-weight:800;color:var(--white);line-height:1.15;margin-bottom:10px}
+.hero-text h1 span{color:var(--gold)}
+.hero-text p{font-size:14px;color:rgba(255,255,255,.7);margin-bottom:20px;line-height:1.6}
+.hero-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.hero-btn{background:var(--gold);color:var(--navy);border:none;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:background .15s}
+.hero-btn:hover{background:var(--gold2)}
+.hero-btn2{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.4);padding:12px 24px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s}
+.hero-btn2:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
+.hero-stats{display:flex;gap:28px;flex-shrink:0}
+.hs{text-align:center}
+.hs-n{font-family:'Poppins',sans-serif;font-size:26px;font-weight:800;color:var(--gold);display:block}
+.hs-l{font-size:10px;color:rgba(255,255,255,.6);letter-spacing:.5px}
+/* Globe animation */
+.hero-globe{position:absolute;right:-60px;top:50%;transform:translateY(-50%);opacity:.08;z-index:1;pointer-events:none}
+.hero-bg-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,216,20,.15) 1px,transparent 1px);background-size:24px 24px;z-index:1}
+
+/* ===== MAIN LAYOUT ===== */
+.main-wrap{max-width:1400px;margin:0 auto;padding:14px 20px;display:flex;gap:14px}
+.sidebar{width:216px;flex-shrink:0}
+.sc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:12px;box-shadow:var(--shadow)}
+.sc-t{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:6px}
+.ci{display:flex;align-items:center;gap:8px;padding:6px 8px;cursor:pointer;font-size:12px;color:var(--text2);border-radius:6px;transition:all .12s}
+.ci:hover{background:var(--light);color:var(--navy)}
+.ci.active{background:#FFFBEA;color:var(--gold3);font-weight:600}
+.ci-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.ci.active .ci-dot{background:var(--gold3)}
+.sf{display:flex;flex-direction:column;gap:2px}
+.sr{display:flex;align-items:center;gap:5px;cursor:pointer;padding:5px 8px;font-size:12px;border-radius:6px;transition:background .12s;color:var(--text2)}
+.sr:hover{background:var(--light);color:var(--navy)}
+.sr.active{background:#FFFBEA;color:var(--gold3);font-weight:600}
+.gstars{color:var(--gold);font-size:12px}
+.range-wrap{margin-top:6px}
+.range-inp{width:100%;accent-color:var(--gold);cursor:pointer}
+.range-val{font-size:12px;color:var(--text2);margin-top:4px}
+
+/* ===== CONTENT AREA ===== */
+.content{flex:1;min-width:0}
+.deals-bar{background:linear-gradient(90deg,var(--navy) 0%,var(--navy3) 100%);border-radius:var(--r);padding:12px 18px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;box-shadow:var(--shadow)}
+.deals-t{font-size:14px;font-weight:700;color:var(--gold);display:flex;align-items:center;gap:8px}
+.dtimer{background:var(--orange);color:var(--white);padding:4px 10px;border-radius:6px;font-size:12px;font-weight:700;font-family:'Poppins',sans-serif;letter-spacing:.5px}
+.see-all{font-size:12px;color:rgba(255,255,255,.7);cursor:pointer;transition:color .15s}
+.see-all:hover{color:var(--gold)}
+
+.bnr-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.pb{padding:16px 18px;border-radius:var(--r);display:flex;flex-direction:column;gap:5px;border:1px solid;box-shadow:var(--shadow)}
+.pb.y{background:linear-gradient(135deg,#FFFBEA,#FFF5CC);border-color:var(--gold)}
+.pb.g{background:linear-gradient(135deg,#ECFDF5,#D1FAE5);border-color:#6EE7B7}
+.pb.b{background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border-color:#93C5FD}
+.pb-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.pb-title{font-size:14px;font-weight:700;color:var(--navy)}
+.pb-sub{font-size:11px;color:var(--text2)}
+.pb-btn{align-self:flex-start;padding:6px 14px;border:none;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;margin-top:4px;transition:opacity .15s;font-family:'Inter',sans-serif}
+.pb-btn:hover{opacity:.88}
+
+.cat-strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:8px;margin-bottom:16px}
+.ct{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:12px 6px;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;transition:all .15s;box-shadow:var(--shadow)}
+.ct:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 4px 16px rgba(255,216,20,.2)}
+.ct-ico{font-size:26px}
+.ct-nm{font-size:10px;color:var(--text);font-weight:600;text-align:center}
+
+.sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.sec-t{font-size:16px;font-weight:700;color:var(--navy);font-family:'Poppins',sans-serif}
+.sort-sel{padding:7px 10px;border:1px solid var(--border);border-radius:6px;font-size:11px;color:#333;cursor:pointer;background:var(--white);font-family:'Inter',sans-serif}
+
+/* ===== PRODUCT CARDS ===== */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:12px;margin-bottom:18px}
+.pcard{background:var(--white);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:all .2s;box-shadow:var(--shadow)}
+.pcard:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 8px 24px rgba(255,216,20,.2)}
+.pc-img{width:100%;height:152px;object-fit:cover;background:#f8f8f8;display:block}
+.pc-fb{width:100%;height:152px;background:linear-gradient(135deg,#f8f8f8,#eee);display:flex;align-items:center;justify-content:center;font-size:46px}
+.pcb{padding:10px 12px 12px}
+.badge{display:inline-block;font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;margin-bottom:4px;letter-spacing:.3px;text-transform:uppercase}
+.badge.bs{background:#FEF9C3;color:#854D0E}
+.badge.hot{background:#FEE2E2;color:#991B1B}
+.badge.new{background:#DCFCE7;color:#166534}
+.badge.pm{background:#EDE9FE;color:#5B21B6}
+.pname{font-size:12px;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;height:34px}
+.pstars{display:flex;align-items:center;gap:3px;margin-bottom:4px}
+.ys{color:var(--gold);font-size:11px}
+.rcnt{font-size:10px;color:var(--text3)}
+.ppr{display:flex;align-items:baseline;gap:5px;margin-bottom:2px;flex-wrap:wrap}
+.pprice{font-size:15px;font-weight:700;color:var(--red)}
+.porig{font-size:10px;color:var(--text3);text-decoration:line-through}
+.pdisc{font-size:10px;color:var(--green);font-weight:600;margin-bottom:3px}
+.pdel{font-size:10px;color:var(--green);margin-bottom:7px}
+.poos{font-size:10px;color:var(--red);font-weight:600;margin-bottom:4px}
+.acb{background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;padding:8px;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;width:100%;color:var(--navy);transition:all .15s;font-family:'Inter',sans-serif}
+.acb:hover:not(:disabled){background:linear-gradient(135deg,var(--gold2),var(--gold3));transform:translateY(-1px)}
+.acb:disabled{opacity:.4;cursor:not-allowed;transform:none}
+
+/* ===== PRODUCT DETAIL MODAL ===== */
+#pdModal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;overflow-y:auto;padding:20px}
+#pdModal.open{display:flex;align-items:flex-start;justify-content:center;padding-top:60px}
+.pd-box{background:var(--white);border-radius:var(--r2);max-width:880px;width:100%;padding:28px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.pd-close{position:absolute;top:14px;right:14px;background:var(--light);border:none;width:32px;height:32px;border-radius:50%;font-size:16px;cursor:pointer;color:#555;display:flex;align-items:center;justify-content:center;transition:background .15s}
+.pd-close:hover{background:var(--border)}
+.pd-layout{display:flex;gap:28px}
+.pd-img-col{width:340px;flex-shrink:0}
+.pd-main-img{width:100%;border-radius:var(--r);border:1px solid var(--border);object-fit:cover;height:300px}
+.pd-info{flex:1}
+.pd-cat{font-size:11px;font-weight:600;color:var(--text2);background:var(--light);padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:10px;letter-spacing:.5px;text-transform:uppercase}
+.pd-title{font-size:19px;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:10px;font-family:'Poppins',sans-serif}
+.pd-stars-row{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.pd-pbox{background:linear-gradient(135deg,#FFF8E1,#FFFBEA);border:1px solid var(--gold);border-radius:var(--r);padding:14px;margin-bottom:14px}
+.pd-price{font-size:30px;font-weight:800;color:var(--red);font-family:'Poppins',sans-serif}
+.pd-orig{font-size:14px;color:var(--text3);text-decoration:line-through;margin-left:8px}
+.pd-disc{font-size:13px;color:var(--green);font-weight:700;margin-top:4px}
+.pd-delivery{font-size:13px;color:var(--green);margin-bottom:4px}
+.pd-stock{font-size:13px;font-weight:700;margin:10px 0}
+.pd-qty-row{display:flex;align-items:center;gap:10px;margin:12px 0}
+.qty-b{width:34px;height:34px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:18px;background:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;transition:background .12s}
+.qty-b:hover{background:var(--gold);border-color:var(--gold)}
+.qty-v{font-size:16px;font-weight:700;min-width:32px;text-align:center}
+.pd-add{background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;padding:13px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;width:100%;color:var(--navy);margin-bottom:8px;transition:all .15s;font-family:'Poppins',sans-serif}
+.pd-add:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 4px 12px rgba(255,216,20,.4)}
+.pd-buy{background:linear-gradient(135deg,var(--orange),var(--orange2));border:none;padding:13px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;width:100%;color:var(--white);transition:all .15s;font-family:'Poppins',sans-serif}
+.pd-buy:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 4px 12px rgba(255,107,53,.3)}
+.pd-seller-info{font-size:12px;color:var(--text2);margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+
+/* ===== CART ===== */
+#cartView{padding:16px 20px;max-width:1200px;margin:0 auto}
+.cart-wrap{display:flex;gap:16px;align-items:flex-start}
+.cart-items-col{flex:1}
+.ci-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px;display:flex;gap:14px;align-items:center;margin-bottom:10px;box-shadow:var(--shadow);transition:border-color .15s}
+.ci-card:hover{border-color:var(--gold)}
+.ci-img{width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid var(--border);flex-shrink:0}
+.ci-info{flex:1;min-width:0}
+.ci-name{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-bottom:3px;color:var(--navy);cursor:pointer}
+.ci-name:hover{color:var(--blue)}
+.ci-del{font-size:11px;color:var(--green);margin-bottom:8px}
+.ci-qty-row{display:flex;align-items:center;gap:8px}
+.cq{width:26px;height:26px;border:1px solid var(--border);border-radius:5px;cursor:pointer;font-size:14px;background:var(--light);display:flex;align-items:center;justify-content:center;font-weight:700;transition:background .12s}
+.cq:hover{background:var(--gold);border-color:var(--gold)}
+.rm{font-size:11px;color:var(--red);cursor:pointer;background:none;border:none;padding:0;margin-left:6px;font-family:'Inter',sans-serif}
+.rm:hover{text-decoration:underline}
+.ci-price-col{text-align:right;flex-shrink:0}
+.ci-total{font-size:17px;font-weight:700;color:var(--red)}
+.ci-each{font-size:10px;color:var(--text3)}
+
+.cart-sum{width:290px;flex-shrink:0;background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:20px;position:sticky;top:72px;box-shadow:var(--shadow)}
+.cs-t{font-size:15px;font-weight:700;margin-bottom:14px;color:var(--navy);font-family:'Poppins',sans-serif}
+.cs-row{display:flex;justify-content:space-between;font-size:13px;margin-bottom:7px;color:var(--text2)}
+.cs-hr{border:none;border-top:1px solid var(--border);margin:12px 0}
+.cs-total-val{font-size:20px;font-weight:800;color:var(--red);font-family:'Poppins',sans-serif}
+.checkout-btn{background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;padding:13px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;width:100%;color:var(--navy);margin-top:14px;transition:all .15s;font-family:'Poppins',sans-serif}
+.checkout-btn:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(255,216,20,.35)}
+
+/* ===== CHECKOUT ===== */
+#checkoutView{padding:16px 20px;max-width:1000px;margin:0 auto}
+.form-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:22px;margin-bottom:14px;box-shadow:var(--shadow)}
+.form-card h3{font-size:14px;font-weight:700;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;color:var(--navy)}
+.fg{display:grid;gap:12px}.fg2{grid-template-columns:1fr 1fr}
+.fg3{grid-template-columns:1fr 1fr 1fr}
+.fgfull{grid-column:1/-1}
+.fgrp{display:flex;flex-direction:column;gap:4px}
+.fgrp label{font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.5px}
+.fgrp input,.fgrp select,.fgrp textarea{padding:9px 11px;border:1px solid var(--border);border-radius:7px;font-size:13px;font-family:'Inter',sans-serif;outline:none;transition:border-color .15s;background:var(--white)}
+.fgrp input:focus,.fgrp select:focus,.fgrp textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(255,216,20,.15)}
+.pay-opt{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;margin-bottom:8px;transition:all .15s}
+.pay-opt:has(input:checked){border-color:var(--gold);background:#FFFBEA}
+.co-btn{background:linear-gradient(135deg,var(--orange),var(--orange2));border:none;padding:14px;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;width:100%;color:var(--white);font-family:'Poppins',sans-serif;transition:all .15s}
+.co-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(255,107,53,.3)}
+
+/* ===== SUCCESS ===== */
+#successView{padding:40px 20px;max-width:560px;margin:0 auto;text-align:center}
+.suc-box{background:var(--white);border:1px solid var(--border);border-radius:var(--r2);padding:40px;box-shadow:var(--shadow2)}
+.suc-icon{font-size:72px;margin-bottom:16px;display:block}
+.suc-box h2{font-size:24px;font-weight:800;color:var(--green);margin-bottom:8px;font-family:'Poppins',sans-serif}
+.suc-box p{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:16px}
+.ord-id-box{background:linear-gradient(135deg,#ECFDF5,#D1FAE5);border:1px solid #6EE7B7;border-radius:8px;padding:12px 16px;font-size:13px;font-weight:700;color:var(--green);display:inline-block;margin-bottom:20px;font-family:'Poppins',sans-serif;letter-spacing:.5px}
+.suc-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-grn{background:linear-gradient(135deg,var(--green),#047857);color:var(--white);border:none;padding:11px 24px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;transition:all .15s}
+.btn-grn:hover{transform:translateY(-1px)}
+.btn-out{background:var(--white);border:1.5px solid var(--border);padding:11px 24px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s}
+.btn-out:hover{border-color:var(--navy)}
+
+/* ===== ACCOUNT ===== */
+#accountView{padding:20px;max-width:460px;margin:0 auto}
+.auth-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r2);padding:28px;box-shadow:var(--shadow2)}
+.auth-tabs{display:flex;margin-bottom:22px;border-bottom:1px solid var(--border)}
+.auth-tab{flex:1;padding:10px;text-align:center;font-size:13px;font-weight:600;cursor:pointer;border-bottom:2.5px solid transparent;color:var(--text2);transition:all .15s}
+.auth-tab.active{border-bottom-color:var(--gold3);color:var(--navy)}
+.aform{display:flex;flex-direction:column;gap:13px}
+.auth-btn{background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;padding:12px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;color:var(--navy);margin-top:4px;transition:all .15s;font-family:'Poppins',sans-serif}
+.auth-btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(255,216,20,.3)}
+.role-row{display:flex;gap:10px;margin-bottom:2px}
+.role-o{flex:1;padding:11px;border:1.5px solid var(--border);border-radius:8px;text-align:center;cursor:pointer;font-size:12px;font-weight:600;transition:all .15s}
+.role-o:hover{border-color:var(--gold)}
+.role-o.active{border-color:var(--gold);background:#FFFBEA;color:var(--gold3)}
+.acct-dash{display:none}
+.acct-header{display:flex;align-items:center;gap:14px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.acct-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy3));display:flex;align-items:center;justify-content:center;font-size:22px;border:3px solid var(--gold)}
+.acct-menu{display:flex;flex-direction:column;gap:8px}
+.acct-menu-btn{display:flex;align-items:center;gap:10px;padding:11px 14px;border:1px solid var(--border);border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;transition:all .15s;background:var(--white);color:var(--text)}
+.acct-menu-btn:hover{border-color:var(--gold);background:#FFFBEA;color:var(--navy)}
+.acct-menu-btn.gold{background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;color:var(--navy);font-weight:700}
+.acct-menu-btn.dark{background:var(--navy);border:none;color:var(--gold);font-weight:700}
+.acct-menu-btn.outline-red{border-color:var(--red);color:var(--red)}
+.acct-menu-btn.outline-red:hover{background:#FEF2F2}
+
+/* ===== MY ORDERS ===== */
+#myordersView{padding:16px 20px;max-width:860px;margin:0 auto}
+.ord-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px;margin-bottom:12px;box-shadow:var(--shadow)}
+.ord-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.ord-meta{font-size:11px;color:var(--text2);margin-top:2px}
+.ord-status{font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px}
+.ord-status.pending{background:#FEF9C3;color:#854D0E}
+.ord-status.shipped{background:#DBEAFE;color:#1D4ED8}
+.ord-status.delivered{background:#DCFCE7;color:#166534}
+.ord-status.cancelled{background:#FEE2E2;color:#991B1B}
+.ord-items-row{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+.oi-row{display:flex;align-items:center;gap:10px;font-size:12px}
+.oi-row img{width:40px;height:40px;object-fit:cover;border-radius:6px;border:1px solid var(--border)}
+.ord-footer{display:flex;justify-content:space-between;align-items:center}
+.ord-total{font-size:15px;font-weight:700;color:var(--red);font-family:'Poppins',sans-serif}
+
+/* ===== SELLER HUB ===== */
+.seller-layout{display:flex;min-height:calc(100vh - 102px)}
+.seller-nav{width:230px;background:var(--navy);flex-shrink:0;padding:0}
+.sn-logo{padding:18px 20px;border-bottom:1px solid rgba(255,255,255,.08)}
+.sn-logo span{font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--gold)}
+.sn-logo p{font-size:11px;color:rgba(255,255,255,.5);margin-top:2px}
+.sn-section{padding:16px 12px 8px;font-size:10px;font-weight:600;color:rgba(255,255,255,.3);letter-spacing:1.5px;text-transform:uppercase}
+.sn-item{display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:12px;font-weight:500;cursor:pointer;color:rgba(255,255,255,.7);transition:all .15s;margin:1px 8px;border-radius:7px}
+.sn-item:hover{background:rgba(255,255,255,.08);color:var(--white)}
+.sn-item.active{background:rgba(255,216,20,.15);color:var(--gold)}
+.sn-item i{font-size:16px}
+.sn-footer{padding:14px 16px;border-top:1px solid rgba(255,255,255,.08);margin-top:auto}
+.seller-content{flex:1;padding:22px;background:var(--light);overflow-x:hidden}
+.seller-content .pg-hd{font-family:'Poppins',sans-serif;font-size:20px;font-weight:800;color:var(--navy);margin-bottom:18px;display:flex;align-items:center;justify-content:space-between}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.stat-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold)}
+.stat-label{font-size:11px;color:var(--text2);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.stat-val{font-size:26px;font-weight:800;color:var(--navy);font-family:'Poppins',sans-serif}
+.stat-sub{font-size:11px;color:var(--green);margin-top:3px}
+.dt{width:100%;background:var(--white);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.dt th{background:var(--light);padding:11px 14px;font-size:10px;font-weight:700;color:var(--text2);text-align:left;border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:.5px}
+.dt td{padding:11px 14px;font-size:12px;border-bottom:1px solid #f8f8f8;vertical-align:middle}
+.dt tr:last-child td{border-bottom:none}
+.dt tr:hover td{background:#fafbfc}
+.act-b{padding:5px 10px;border:none;border-radius:5px;font-size:11px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;transition:all .12s}
+.act-b.edit{background:#EFF6FF;color:var(--blue)}.act-b.edit:hover{background:#DBEAFE}
+.act-b.del{background:#FEF2F2;color:var(--red)}.act-b.del:hover{background:#FEE2E2}
+.act-b.ship{background:#ECFDF5;color:var(--green)}.act-b.ship:hover{background:#D1FAE5}
+.act-b.warn{background:#FEF9C3;color:#854D0E}
+.sp-form{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:24px;box-shadow:var(--shadow);max-width:680px}
+.sp-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.sp-full{grid-column:1/-1}
+.sp-l{font-size:11px;font-weight:600;color:var(--text2);display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
+.sp-inp,.sp-sel,.sp-area{width:100%;padding:9px 11px;border:1px solid var(--border);border-radius:7px;font-size:13px;font-family:'Inter',sans-serif;outline:none;transition:all .15s;background:var(--white)}
+.sp-inp:focus,.sp-sel:focus,.sp-area:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(255,216,20,.15)}
+.sp-area{resize:vertical;min-height:80px}
+.sp-save{background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;padding:11px 24px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;color:var(--navy);transition:all .15s;font-family:'Poppins',sans-serif}
+.sp-save:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(255,216,20,.3)}
+.sp-cancel{background:var(--white);border:1px solid var(--border);padding:11px 24px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;margin-left:8px;transition:all .15s}
+.sp-cancel:hover{border-color:var(--navy)}
+
+/* ===== ADMIN PANEL ===== */
+#adminView .seller-nav{background:#1E293B}
+.admin-badge{background:var(--red);color:var(--white);font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;margin-left:auto;letter-spacing:.5px}
+#adminLoginBox{max-width:420px;margin:60px auto;padding:20px}
+.admin-login-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r2);padding:32px;box-shadow:var(--shadow2);text-align:center}
+.admin-login-card .shield{font-size:52px;margin-bottom:12px;display:block}
+.admin-login-card h2{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;font-family:'Poppins',sans-serif}
+.admin-login-card p{font-size:13px;color:var(--text2);margin-bottom:20px}
+.admin-btn{background:linear-gradient(135deg,#1E293B,var(--navy));color:var(--white);border:none;padding:12px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;width:100%;font-family:'Poppins',sans-serif;transition:all .15s}
+.admin-btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(13,27,42,.3)}
+.partner-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:10px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between}
+.partner-info h4{font-size:13px;font-weight:700;color:var(--navy)}
+.partner-info p{font-size:11px;color:var(--text2);margin-top:2px}
+.partner-badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;margin-left:8px}
+.partner-badge.active{background:#DCFCE7;color:var(--green)}
+.partner-badge.inactive{background:#FEE2E2;color:var(--red)}
+
+/* ===== FOOTER ===== */
+#footer{background:var(--navy);color:var(--white);padding:32px 24px 16px;margin-top:32px}
+.f-top{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px;margin-bottom:24px}
+.f-brand .f-logo-name{font-family:'Poppins',sans-serif;font-size:22px;font-weight:800;color:var(--white)}
+.f-brand .f-logo-name span{color:var(--gold)}
+.f-brand p{font-size:12px;color:rgba(255,255,255,.5);line-height:1.7;margin-top:10px;max-width:260px}
+.f-social{display:flex;gap:8px;margin-top:14px}
+.f-soc{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px;transition:all .15s}
+.f-soc:hover{background:rgba(255,216,20,.2);border-color:var(--gold)}
+.f-col h4{font-size:12px;font-weight:700;color:var(--white);margin-bottom:12px;letter-spacing:.5px;text-transform:uppercase}
+.f-col a{display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:7px;cursor:pointer;transition:color .15s}
+.f-col a:hover{color:var(--gold)}
+.f-bot{border-top:1px solid rgba(255,255,255,.08);padding-top:14px;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.f-currencies{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.f-cur{font-size:10px;color:rgba(255,255,255,.4);cursor:pointer;padding:2px 8px;border-radius:4px;transition:all .15s}
+.f-cur:hover,.f-cur.active{color:var(--gold);background:rgba(255,216,20,.08)}
+
+/* ===== TOAST ===== */
+#toast{position:fixed;bottom:22px;right:22px;padding:12px 18px;border-radius:10px;font-size:12px;font-weight:600;z-index:9999;display:none;align-items:center;gap:8px;max-width:320px;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:all .3s}
+#toast.show{display:flex}
+#toast.success{background:var(--green);color:var(--white)}
+#toast.error{background:var(--red);color:var(--white)}
+#toast.warn{background:#D97706;color:var(--white)}
+#toast.info{background:var(--navy);color:var(--white)}
+
+/* ===== EMPTY ===== */
+.empty-state{text-align:center;padding:56px 20px;background:var(--white);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow)}
+.empty-state .ei{font-size:56px;margin-bottom:14px;display:block}
+.empty-state h3{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:6px;font-family:'Poppins',sans-serif}
+.empty-state p{font-size:13px;color:var(--text2);margin-bottom:16px}
+
+/* ===== MISC ===== */
+.pg-title{font-family:'Poppins',sans-serif;font-size:22px;font-weight:800;color:var(--navy);margin-bottom:18px}
+.tag{display:inline-block;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.3px}
+.tag.green{background:#DCFCE7;color:#166534}
+.tag.red{background:#FEE2E2;color:#991B1B}
+.tag.blue{background:#DBEAFE;color:#1D4ED8}
+.tag.yellow{background:#FEF9C3;color:#854D0E}
+.tag.grey{background:var(--light);color:var(--text2)}
+.tag.purple{background:#EDE9FE;color:#5B21B6}
+.btn-prim{background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;padding:9px 20px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;color:var(--navy);transition:all .15s;font-family:'Inter',sans-serif}
+.btn-prim:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(255,216,20,.3)}
+.btn-sec{background:var(--white);border:1px solid var(--border);padding:9px 20px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;transition:all .15s;font-family:'Inter',sans-serif}
+.btn-sec:hover{border-color:var(--navy);color:var(--navy)}
+.divider{border:none;border-top:1px solid var(--border);margin:16px 0}
+
+@media(max-width:900px){
+  .main-wrap{padding:8px;gap:8px}
+  .sidebar{display:none}
+  .pgrid{grid-template-columns:repeat(auto-fill,minmax(145px,1fr))}
+  .bnr-row{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .f-top{grid-template-columns:1fr 1fr}
+  .cart-wrap{flex-direction:column}
+  .cart-sum{width:100%;position:static}
+  .pd-layout{flex-direction:column}
+  .pd-img-col{width:100%}
+  .seller-nav{width:200px}
+}
+@media(max-width:600px){
+  #topbar{flex-wrap:wrap;height:auto;padding:10px 12px;gap:8px}
+  #searchBar{order:3;width:100%;max-width:100%}
+  .tb-nav{gap:2px}
+  .hero-inner{flex-direction:column}
+  .hero-stats{justify-content:center}
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .seller-layout{flex-direction:column}
+  .seller-nav{width:100%;min-height:auto}
+}
+
+/* ===== ACCESSIBILITY & FOCUS ===== */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+#skip-link{position:absolute;top:-40px;left:0;background:var(--navy);color:var(--gold);padding:8px 16px;z-index:9999;font-size:13px;font-weight:600;border-radius:0 0 6px 0;transition:top .2s}
+#skip-link:focus{top:0}
+
+/* ===== LOADING SPINNER ===== */
+.spinner{display:inline-block;width:18px;height:18px;border:2px solid rgba(255,216,20,.3);border-top-color:var(--gold);border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-overlay{position:fixed;inset:0;background:rgba(13,27,42,.6);z-index:8000;display:flex;align-items:center;justify-content:center;display:none}
+.loading-overlay.show{display:flex}
+.loading-box{background:var(--white);border-radius:var(--r);padding:24px 32px;text-align:center;box-shadow:var(--shadow2)}
+.loading-box p{font-size:13px;color:var(--text2);margin-top:10px}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2);padding:10px 20px;background:var(--white);border-bottom:1px solid var(--border);flex-wrap:wrap}
+.breadcrumb span{cursor:pointer;color:var(--blue);transition:color .15s}
+.breadcrumb span:hover{color:var(--gold3)}
+.breadcrumb .sep{color:var(--text3)}
+.breadcrumb .current{color:var(--text);font-weight:500}
+
+/* ===== NOTIFICATION BADGE ===== */
+.notif-dot{width:8px;height:8px;background:var(--orange);border-radius:50%;display:inline-block;margin-left:4px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* ===== IMPROVED TOAST ===== */
+#toast{display:none;position:fixed;bottom:20px;right:20px;z-index:9999;max-width:340px;border-radius:var(--r);box-shadow:var(--shadow2);padding:12px 16px;font-size:13px;font-weight:500;align-items:center;gap:10px;animation:slideUp .25s ease}
+#toast.show{display:flex}
+@keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+#toast.success{background:var(--green);color:#fff}
+#toast.error{background:var(--red);color:#fff}
+#toast.warn{background:#D97706;color:#fff}
+#toast.info{background:var(--navy);color:var(--gold)}
+#toast .ti{font-size:16px}
+
+/* ===== MOBILE IMPROVEMENTS ===== */
+@media(max-width:480px){
+  #topbar{flex-wrap:wrap;height:auto;padding:10px 12px;gap:8px}
+  #searchBar{order:3;width:100%;min-width:unset}
+  .tb-nav .tb-btn small{display:none}
+  .hero h1{font-size:24px}
+  .bnr-row{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .pcard .pcb{padding:8px}
+  .pname{font-size:11px;height:30px}
+  .pprice{font-size:13px}
+  .acb{font-size:10px;padding:6px}
+  .cart-wrap{flex-direction:column}
+  .cart-sum{width:100%;position:static}
+  .pd-layout{flex-direction:column}
+  .pd-img-col{width:100%}
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .seller-layout{flex-direction:column}
+  .seller-nav{width:100%;min-height:auto;display:flex;flex-wrap:wrap;padding:8px}
+  .sn-item{padding:8px 10px;font-size:11px}
+  .f-top{grid-template-columns:1fr 1fr}
+  .fg2,.fg3{grid-template-columns:1fr}
+  .sp-grid{grid-template-columns:1fr}
+  .bnr-row{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .sidebar{display:none}
+  .main-wrap{padding:8px;gap:8px}
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .dt{font-size:11px}
+  .dt th,.dt td{padding:8px 10px}
+  .pgrid{grid-template-columns:repeat(auto-fill,minmax(145px,1fr))}
+  .cm-grid{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
+}
+@media(max-width:1024px){
+  .f-top{grid-template-columns:1fr 1fr}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ===== IMPROVED PRODUCT CARD ===== */
+.pcard{position:relative}
+.pcard .pc-wishlist{position:absolute;top:8px;right:8px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.9);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;box-shadow:var(--shadow)}
+.pcard:hover .pc-wishlist{opacity:1}
+.pcard .pc-wishlist:hover{background:var(--white)}
+.pcard .pc-wishlist i{font-size:14px;color:var(--red)}
+
+/* ===== IMPROVED FILTERS ===== */
+.active-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.filter-chip{background:var(--light);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:11px;color:var(--text2);display:flex;align-items:center;gap:4px;cursor:pointer}
+.filter-chip:hover{border-color:var(--red);color:var(--red)}
+.filter-chip .ti{font-size:12px}
+
+/* ===== IMPROVED FORMS ===== */
+.form-error{color:var(--red);font-size:11px;margin-top:3px;display:none}
+.fgrp.has-error input,.fgrp.has-error select{border-color:var(--red)}
+.fgrp.has-error .form-error{display:block}
+.fgrp.has-success input{border-color:var(--green)}
+.password-strength{height:3px;border-radius:2px;margin-top:4px;transition:all .3s}
+.pw-weak{background:var(--red);width:33%}
+.pw-medium{background:#D97706;width:66%}
+.pw-strong{background:var(--green);width:100%}
+
+/* ===== SELLER KYC STEPS ===== */
+.kyc-step{display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.kyc-step-num{width:24px;height:24px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+.kyc-step-label{font-size:12px;font-weight:700;color:var(--navy)}
+
+/* ===== IMPROVED TABLES ===== */
+.dt-wrap{overflow-x:auto;border-radius:var(--r);box-shadow:var(--shadow)}
+.dt{min-width:600px}
+
+/* ===== BACK TO TOP ===== */
+#backToTop{position:fixed;bottom:70px;right:20px;width:40px;height:40px;background:var(--navy);color:var(--gold);border:none;border-radius:50%;cursor:pointer;font-size:18px;display:none;align-items:center;justify-content:center;z-index:500;box-shadow:var(--shadow2);transition:all .2s}
+#backToTop.show{display:flex}
+#backToTop:hover{background:var(--navy3);transform:translateY(-2px)}
+
+/* ===== AFFILIATE BADGE ===== */
+.aff-badge{background:linear-gradient(135deg,var(--gold),var(--gold3));color:var(--navy);font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;letter-spacing:.5px}
+
+/* ===== SEARCH SUGGESTIONS ===== */
+#searchSuggestions{position:absolute;top:100%;left:0;right:0;background:var(--white);border:1px solid var(--border);border-top:none;border-radius:0 0 8px 8px;box-shadow:var(--shadow2);z-index:200;display:none;max-height:280px;overflow-y:auto}
+#searchSuggestions.open{display:block}
+.sug-item{padding:9px 14px;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:8px;color:var(--text);transition:background .12s}
+.sug-item:hover{background:var(--light)}
+.sug-item i{font-size:14px;color:var(--text3)}
+.sug-item strong{color:var(--navy)}
+#searchBar{position:relative}
+
+/* ===== CART ANIMATION ===== */
+@keyframes cartBounce{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
+.cart-animate{animation:cartBounce .3s ease}
+
+/* ===== IMPROVED EMPTY STATES ===== */
+.empty-state{text-align:center;padding:56px 20px;background:var(--white);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow)}
+.empty-state .ei{font-size:56px;margin-bottom:14px;display:block}
+.empty-state h3{font-size:17px;font-weight:500;color:var(--navy);margin-bottom:6px}
+.empty-state p{font-size:13px;color:var(--text2);margin-bottom:18px;line-height:1.7}
+
+/* ===== PRODUCT RATING BAR ===== */
+.rating-bars{margin-top:8px}
+.rb-row{display:flex;align-items:center;gap:6px;margin-bottom:3px;font-size:11px;color:var(--text2)}
+.rb-bar{flex:1;height:6px;background:var(--light);border-radius:3px;overflow:hidden}
+.rb-fill{height:100%;background:var(--gold);border-radius:3px}
+
+
+/* ===== DARK MODE ===== */
+body.dark{
+  --navy:#0D1B2A;        /* stays dark — used for nav bg + gold-button text */
+  --navy2:#11161f;
+  --navy3:#1E3A5F;
+  --white:#1a1f29;       /* surfaces */
+  --offwhite:#11161f;
+  --light:#0d1117;       /* page bg */
+  --border:#2a323d;
+  --border2:#3a4350;
+  --text:#e6e9ef;
+  --text2:#aab4c4;
+  --text3:#7e8a99;
+  --shadow:0 2px 12px rgba(0,0,0,.4);
+  --shadow2:0 8px 32px rgba(0,0,0,.5);
+  background:#0d1117;
+}
+/* Any text that used var(--navy) as its color must become light in dark mode.
+   We target the known text elements explicitly below. */
+body.dark .sec-t,body.dark .pg-title,body.dark .sc-t,body.dark .pname,
+body.dark .pd-title,body.dark .cs-t,body.dark .ci-name,body.dark .rev-name,
+body.dark .rev-score-num,body.dark .seller-content .pg-hd,body.dark .stat-val,
+body.dark .form-card h3,body.dark .empty-state h3,body.dark .kyc-step-label,
+body.dark .partner-info h4,body.dark .pb-title,body.dark .hs-n,
+body.dark .pd-stock,body.dark .ord-total,body.dark .cs-total-val,
+body.dark .pd-price,body.dark .pprice,body.dark .ci-total{color:#e6e9ef !important}
+body.dark .pprice,body.dark .ci-total,body.dark .pd-price,body.dark .cs-total-val,body.dark .ord-total{color:#ff8a6b !important}
+body.dark [style*="color:var(--navy)"]{color:#e6e9ef !important}
+body.dark [style*="color: var(--navy)"]{color:#e6e9ef !important}
+/* Topbar & nav stay dark navy in both modes — force real dark blue, not the text var */
+body.dark #topbar{background:#070a0f}
+body.dark #nav2{background:#0d1219}
+body.dark .seller-nav{background:#070a0f}
+body.dark .hero{background:linear-gradient(135deg,#070a0f 0%,#0f1a2e 50%,#13243f 100%)}
+body.dark #footer{background:#070a0f}
+body.dark .deals-bar{background:linear-gradient(90deg,#0f1a2e,#13243f)}
+/* Surfaces */
+body.dark .pc-img,body.dark .pc-fb{background:#11161f}
+body.dark .sc,body.dark .pcard,body.dark .form-card,body.dark .stat-card,body.dark .ci-card,
+body.dark .cart-sum,body.dark .auth-card,body.dark .ord-card,body.dark .sp-form,
+body.dark .empty-state,body.dark .partner-card,body.dark .suc-box,body.dark .admin-login-card,
+body.dark .write-review,body.dark .rv-card img{background:#1a1f29}
+body.dark .dt{background:#1a1f29}
+body.dark .dt th{background:#11161f;color:#aab4c4}
+body.dark .dt td{color:#e6e9ef}
+body.dark .dt tr:hover td{background:#11161f}
+body.dark #searchSuggestions{background:#1a1f29}
+body.dark .sug-item{color:#e6e9ef}
+body.dark .sug-item:hover{background:#11161f}
+body.dark .sug-item strong{color:#fff}
+body.dark .ct,body.dark .cm-item{background:#1a1f29}
+body.dark .ct:hover,body.dark .cm-item:hover,body.dark .cm-item.active{background:#1a2330}
+body.dark .ct-nm{color:#e6e9ef}
+body.dark .pb.y{background:#26220f}
+body.dark .pb.g{background:#0f2018}
+body.dark .pb.b{background:#0f1a2e}
+body.dark .pd-box,body.dark .cm-box{background:#1a1f29}
+/* Inputs in dark mode */
+body.dark input,body.dark select,body.dark textarea{background:#11161f;color:#e6e9ef;border-color:#2a323d}
+body.dark input::placeholder,body.dark textarea::placeholder{color:#6b7280}
+body.dark #sCat{background:#2a323d;color:#e6e9ef;border-color:#3a4350}
+body.dark #sInp{background:#1a1f29;color:#111}
+body.dark .coupon-box input{background:#11161f;color:#e6e9ef}
+/* Pay options & cards in checkout */
+body.dark .pay-opt{background:#1a1f29;color:#e6e9ef}
+body.dark #cardFormBox,body.dark #payoneerBox,body.dark #cryptoBox{background:#11161f}
+body.dark .auth-tab.active,body.dark .acct-menu-btn{color:#e6e9ef}
+/* Keep gold/colored accents readable */
+body.dark .logo-name{color:#fff}
+body.dark .auth-tab{color:#aab4c4}
+body.dark .pd-cat{background:#11161f;color:#aab4c4}
+/* breadcrumb */
+body.dark .breadcrumb{background:#1a1f29;border-color:#2a323d}
+body.dark .breadcrumb .current{color:#e6e9ef}
+/* toast info stays readable */
+body.dark #toast.info{background:#1a2330;color:#FFD814}
+/* loading box */
+body.dark .loading-box{background:#1a1f29}
+body.dark .loading-box p{color:#aab4c4}
+/* fix hardcoded grays */
+body.dark [style*="color:#111"]{color:#e6e9ef !important}
+body.dark [style*="color:#333"]{color:#cdd3dc !important}
+body.dark [style*="color:#555"]{color:#aab4c4 !important}
+body.dark [style*="color:#888"]{color:#8b95a3 !important}
+.theme-toggle{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#fff;width:36px;height:36px;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;transition:background .15s}
+.theme-toggle:hover{background:rgba(255,255,255,.16)}
+
+/* ===== REVIEWS ===== */
+.reviews-section{margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
+.review-summary{display:flex;gap:20px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
+.rev-score{text-align:center}
+.rev-score-num{font-size:42px;font-weight:800;color:var(--navy);font-family:Poppins,sans-serif;line-height:1}
+.rev-score-stars{color:var(--gold);font-size:14px;margin-top:4px}
+.rev-score-count{font-size:11px;color:var(--text2);margin-top:2px}
+.rev-bars{flex:1;min-width:180px}
+.review-item{padding:12px 0;border-bottom:1px solid var(--border)}
+.rev-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.rev-avatar{width:30px;height:30px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.rev-name{font-size:12px;font-weight:600;color:var(--navy)}
+.rev-verified{font-size:10px;color:var(--green);background:#DCFCE7;padding:1px 6px;border-radius:10px}
+.rev-stars{color:var(--gold);font-size:12px}
+.rev-text{font-size:12px;color:var(--text2);line-height:1.6}
+.rev-date{font-size:10px;color:var(--text3);margin-top:3px}
+.write-review{background:var(--light);border-radius:8px;padding:14px;margin-top:12px}
+.star-input{display:flex;gap:4px;margin:6px 0}
+.star-input i{font-size:22px;color:var(--border2);cursor:pointer;transition:color .1s}
+.star-input i.active{color:var(--gold)}
+
+/* ===== COUPON ===== */
+.coupon-box{display:flex;gap:8px;margin:10px 0}
+.coupon-box input{flex:1;padding:8px 10px;border:1px solid var(--border);border-radius:6px;font-size:12px;outline:none}
+.coupon-applied{background:#DCFCE7;border:1px solid #6EE7B7;border-radius:6px;padding:8px 10px;font-size:11px;color:#166534;display:flex;justify-content:space-between;align-items:center;margin:8px 0}
+
+/* ===== RECENTLY VIEWED ===== */
+.recently-viewed{margin-top:20px}
+.rv-strip{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}
+.rv-card{flex-shrink:0;width:130px;cursor:pointer}
+.rv-card img{width:130px;height:100px;object-fit:cover;border-radius:8px;border:1px solid var(--border)}
+.rv-card .rv-name{font-size:11px;margin-top:5px;color:var(--text);line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.rv-card .rv-price{font-size:12px;font-weight:700;color:var(--red);margin-top:2px}
+
+</style>
+<!-- ===== SVG LOGO ===== -->
+
+
+<!-- ===== TOPBAR ===== -->
+<a id="skip-link" href="#main-content">Skip to main content</a>
+<div id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top" aria-label="Back to top">
+  <i class="ti ti-arrow-up" aria-hidden="true"></i>
+</div>
+<div id="loadingOverlay" class="loading-overlay"><div class="loading-box"><div class="spinner"></div><p>Loading…</p></div></div>
+<noscript><div style="background:#B12704;color:#fff;padding:10px;text-align:center;font-size:13px">JavaScript is required to use Zorix. Please enable JavaScript in your browser settings.</div></noscript>
+<div id="topbar">
+  <div class="gm-logo" onclick="navigate('home')">
+    <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="2" width="36" height="36" rx="10" fill="#1E3A5F"/>
+      <rect x="2" y="2" width="36" height="36" rx="10" stroke="#FFD814" stroke-width="1.5" fill="none"/>
+      <path d="M13 12 H27 L15 24 H27" stroke="#FFD814" stroke-width="2.6" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M22 26 l3 5 l3 -5" fill="#FF6B35"/>
+      <circle cx="30" cy="11" r="2.2" fill="#FF6B35"/>
+    </svg>
+    <div class="logo-text-wrap">
+      <span class="logo-name">ZO<span>RIX</span></span>
+      <span class="logo-tag">Shop Smarter. Live Better.</span>
+    </div>
+  </div>
+
+  <div class="country-btn" onclick="openCountryModal()">
+    <span class="country-flag" id="topFlag">🌍</span>
+    <span id="topCountry">Worldwide</span>
+    <i class="ti ti-chevron-down" style="font-size:12px;opacity:.7"></i>
+  </div>
+
+  <div id="searchBar">
+    <select id="sCat">
+      <option value="">All</option>
+      <option>Electronics</option><option>Clothing</option><option>Home</option>
+      <option>Books</option><option>Sports</option><option>Beauty</option>
+      <option>Grocery</option><option>Toys</option>
+    </select>
+    <input type="text" id="sInp" placeholder="Search Zorix worldwide…" autocomplete="off" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-autocomplete="list">
+    <div id="searchSuggestions" role="listbox" aria-label="Search suggestions"></div>
+    <button id="sBtn" onclick="doSearch()" aria-label="Search products">
+      <i class="ti ti-search" style="font-size:18px;color:#111"></i>
+    </button>
+  </div>
+
+  <div class="tb-nav">
+    <div class="tb-btn" id="acctBtn" onclick="navigate('account')">
+      <small id="acctGreet">Hello, Sign in</small>
+      Account
+    </div>
+    <div class="tb-btn" onclick="navigate('myorders')"><small>Returns</small>Orders</div>
+    <div class="tb-btn" onclick="navigate('wishlist')" aria-label="Wishlist"><small>Your</small>Wishlist</div>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle theme"><i class="ti ti-moon" id="themeIcon" aria-hidden="true"></i></button>
+    <div class="cart-tb" onclick="navigate('cart')" aria-label="Shopping cart">
+      <i class="ti ti-shopping-cart" style="font-size:22px" aria-hidden="true"></i>Cart
+      <span id="cartBadge">0</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- ===== NAV2 ===== -->
+<div id="nav2">
+  <div class="n2" onclick="filterCat('')">☰ All</div>
+  <div class="n2" onclick="filterCat('Electronics')">📱 Electronics</div>
+  <div class="n2" onclick="filterCat('Clothing')">👗 Fashion</div>
+  <div class="n2" onclick="filterCat('Home')">🏠 Home & Kitchen</div>
+  <div class="n2" onclick="filterCat('Books')">📚 Books</div>
+  <div class="n2" onclick="filterCat('Sports')">⚽ Sports</div>
+  <div class="n2" onclick="filterCat('Beauty')">💄 Beauty</div>
+  <div class="n2" onclick="filterCat('Grocery')">🛒 Grocery</div>
+  <div class="n2" onclick="filterCat('Toys')">🎮 Toys</div>
+  <div class="n2 hot">🔥 Today's Deals</div>
+  <div class="n2 sell-btn" onclick="navigate('seller-dashboard')">🏪 Sell on Zorix</div>
+</div>
+
+<!-- ===== COUNTRY MODAL ===== -->
+<div id="countryModal">
+  <div class="cm-box">
+    <div class="cm-title">
+      <span>🌍 Choose Your Country</span>
+      <button class="cm-close" onclick="closeCountryModal()">✕</button>
+    </div>
+    <input class="cm-search" id="cmSearch" placeholder="Search country…" oninput="filterCountries(this.value)">
+    <div class="cm-grid" id="cmGrid"></div>
+  </div>
+</div>
+
+<!-- ===== HOME VIEW ===== -->
+<div id="homeView" class="view active" role="main" id="main-content">
+  <div class="hero">
+    <div class="hero-bg-dots"></div>
+    <svg class="hero-globe" width="400" height="400" viewBox="0 0 400 400"><circle cx="200" cy="200" r="180" stroke="white" stroke-width="1" fill="none"/><ellipse cx="200" cy="200" rx="180" ry="80" stroke="white" stroke-width="1" fill="none"/><ellipse cx="200" cy="200" rx="80" ry="180" stroke="white" stroke-width="1" fill="none"/><line x1="20" y1="200" x2="380" y2="200" stroke="white" stroke-width="1"/><line x1="200" y1="20" x2="200" y2="380" stroke="white" stroke-width="1"/></svg>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Shop <span>Smarter</span>.<br>Live Better. 🌍</h1>
+        <p>Millions of products delivered worldwide.<br>Best prices, trusted sellers, every country.</p>
+        <div class="hero-actions">
+          <button class="hero-btn" onclick="scrollToProducts()">Shop Now</button>
+          <button class="hero-btn2" onclick="navigate('seller-dashboard')">Start Selling</button>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hs"><span class="hs-n">2M+</span><span class="hs-l">Products</span></div>
+        <div class="hs"><span class="hs-n">50+</span><span class="hs-l">Countries</span></div>
+        <div class="hs"><span class="hs-n">USDT</span><span class="hs-l">Pricing</span></div>
+        <div class="hs"><span class="hs-n">24/7</span><span class="hs-l">Support</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-wrap">
+    <div class="sidebar">
+      <div class="sc">
+        <div class="sc-t"><i class="ti ti-layout-grid" style="color:var(--gold)"></i>Departments</div>
+        <div id="catList"></div>
+      </div>
+      <div class="sc">
+        <div class="sc-t"><i class="ti ti-currency-dollar" style="color:var(--gold)"></i>Price</div>
+        <div class="range-wrap">
+          <input type="range" min="0" max="1000000" value="1000000" step="5000" id="priceRange" class="range-inp" oninput="document.getElementById('pVal').textContent=formatPrice(parseInt(this.value));applyFilters()">
+          <div class="range-val">Up to: <strong id="pVal">Max</strong></div>
+        </div>
+      </div>
+      <div class="sc">
+        <div class="sc-t"><i class="ti ti-star" style="color:var(--gold)"></i>Rating</div>
+        <div class="sf" id="starF">
+          <div class="sr" onclick="setStar(4,this)"><span class="gstars">★★★★☆</span>&nbsp;&amp; Up</div>
+          <div class="sr" onclick="setStar(3,this)"><span class="gstars">★★★☆☆</span>&nbsp;&amp; Up</div>
+          <div class="sr" onclick="setStar(2,this)"><span class="gstars">★★☆☆☆</span>&nbsp;&amp; Up</div>
+          <div class="sr" onclick="setStar(0,this)"><span class="gstars">★☆☆☆☆</span>&nbsp;&amp; Up</div>
+        </div>
+      </div>
+      <div class="sc">
+        <div class="sc-t"><i class="ti ti-package" style="color:var(--gold)"></i>Availability</div>
+        <label style="display:flex;align-items:center;gap:8px;font-size:12px;cursor:pointer;color:var(--text2)">
+          <input type="checkbox" id="inStock" onchange="applyFilters()" style="accent-color:var(--gold)"> In Stock Only
+        </label>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="deals-bar">
+        <div class="deals-t">⚡ Today's Deals <div class="dtimer" id="dealTimer">05:42:18</div></div>
+        <span class="see-all" onclick="filterCat('')">See all deals →</span>
+      </div>
+
+      <div class="bnr-row">
+        <div class="pb y"><span class="pb-tag" style="color:#854D0E">⚡ Flash Sale</span><span class="pb-title">Up to 70% Off Electronics</span><span class="pb-sub">Limited time only</span><button class="pb-btn" style="background:var(--gold);color:#0D1B2A" onclick="filterCat('Electronics')">Shop Electronics</button></div>
+        <div class="pb g"><span class="pb-tag" style="color:#065F46">🌍 Worldwide</span><span class="pb-title">Delivery to 50+ Countries</span><span class="pb-sub">Fast international shipping</span><button class="pb-btn" style="background:var(--green);color:white" onclick="openCountryModal()">Select Country</button></div>
+        <div class="pb b"><span class="pb-tag" style="color:#1E40AF">✨ New Arrivals</span><span class="pb-title">Just landed worldwide</span><span class="pb-sub">Fresh picks this week</span><button class="pb-btn" style="background:var(--blue);color:white" onclick="filterCat('')">View New</button></div>
+      </div>
+
+      <div class="cat-strip">
+        <div class="ct" onclick="filterCat('Electronics')"><span class="ct-ico">📱</span><span class="ct-nm">Electronics</span></div>
+        <div class="ct" onclick="filterCat('Clothing')"><span class="ct-ico">👗</span><span class="ct-nm">Fashion</span></div>
+        <div class="ct" onclick="filterCat('Home')"><span class="ct-ico">🏠</span><span class="ct-nm">Home</span></div>
+        <div class="ct" onclick="filterCat('Books')"><span class="ct-ico">📚</span><span class="ct-nm">Books</span></div>
+        <div class="ct" onclick="filterCat('Sports')"><span class="ct-ico">⚽</span><span class="ct-nm">Sports</span></div>
+        <div class="ct" onclick="filterCat('Beauty')"><span class="ct-ico">💄</span><span class="ct-nm">Beauty</span></div>
+        <div class="ct" onclick="filterCat('Grocery')"><span class="ct-ico">🛒</span><span class="ct-nm">Grocery</span></div>
+        <div class="ct" onclick="filterCat('Toys')"><span class="ct-ico">🎮</span><span class="ct-nm">Toys</span></div>
+      </div>
+
+      <div class="active-filters" id="activeFilters" aria-label="Active filters"></div>
+      <div class="sec-hd" id="productsSec">
+        <span class="sec-t" id="secTitle">All Products</span>
+        <div style="display:flex;align-items:center;gap:10px">
+          
+          <select class="sort-sel" id="sortSel" onchange="applyFilters()">
+            <option value="featured">Featured</option>
+            <option value="pl">Price: Low to High</option>
+            <option value="ph">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+      </div>
+      <div class="pgrid" id="pgrid"></div>
+      <div class="recently-viewed" id="recentlyViewedSection" style="display:none">
+        <div class="sec-t" style="margin-bottom:12px">Recently Viewed</div>
+        <div class="rv-strip" id="rvStrip"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SEARCH VIEW ===== -->
+<div id="searchView" class="view">
+  <div style="padding:14px 20px;max-width:1400px;margin:0 auto">
+    <div class="sec-hd">
+      <span class="sec-t" id="searchTitle">Search Results</span>
+      <select class="sort-sel" id="searchSort" onchange="renderSearch()">
+        <option value="featured">Featured</option><option value="pl">Price: Low</option>
+        <option value="ph">Price: High</option><option value="rating">Top Rated</option>
+      </select>
+    </div>
+    <div class="pgrid" id="searchGrid"></div>
+  </div>
+</div>
+
+<!-- ===== CART VIEW ===== -->
+<div id="cartView" class="view">
+  <div class="cart-wrap">
+    <div class="cart-items-col" id="cartItemsEl"></div>
+    <div class="cart-sum" id="cartSumEl"></div>
+  </div>
+</div>
+
+<!-- ===== CHECKOUT VIEW ===== -->
+<div id="checkoutView" class="view">
+  <div class="pg-title">Secure Checkout 🔒</div>
+  <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap">
+    <div style="flex:1;min-width:280px">
+      <div class="form-card">
+        <h3>📦 Delivery Address</h3>
+        <div class="fg fg2">
+          <div class="fgrp"><label>Full Name *</label><input type="text" id="coName" placeholder="John Smith"></div>
+          <div class="fgrp"><label>Phone *</label><input type="tel" id="coPhone" placeholder="+1 555 000 0000"></div>
+          <div class="fgrp fgfull"><label>Street Address *</label><input type="text" id="coAddr" placeholder="123 Main Street, Apt 4B"></div>
+          <div class="fgrp"><label>City *</label><input type="text" id="coCity" placeholder="New York"></div>
+          <div class="fgrp"><label>Country *</label><select id="coCountry" onchange="updateCoDelivery()"></select></div>
+          <div class="fgrp"><label>Zip / Postal Code</label><input type="text" id="coZip" placeholder="10001"></div>
+        </div>
+      </div>
+      <div class="form-card">
+        <h3>💳 Payment Method</h3>
+        <label class="pay-opt"><input type="radio" name="pay" value="cod" checked> 💵 Cash on Delivery (COD)</label>
+        <label class="pay-opt"><input type="radio" name="pay" value="visa" onchange="showCardForm()"> 💳 Visa Card</label>
+        <label class="pay-opt"><input type="radio" name="pay" value="mastercard" onchange="showCardForm()"> 💳 Mastercard</label>
+        <label class="pay-opt"><input type="radio" name="pay" value="amex" onchange="showCardForm()"> 💳 American Express</label>
+        <label class="pay-opt"><input type="radio" name="pay" value="unionpay" onchange="showCardForm()"> 💳 UnionPay</label>
+        <label class="pay-opt"><input type="radio" name="pay" value="payoneer"> 🏦 Payoneer</label>
+        <label class="pay-opt"><input type="radio" name="pay" value="paypal"> 🅿 PayPal</label>
+        <label class="pay-opt"><input type="radio" name="pay" value="crypto"> ₿ USDT / Crypto</label>
+        <div id="cardFormBox" style="display:none;margin-top:12px;padding:14px;background:var(--light);border-radius:8px">
+          <div class="fg fg2" style="gap:10px">
+            <div class="fgrp" style="grid-column:1/-1"><label>Card Number</label><input type="text" id="cardNum" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCard(this)"></div>
+            <div class="fgrp"><label>Cardholder Name</label><input type="text" id="cardName" placeholder="JOHN SMITH"></div>
+            <div class="fgrp"><label>Expiry Date</label><input type="text" id="cardExp" placeholder="MM/YY" maxlength="5"></div>
+            <div class="fgrp"><label>CVV</label><input type="password" id="cardCvv" placeholder="***" maxlength="4"></div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:8px;align-items:center">
+            <span style="font-size:11px;color:var(--text2)">🔒 Secured by SSL • PCI DSS Compliant</span>
+            <div style="display:flex;gap:4px;margin-left:auto">
+              <img src="https://img.icons8.com/color/20/000000/visa.png" onerror="this.style.display='none'" style="height:20px">
+              <img src="https://img.icons8.com/color/20/000000/mastercard.png" onerror="this.style.display='none'" style="height:20px">
+            </div>
+          </div>
+        </div>
+        <div id="payoneerBox" style="display:none;margin-top:12px;padding:14px;background:var(--light);border-radius:8px">
+          <div class="fgrp"><label>Payoneer Account Email</label><input type="email" id="payoneerEmail" placeholder="your@payoneer.com"></div>
+          <div style="font-size:11px;color:var(--text2);margin-top:6px">You will receive a payment request on your Payoneer account.</div>
+        </div>
+        <div id="cryptoBox" style="display:none;margin-top:12px;padding:14px;background:var(--light);border-radius:8px">
+          <div style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:8px">Send USDT (TRC20 / ERC20)</div>
+          <div style="font-size:12px;color:var(--text2);word-break:break-all;background:var(--white);padding:10px;border-radius:6px;border:1px solid var(--border)">Wallet: <strong>TZorixXXXXXXXXXXXXXXXXXXXXXX</strong></div>
+          <div style="font-size:11px;color:var(--text3);margin-top:6px">Send exact amount and include your Order ID as memo.</div>
+        </div>
+      </div>
+    </div>
+    <div style="width:300px;flex-shrink:0">
+      <div class="form-card">
+        <h3>🧾 Order Summary</h3>
+        <div id="coReview"></div>
+        <hr class="divider">
+        <div id="coTotals"></div>
+        <div id="coDeliveryNote" style="font-size:11px;color:var(--green);margin:8px 0"></div>
+        <button class="co-btn" id="placeOrderBtn" onclick="placeOrder()">Place Order →</button>
+        <button class="btn-sec" onclick="navigate('cart')" style="width:100%;margin-top:8px">← Back to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SUCCESS VIEW ===== -->
+<div id="successView" class="view">
+  <div class="suc-box">
+    <span class="suc-icon">🎉</span>
+    <h2>Order Placed Successfully!</h2>
+    <p>Thank you for shopping at Zorix.<br>Your order is being processed and will be delivered soon.</p>
+    <div class="ord-id-box" id="sucOrderId">Order #GM-000000</div><br>
+    <div class="suc-btns">
+      <button class="btn-grn" onclick="navigate('myorders')">📦 Track Order</button>
+      <button class="btn-out" onclick="navigate('home')">Continue Shopping</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ACCOUNT VIEW ===== -->
+<div id="accountView" class="view">
+  <div class="auth-card">
+    <div class="auth-tabs" id="authTabsRow">
+      <div class="auth-tab active" id="tabLogin" onclick="switchTab('login')">Sign In</div>
+      <div class="auth-tab" id="tabReg" onclick="switchTab('reg')">Create Account</div>
+    </div>
+    <div id="loginForm">
+      <div class="aform">
+        <div class="fgrp"><label>Email</label><input type="email" id="lEmail" placeholder="you@example.com"></div>
+        <div class="fgrp"><label>Password</label><input type="password" id="lPass" placeholder="••••••••"></div>
+        <button class="auth-btn" onclick="doLogin()">Sign In</button>
+        <p style="font-size:11px;color:var(--text2);text-align:center">New to Zorix? <span style="color:var(--blue);cursor:pointer" onclick="switchTab('reg')">Create account</span></p>
+      </div>
+    </div>
+    <div id="regForm" style="display:none">
+      <div class="aform">
+        <div class="role-row">
+          <div class="role-o active" id="rBuyer" onclick="selRole('buyer')">🛍 Buyer</div>
+          <div class="role-o" id="rSeller" onclick="selRole('seller')">🏪 Seller</div>
+        </div>
+        <!-- BUYER FIELDS -->
+        <div id="buyerFields">
+          <div class="fgrp"><label>Full Name *</label><input type="text" id="rName" placeholder="Your full name"></div>
+          <div class="fgrp"><label>Email *</label><input type="email" id="rEmail" placeholder="you@example.com"></div>
+          <div class="fgrp"><label>Phone Number *</label><input type="tel" id="rPhone" placeholder="+1 555 000 0000"></div>
+          <div class="fgrp"><label>Password *</label><input type="password" id="rPass" placeholder="Min 8 characters"></div>
+          <button class="auth-btn" onclick="doRegister()">Create Buyer Account</button>
+        </div>
+        <!-- SELLER KYC FIELDS -->
+        <div id="sellerKycFields" style="display:none">
+          <div style="background:linear-gradient(135deg,#FFF8E1,#FFFBEA);border:1px solid var(--gold);border-radius:8px;padding:12px;margin-bottom:14px;font-size:12px;color:#856404">
+            <strong>🏪 Seller Verification Required</strong><br>
+            To protect buyers and maintain trust, we verify all sellers. Your information is encrypted and secure.
+          </div>
+          <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;gap:6px"><span style="background:var(--navy);color:white;border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:11px">1</span> Business Info</div>
+          <div class="fgrp"><label>Full Legal Name *</label><input type="text" id="rName" placeholder="As on ID card"></div>
+          <div class="fgrp"><label>Shop / Business Name *</label><input type="text" id="rShop" placeholder="Your store name"></div>
+          <div class="fgrp"><label>Business Email *</label><input type="email" id="rEmail" placeholder="business@example.com"></div>
+          <div class="fgrp"><label>Phone Number *</label><input type="tel" id="rPhone" placeholder="+1 555 000 0000"></div>
+          <div class="fgrp"><label>WhatsApp Number</label><input type="tel" id="rWhatsapp" placeholder="+1 555 000 0000"></div>
+          <div style="font-size:12px;font-weight:700;color:var(--navy);margin:10px 0 8px;display:flex;align-items:center;gap:6px"><span style="background:var(--navy);color:white;border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:11px">2</span> Identity Verification</div>
+          <div class="fgrp"><label>National ID / Passport Number *</label><input type="text" id="rIdNum" placeholder="ID card or passport number"></div>
+          <div class="fgrp"><label>Country of Registration *</label><select id="rCountry" style="padding:9px 11px;border:1px solid var(--border);border-radius:7px;font-size:13px;outline:none"></select></div>
+          <div class="fgrp"><label>ID Card / Passport Upload</label><input type="file" id="rIdFile" accept="image/*,.pdf" style="padding:7px;border:1px solid var(--border);border-radius:7px;font-size:12px;background:var(--white)"></div>
+          <div style="font-size:12px;font-weight:700;color:var(--navy);margin:10px 0 8px;display:flex;align-items:center;gap:6px"><span style="background:var(--navy);color:white;border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:11px">3</span> Bank / Payment Details</div>
+          <div class="fgrp"><label>Bank Account / IBAN *</label><input type="text" id="rBank" placeholder="Bank account or IBAN number"></div>
+          <div class="fgrp"><label>Bank Name *</label><input type="text" id="rBankName" placeholder="e.g. Citibank, HSBC"></div>
+          <div class="fgrp"><label>Payoneer Account Email</label><input type="email" id="rPayoneer" placeholder="payoneer@email.com"></div>
+          <div class="fgrp"><label>PayPal Email</label><input type="email" id="rPaypal" placeholder="paypal@email.com"></div>
+          <div style="font-size:12px;font-weight:700;color:var(--navy);margin:10px 0 8px;display:flex;align-items:center;gap:6px"><span style="background:var(--navy);color:white;border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:11px">4</span> Security</div>
+          <div class="fgrp"><label>Password *</label><input type="password" id="rPass" placeholder="Min 8 characters"></div>
+          <div class="fgrp"><label>Gmail for Verification *</label><input type="email" id="rGmail" placeholder="yourname@gmail.com"></div>
+          <div id="gmailVerifyBox" style="display:none;margin-top:4px">
+            <div style="display:flex;gap:8px">
+              <input class="sp-inp" id="gmailOTP" placeholder="Enter 6-digit code" maxlength="6" style="flex:1">
+              <button class="btn-prim" style="white-space:nowrap" onclick="verifyGmailOTP()">Verify</button>
+            </div>
+            <div style="font-size:11px;color:var(--text2);margin-top:4px">✉️ Demo: code is <strong>123456</strong></div>
+          </div>
+          <button class="btn-sec" style="width:100%;margin-bottom:8px" onclick="sendGmailVerify()">📧 Send Verification Code</button>
+          <div style="background:#FEF2F2;border:1px solid #FECACA;border-radius:6px;padding:10px;font-size:11px;color:#991B1B;margin-bottom:12px">
+            ⚠️ By registering as a seller, you agree to our Seller Agreement. Providing false information may result in permanent account suspension and legal action.
+          </div>
+          <button class="auth-btn" id="sellerRegBtn" onclick="doRegister()" disabled style="opacity:.5">Complete Seller Registration</button>
+          <div id="gmailVerifiedNote" style="display:none;font-size:11px;color:var(--green);text-align:center;margin-top:6px">✅ Gmail verified — you can now register</div>
+        </div>
+      </div>
+    </div>
+    <div class="acct-dash" id="acctDash">
+      <div class="acct-header">
+        <div class="acct-avatar" id="acctAvatar">👤</div>
+        <div>
+          <div style="font-size:16px;font-weight:700;color:var(--navy)" id="acctName">User</div>
+          <div style="font-size:12px;color:var(--text2)" id="acctEmail">email</div>
+          <span class="tag green" id="acctRoleBadge">Buyer</span>
+        </div>
+      </div>
+      <div class="acct-menu">
+        <div class="acct-menu-btn" onclick="navigate('myorders')"><i class="ti ti-package"></i> My Orders</div>
+        <div class="acct-menu-btn gold" id="sellerBtn" style="display:none" onclick="navigate('seller-dashboard')"><i class="ti ti-store"></i> Seller Dashboard</div>
+        <div class="acct-menu-btn dark" id="adminBtn" style="display:none" onclick="navigate('admin')"><i class="ti ti-shield"></i> Admin Panel</div>
+        <div class="acct-menu-btn outline-red" onclick="doLogout()"><i class="ti ti-logout"></i> Sign Out</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MY ORDERS VIEW ===== -->
+<div id="myordersView" class="view">
+  <div class="pg-title">My Orders</div>
+  <div id="myOrdersEl"></div>
+</div>
+
+<!-- ===== SELLER VIEW ===== -->
+<div id="sellerView">
+  <div class="seller-layout">
+    <div class="seller-nav">
+      <div class="sn-logo">
+        <span>🏪 Seller Hub</span>
+        <p id="sellerShopName">My Store</p>
+      </div>
+      <div class="sn-section">Overview</div>
+      <div class="sn-item active" id="sn-d" onclick="showSP('dashboard')"><i class="ti ti-layout-dashboard"></i>Dashboard</div>
+      <div class="sn-section">Catalog</div>
+      <div class="sn-item" id="sn-p" onclick="showSP('products')"><i class="ti ti-package"></i>My Products</div>
+      <div class="sn-item" id="sn-a" onclick="showSP('add')"><i class="ti ti-circle-plus"></i>Add Product</div>
+      <div class="sn-section">Sales</div>
+      <div class="sn-item" id="sn-o" onclick="showSP('orders')"><i class="ti ti-truck"></i>Orders</div>
+      <div class="sn-item" id="sn-e" onclick="showSP('earnings')"><i class="ti ti-chart-bar"></i>Earnings & Affiliate</div>
+      <div class="sn-footer">
+        <button class="btn-sec" style="width:100%;font-size:12px" onclick="navigate('home')">← Back to Store</button>
+      </div>
+    </div>
+    <div class="seller-content">
+      <div id="sp-dashboard">
+        <div class="pg-hd">Dashboard</div>
+        <div class="stat-grid" id="sdStats"></div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:10px;color:var(--navy)">Recent Orders</div>
+        <div id="sdOrders"></div>
+      </div>
+      <div id="sp-products" style="display:none">
+        <div class="pg-hd">My Products <button class="btn-prim" onclick="showSP('add')">+ Add Product</button></div>
+        <div class="dt-wrap"><table class="dt"><thead><tr><th>Image</th><th>Product</th><th>Category</th><th>Price</th><th>Stock</th><th>Actions</th></tr></thead><tbody id="sProductsT"></tbody></table></div>
+      </div>
+      <div id="sp-add" style="display:none">
+        <div class="pg-hd" id="addPdTitle">Add New Product</div>
+        <div class="sp-form">
+          <input type="hidden" id="editId">
+          <div class="sp-grid">
+            <div class="sp-full"><label class="sp-l">Product Name *</label><input class="sp-inp" id="spN" placeholder="e.g. Samsung Galaxy S25 Ultra"></div>
+            <div><label class="sp-l">Category *</label><select class="sp-sel" id="spC"><option value="">Select…</option><option>Electronics</option><option>Clothing</option><option>Home</option><option>Books</option><option>Sports</option><option>Beauty</option><option>Grocery</option><option>Toys</option></select></div>
+            <div><label class="sp-l">Price *</label><input class="sp-inp" type="number" id="spP" placeholder="9.99"></div>
+            <div><label class="sp-l">Original Price</label><input class="sp-inp" type="number" id="spO" placeholder="14.99"></div>
+            <div><label class="sp-l">Currency</label><select class="sp-sel" id="spCur"><option value="USD">USD $</option><option value="EUR">EUR €</option><option value="GBP">GBP £</option><option value="PKR">PKR ₨</option><option value="SAR">SAR ﷼</option><option value="AED">AED د.إ</option><option value="INR">INR ₹</option></select></div>
+            <div><label class="sp-l">Stock</label><select class="sp-sel" id="spS"><option value="true">In Stock</option><option value="false">Out of Stock</option></select></div>
+            <div><label class="sp-l">Delivery</label><select class="sp-sel" id="spD"><option>Same day</option><option>Tomorrow</option><option>2-3 days</option><option>3-5 days</option><option>5-7 days</option><option>7-14 days</option></select></div>
+            <div><label class="sp-l">Badge</label><select class="sp-sel" id="spB"><option value="">None</option><option value="bs">Best Seller</option><option value="hot">Hot</option><option value="new">New</option><option value="pm">Premium</option></select></div>
+            <div><label class="sp-l">Image Seed</label><input class="sp-inp" id="spI" placeholder="product-name-keyword"></div>
+            <div class="sp-full"><label class="sp-l">Description</label><textarea class="sp-area" id="spDe" placeholder="Describe your product…"></textarea></div>
+          </div>
+          <div style="margin-top:16px">
+            <button class="sp-save" onclick="saveProd()">💾 Save Product</button>
+            <button class="sp-cancel" onclick="showSP('products')">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <div id="sp-orders" style="display:none">
+        <div class="pg-hd">Orders</div>
+        <div class="dt-wrap"><table class="dt"><thead><tr><th>Order ID</th><th>Customer</th><th>Items</th><th>Total</th><th>Country</th><th>Date</th><th>Status</th><th>Action</th></tr></thead><tbody id="sOrdersT"></tbody></table></div>
+      </div>
+      <div id="sp-earnings" style="display:none">
+        <div class="pg-hd">Earnings & Affiliate</div>
+        <div class="stat-grid" id="seStats"></div>
+        <!-- AFFILIATE SECTION -->
+        <div style="background:linear-gradient(135deg,var(--navy),var(--navy3));border-radius:var(--r);padding:22px;color:white;margin-bottom:14px">
+          <div style="font-size:16px;font-weight:800;margin-bottom:4px;font-family:Poppins,sans-serif">🔗 Your Affiliate Program</div>
+          <div style="font-size:12px;opacity:.7;margin-bottom:14px">Share your affiliate link and earn commission on every sale</div>
+          <div style="background:rgba(255,255,255,.1);border-radius:8px;padding:12px;display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <div id="affiliateLinkDisplay" style="font-size:12px;flex:1;word-break:break-all;opacity:.9">https://zorix.com/ref/SELLER_ID</div>
+            <button onclick="copyAffiliate()" style="background:var(--gold);color:#0D1B2A;border:none;padding:8px 14px;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap">Copy Link</button>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+            <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:12px;text-align:center">
+              <div id="affClicks" style="font-size:20px;font-weight:800;color:var(--gold)">0</div>
+              <div style="font-size:10px;opacity:.6;margin-top:2px">Clicks</div>
+            </div>
+            <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:12px;text-align:center">
+              <div id="affConversions" style="font-size:20px;font-weight:800;color:var(--gold)">0</div>
+              <div style="font-size:10px;opacity:.6;margin-top:2px">Conversions</div>
+            </div>
+            <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:12px;text-align:center">
+              <div id="affEarnings" style="font-size:20px;font-weight:800;color:var(--gold)">USDT 0.00</div>
+              <div style="font-size:10px;opacity:.6;margin-top:2px">Commission</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px;box-shadow:var(--shadow)">
+          <div style="font-size:14px;font-weight:700;margin-bottom:12px;color:var(--navy)">Commission Structure</div>
+          <table class="dt">
+            <thead><tr><th>Category</th><th>Commission Rate</th><th>Min Payout</th><th>Payment Method</th></tr></thead>
+            <tbody>
+              <tr><td>Electronics</td><td><span class="tag green">4%</span></td><td>USDT 10</td><td>USDT / Payoneer</td></tr>
+              <tr><td>Clothing & Fashion</td><td><span class="tag green">8%</span></td><td>USDT 10</td><td>USDT / Payoneer</td></tr>
+              <tr><td>Home & Kitchen</td><td><span class="tag green">6%</span></td><td>USDT 10</td><td>USDT / Payoneer</td></tr>
+              <tr><td>Books</td><td><span class="tag green">10%</span></td><td>USDT 5</td><td>USDT / Payoneer</td></tr>
+              <tr><td>Beauty</td><td><span class="tag green">9%</span></td><td>USDT 10</td><td>USDT / Payoneer</td></tr>
+              <tr><td>All Others</td><td><span class="tag green">5%</span></td><td>USDT 10</td><td>USDT / Payoneer</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ADMIN VIEW ===== -->
+<div id="adminView">
+  <div id="adminLoginBox">
+    <div class="admin-login-card">
+      <span class="shield">🛡️</span>
+      <h2>Admin Panel</h2>
+      <p>Zorix Control Center<br>Enter credentials to access</p>
+      <div class="aform" style="text-align:left">
+        <div class="fgrp"><label>Admin Username</label><input type="text" id="aUser" placeholder="admin"></div>
+        <div class="fgrp"><label>Admin Password</label><input type="password" id="aPass" placeholder="••••••••" onkeydown="if(event.key==='Enter')doAdminLogin()"></div>
+        <button class="admin-btn" onclick="doAdminLogin()">🔑 Access Admin Panel</button>
+        <p style="font-size:11px;color:var(--text3);text-align:center;margin-top:8px">Default: admin / zorix2025</p>
+      </div>
+    </div>
+  </div>
+  <div id="adminDash" style="display:none">
+    <div class="seller-layout">
+      <div class="seller-nav" style="background:#1E293B">
+        <div class="sn-logo"><span style="color:var(--red)">🛡️ Admin Panel</span><p>Zorix Control</p></div>
+        <div class="sn-section">Overview</div>
+        <div class="sn-item active" id="an-overview" onclick="showAP('overview')"><i class="ti ti-layout-dashboard"></i>Overview <span class="admin-badge">ADMIN</span></div>
+        <div class="sn-section">Management</div>
+        <div class="sn-item" id="an-products" onclick="showAP('products')"><i class="ti ti-package"></i>All Products</div>
+        <div class="sn-item" id="an-orders" onclick="showAP('orders')"><i class="ti ti-truck"></i>All Orders</div>
+        <div class="sn-item" id="an-users" onclick="showAP('users')"><i class="ti ti-users"></i>Users & Sellers</div>
+        <div class="sn-item" id="an-partners" onclick="showAP('partners')"><i class="ti ti-building-store"></i>Partners Access</div>
+        <div class="sn-section">Settings</div>
+        <div class="sn-item" id="an-settings" onclick="showAP('settings')"><i class="ti ti-settings"></i>Settings</div>
+        <div class="sn-footer"><button class="btn-sec" style="width:100%;font-size:12px" onclick="navigate('home')">← Back to Store</button></div>
+      </div>
+      <div class="seller-content">
+        <div id="ap-overview"><div class="pg-hd">Platform Overview</div><div class="stat-grid" id="aStats"></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:4px"><div><div style="font-size:13px;font-weight:700;margin-bottom:10px;color:var(--navy)">Recent Orders</div><div id="aRecentOrders"></div></div><div><div style="font-size:13px;font-weight:700;margin-bottom:10px;color:var(--navy)">Top Sellers</div><div id="aTopSellers"></div></div></div></div>
+        <div id="ap-products" style="display:none"><div class="pg-hd">All Products <span id="aProdCount" class="tag grey"></span></div><div style="margin-bottom:12px;display:flex;gap:8px"><input class="sp-inp" id="aProdSearch" placeholder="Search products…" oninput="renderAProducts()" style="max-width:260px"><select class="sp-sel" id="aProdCat" onchange="renderAProducts()" style="max-width:160px"><option value="">All Categories</option><option>Electronics</option><option>Clothing</option><option>Home</option><option>Books</option><option>Sports</option><option>Beauty</option><option>Grocery</option><option>Toys</option></select></div><table class="dt"><thead><tr><th>Image</th><th>Name</th><th>Category</th><th>Price</th><th>Seller</th><th>Stock</th><th>Actions</th></tr></thead><tbody id="aProductsT"></tbody></table></div>
+        <div id="ap-orders" style="display:none"><div class="pg-hd">All Orders <span id="aOrdCount" class="tag grey"></span></div><table class="dt"><thead><tr><th>Order ID</th><th>Customer</th><th>Total</th><th>Country</th><th>Date</th><th>Status</th><th>Action</th></tr></thead><tbody id="aOrdersT"></tbody></table></div>
+        <div id="ap-users" style="display:none"><div class="pg-hd">Users & Sellers</div><table class="dt"><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Shop</th><th>Joined</th><th>Status</th><th>Action</th></tr></thead><tbody id="aUsersT"></tbody></table></div>
+        <div id="ap-partners" style="display:none">
+          <div class="pg-hd">Partner Access Management</div>
+          <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:22px;margin-bottom:16px;box-shadow:var(--shadow)">
+            <h3 style="font-size:14px;font-weight:700;margin-bottom:14px;color:var(--navy)">Add New Partner</h3>
+            <div class="fg fg2" style="max-width:540px">
+              <div class="fgrp"><label>Partner Name</label><input class="sp-inp" id="pName" placeholder="Partner Company Name"></div>
+              <div class="fgrp"><label>Email</label><input class="sp-inp" id="pEmail" type="email" placeholder="partner@company.com"></div>
+              <div class="fgrp"><label>Access Level</label><select class="sp-sel" id="pLevel"><option value="viewer">Viewer (Read only)</option><option value="manager">Manager (Products+Orders)</option><option value="full">Full Access</option></select></div>
+              <div class="fgrp"><label>Region</label><select class="sp-sel" id="pRegion"><option>Worldwide</option><option>North America</option><option>Europe</option><option>Asia Pacific</option><option>Middle East</option><option>South Asia</option><option>Africa</option></select></div>
+            </div>
+            <button class="btn-prim" style="margin-top:12px" onclick="addPartner()">Add Partner</button>
+          </div>
+          <div id="partnersList"></div>
+        </div>
+        <div id="ap-settings" style="display:none">
+          <div class="pg-hd">Platform Settings</div>
+          <div class="form-card">
+            <h3>🌍 Regional Settings</h3>
+            <div class="fg fg2" style="max-width:500px">
+              <div class="fgrp"><label>Default Currency</label><select class="sp-sel" id="defCur"><option>USD</option><option>EUR</option><option>GBP</option></select></div>
+              <div class="fgrp"><label>Default Language</label><select class="sp-sel"><option>English</option><option>Arabic</option><option>French</option><option>Spanish</option></select></div>
+            </div>
+          </div>
+          <div class="form-card" style="margin-top:12px">
+            <h3>🔑 Change Admin Password</h3>
+            <div class="fg fg2" style="max-width:500px">
+              <div class="fgrp"><label>New Password</label><input class="sp-inp" type="password" id="newAdminPass" placeholder="New password"></div>
+              <div class="fgrp"><label>Confirm</label><input class="sp-inp" type="password" id="confAdminPass" placeholder="Confirm password"></div>
+            </div>
+            <button class="btn-prim" style="margin-top:12px" onclick="changeAdminPass()">Update Password</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PRODUCT DETAIL MODAL ===== -->
+<div id="pdModal">
+  <div class="pd-box">
+    <button class="pd-close" onclick="closePD()">✕</button>
+    <div class="pd-layout">
+      <div class="pd-img-col">
+        <img id="pdImg" class="pd-main-img" src="" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="pd-info">
+        <span class="pd-cat" id="pdCat"></span>
+        <div class="pd-title" id="pdTitle"></div>
+        <div class="pd-stars-row"><span id="pdStars" class="gstars" style="font-size:16px"></span><span id="pdRating" style="font-weight:700;font-size:13px"></span><span id="pdRevs" style="color:var(--text3);font-size:12px"></span></div>
+        <div class="pd-pbox">
+          <div><span class="pd-price" id="pdPrice"></span><span class="pd-orig" id="pdOrig"></span></div>
+          <div class="pd-disc" id="pdDisc"></div>
+        </div>
+        <div class="pd-delivery" id="pdDel">📦 Worldwide Delivery</div>
+        <div class="pd-stock" id="pdStk"></div>
+        <div class="pd-qty-row">
+          <span style="font-size:12px;font-weight:600;color:var(--text2)">Qty:</span>
+          <button class="qty-b" onclick="chPdQ(-1)">−</button>
+          <span class="qty-v" id="pdQ">1</span>
+          <button class="qty-b" onclick="chPdQ(1)">+</button>
+        </div>
+        <button class="pd-add" id="pdAddBtn" onclick="addFromPD()">Add to Cart</button>
+        <button class="pd-buy" id="pdBuyBtn" onclick="buyNow()">Buy Now →</button>
+        <div class="pd-seller-info" id="pdSellerInfo"></div>
+        <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border)">
+          <div style="font-size:13px;font-weight:700;margin-bottom:6px;color:var(--navy)">Description</div>
+          <div id="pdDescEl" style="font-size:13px;color:var(--text2);line-height:1.7"></div>
+        </div>
+        <div id="pdReviewsSection"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div id="footer">
+  <div class="f-top">
+    <div class="f-brand">
+      <div class="f-logo-name">ZO<span>RIX</span></div>
+      <p>Your worldwide marketplace connecting buyers and sellers across 50+ countries. Shop smart, sell smart.</p>
+      <div class="f-social">
+        <div class="f-soc">𝕏</div><div class="f-soc">in</div><div class="f-soc">f</div><div class="f-soc">📷</div>
+      </div>
+    </div>
+    <div class="f-col"><h4>Company</h4><a>About Zorix</a><a>Careers</a><a>Press</a><a>Blog</a></div>
+    <div class="f-col"><h4>Sell With Us</h4><a onclick="navigate('seller-dashboard')">Start Selling</a><a>Seller Guidelines</a><a>Fees & Pricing</a><a>Partner Program</a></div>
+    <div class="f-col"><h4>Support</h4><a onclick="navigate('myorders')">My Orders</a><a>Shipping Info</a><a>Returns Policy</a><a>Help Center</a></div>
+  </div>
+  <div class="f-bot">
+    <span style="font-size:11px;color:rgba(255,255,255,.4)">© 2025 Zorix Inc. All rights reserved.</span>
+    <div class="f-currencies" id="footerCurrencies"></div>
+    <span style="font-size:11px;color:rgba(255,255,255,.4)">🌍 50+ Countries</span>
+  </div>
+</div>
+
+<div id="toast"></div>
+<script>
+// ============================================================
+// GRAND MART v2 — WORLDWIDE PLATFORM
+// ============================================================
+
+// ===== COUNTRIES & CURRENCIES =====
+const COUNTRIES = [
+  {code:'US',name:'United States',flag:'🇺🇸',currency:'USD',sym:'$'},
+  {code:'GB',name:'United Kingdom',flag:'🇬🇧',currency:'GBP',sym:'£'},
+  {code:'CA',name:'Canada',flag:'🇨🇦',currency:'CAD',sym:'CA$'},
+  {code:'AU',name:'Australia',flag:'🇦🇺',currency:'AUD',sym:'A$'},
+  {code:'DE',name:'Germany',flag:'🇩🇪',currency:'EUR',sym:'€'},
+  {code:'FR',name:'France',flag:'🇫🇷',currency:'EUR',sym:'€'},
+  {code:'IT',name:'Italy',flag:'🇮🇹',currency:'EUR',sym:'€'},
+  {code:'ES',name:'Spain',flag:'🇪🇸',currency:'EUR',sym:'€'},
+  {code:'NL',name:'Netherlands',flag:'🇳🇱',currency:'EUR',sym:'€'},
+  {code:'SE',name:'Sweden',flag:'🇸🇪',currency:'SEK',sym:'kr'},
+  {code:'NO',name:'Norway',flag:'🇳🇴',currency:'NOK',sym:'kr'},
+  {code:'CH',name:'Switzerland',flag:'🇨🇭',currency:'CHF',sym:'CHF'},
+  {code:'JP',name:'Japan',flag:'🇯🇵',currency:'JPY',sym:'¥'},
+  {code:'CN',name:'China',flag:'🇨🇳',currency:'CNY',sym:'¥'},
+  {code:'IN',name:'India',flag:'🇮🇳',currency:'INR',sym:'₹'},
+  {code:'PK',name:'Pakistan',flag:'🇵🇰',currency:'PKR',sym:'₨'},
+  {code:'BD',name:'Bangladesh',flag:'🇧🇩',currency:'BDT',sym:'৳'},
+  {code:'LK',name:'Sri Lanka',flag:'🇱🇰',currency:'LKR',sym:'₨'},
+  {code:'NP',name:'Nepal',flag:'🇳🇵',currency:'NPR',sym:'₨'},
+  {code:'AE',name:'UAE',flag:'🇦🇪',currency:'AED',sym:'د.إ'},
+  {code:'SA',name:'Saudi Arabia',flag:'🇸🇦',currency:'SAR',sym:'﷼'},
+  {code:'QA',name:'Qatar',flag:'🇶🇦',currency:'QAR',sym:'﷼'},
+  {code:'KW',name:'Kuwait',flag:'🇰🇼',currency:'KWD',sym:'KD'},
+  {code:'BH',name:'Bahrain',flag:'🇧🇭',currency:'BHD',sym:'BD'},
+  {code:'OM',name:'Oman',flag:'🇴🇲',currency:'OMR',sym:'OMR'},
+  {code:'TR',name:'Turkey',flag:'🇹🇷',currency:'TRY',sym:'₺'},
+  {code:'EG',name:'Egypt',flag:'🇪🇬',currency:'EGP',sym:'E£'},
+  {code:'NG',name:'Nigeria',flag:'🇳🇬',currency:'NGN',sym:'₦'},
+  {code:'ZA',name:'South Africa',flag:'🇿🇦',currency:'ZAR',sym:'R'},
+  {code:'KE',name:'Kenya',flag:'🇰🇪',currency:'KES',sym:'KSh'},
+  {code:'GH',name:'Ghana',flag:'🇬🇭',currency:'GHS',sym:'₵'},
+  {code:'BR',name:'Brazil',flag:'🇧🇷',currency:'BRL',sym:'R$'},
+  {code:'MX',name:'Mexico',flag:'🇲🇽',currency:'MXN',sym:'$'},
+  {code:'AR',name:'Argentina',flag:'🇦🇷',currency:'ARS',sym:'$'},
+  {code:'CO',name:'Colombia',flag:'🇨🇴',currency:'COP',sym:'$'},
+  {code:'SG',name:'Singapore',flag:'🇸🇬',currency:'SGD',sym:'S$'},
+  {code:'MY',name:'Malaysia',flag:'🇲🇾',currency:'MYR',sym:'RM'},
+  {code:'TH',name:'Thailand',flag:'🇹🇭',currency:'THB',sym:'฿'},
+  {code:'ID',name:'Indonesia',flag:'🇮🇩',currency:'IDR',sym:'Rp'},
+  {code:'PH',name:'Philippines',flag:'🇵🇭',currency:'PHP',sym:'₱'},
+  {code:'VN',name:'Vietnam',flag:'🇻🇳',currency:'VND',sym:'₫'},
+  {code:'KR',name:'South Korea',flag:'🇰🇷',currency:'KRW',sym:'₩'},
+  {code:'HK',name:'Hong Kong',flag:'🇭🇰',currency:'HKD',sym:'HK$'},
+  {code:'TW',name:'Taiwan',flag:'🇹🇼',currency:'TWD',sym:'NT$'},
+  {code:'NZ',name:'New Zealand',flag:'🇳🇿',currency:'NZD',sym:'NZ$'},
+  {code:'PL',name:'Poland',flag:'🇵🇱',currency:'PLN',sym:'zł'},
+  {code:'RU',name:'Russia',flag:'🇷🇺',currency:'RUB',sym:'₽'},
+  {code:'UA',name:'Ukraine',flag:'🇺🇦',currency:'UAH',sym:'₴'},
+  {code:'IL',name:'Israel',flag:'🇮🇱',currency:'ILS',sym:'₪'},
+  {code:'WW',name:'Worldwide',flag:'🌍',currency:'USDT',sym:'USDT'},
+  {code:'EU',name:'Eurozone',flag:'🇪🇺',currency:'EUR',sym:'€'},
+];
+
+// FX rates relative to USD
+const FX = {USD:1,GBP:.79,EUR:.92,CAD:1.36,AUD:1.52,JPY:149,CNY:7.2,INR:83,PKR:278,AED:3.67,SAR:3.75,QAR:3.64,KWD:.31,BHD:.38,OMR:.38,TRY:32,EGP:48,NGN:1500,ZAR:18.5,KES:130,GHS:12,BRL:4.97,MXN:17,ARS:870,COP:3900,SGD:1.34,MYR:4.7,THB:35,IDR:15600,PHP:56,VND:24500,KRW:1330,HKD:7.82,TWD:31.5,NZD:1.63,PLN:3.95,RUB:91,UAH:38,ILS:3.6,SEK:10.4,NOK:10.6,CHF:.89,CHF:.89,BDT:110,LKR:318,NPR:133,HKD:7.82,CAD:1.36};
+
+// Add USDT to FX
+FX['USDT'] = 1; // 1:1 with USD
+
+let selCountry = COUNTRIES[COUNTRIES.length-1]; // Worldwide default
+let selCurrency = 'USD';
+
+function formatPrice(usdPrice) {
+  if(!usdPrice && usdPrice!==0) return 'USDT 0.00';
+  const cur = selCurrency || 'USDT';
+  if (cur === 'USDT') return 'USDT ' + Number(usdPrice).toFixed(2);
+  if (cur === 'EUR') return '€' + (usdPrice * 0.92).toFixed(2);
+  const sym = COUNTRIES.find(c=>c.currency===cur)?.sym || 'USDT ';
+  const rate = FX[cur] || 1;
+  const converted = usdPrice * rate;
+  if (converted >= 1000) return sym + Math.round(converted).toLocaleString();
+  return sym + converted.toFixed(2);
+}
+
+function formatDual(p) {
+  if(!p && p!==0) return 'USDT 0.00';
+  return 'USDT '+Number(p).toFixed(2)+' <small style="color:var(--text3);font-weight:400"> / €'+(Number(p)*0.92).toFixed(2)+'</small>';
+}
+
+
+function openCountryModal() {
+  document.getElementById('countryModal').classList.add('open');
+  renderCountries('');
+}
+function closeCountryModal() {
+  document.getElementById('countryModal').classList.remove('open');
+}
+function filterCountries(q) { renderCountries(q); }
+function renderCountries(q) {
+  const list = q ? COUNTRIES.filter(c=>c.name.toLowerCase().includes(q.toLowerCase())||c.currency.toLowerCase().includes(q.toLowerCase())) : COUNTRIES;
+  document.getElementById('cmGrid').innerHTML = list.map(c=>`
+    <div class="cm-item ${c.code===selCountry.code?'active':''}" onclick="selectCountry('${c.code}')">
+      <span class="cm-flag">${c.flag}</span><span>${c.name}<br><span style="color:#888;font-size:10px">${c.currency}</span></span>
+    </div>`).join('');
+}
+function selectCountry(code) {
+  selCountry = COUNTRIES.find(c=>c.code===code);
+  selCurrency = selCountry.currency;
+  document.getElementById('topFlag').textContent = selCountry.flag;
+  document.getElementById('topCountry').textContent = selCountry.name;
+  closeCountryModal();
+  applyFilters();
+  renderFooterCurrencies();
+  toast(`Delivering to ${selCountry.name} • ${selCountry.currency}`, 'info');
+}
+
+function renderFooterCurrencies() {
+  const main = ['USDT','EUR','USD','GBP','AED','SAR','INR','PKR'];
+  document.getElementById('footerCurrencies').innerHTML = main.map(c=>`<span class="f-cur ${c===selCurrency?'active':''}" onclick="selCurrency='${c}';applyFilters();renderFooterCurrencies()">${c}</span>`).join('');
+}
+
+function populateCheckoutCountries() {
+  const sel = document.getElementById('coCountry');
+  if (!sel) return;
+  sel.innerHTML = COUNTRIES.filter(c=>c.code!=='WW').map(c=>`<option value="${c.code}" ${c.code===selCountry.code?'selected':''}>${c.flag} ${c.name}</option>`).join('');
+}
+function updateCoDelivery() {
+  const code = document.getElementById('coCountry')?.value;
+  const c = COUNTRIES.find(x=>x.code===code);
+  const n = document.getElementById('coDeliveryNote');
+  if (n && c) n.textContent = `📦 Delivery to ${c.name} · ${c.currency}`;
+}
+
+// ===== DB =====
+const DB = {
+  get: k => { try{ return JSON.parse(localStorage.getItem('zrx_'+k)) }catch(e){ return null } },
+  set: (k,v) => { try{ localStorage.setItem('zrx_'+k, JSON.stringify(v)) }catch(e){} }
+};
+
+// ===== SEED PRODUCTS =====
+const SEEDS = [
+  {id:'p1',name:'Samsung Galaxy S24 Ultra 256GB',cat:'Electronics',usdPrice:720,orig:870,rating:4.7,reviews:8241,badge:'bs',badgeT:'Best Seller',img:'samsung-s24',del:'2-3 days',stock:true,desc:'200MP camera, titanium frame, S Pen included. 12GB RAM, 5G enabled worldwide.',seller:'TechStore Global',sellerId:'s1'},
+  {id:'p2',name:'Apple AirPods Pro 2nd Gen',cat:'Electronics',usdPrice:249,orig:329,rating:4.8,reviews:22104,badge:'bs',badgeT:'Best Seller',img:'airpods-pro2',del:'Tomorrow',stock:true,desc:'Active Noise Cancellation, Spatial Audio, 30hr battery. MagSafe charging.',seller:'Apple Zone',sellerId:'s2'},
+  {id:'p3',name:'Sony Bravia 55" 4K OLED TV',cat:'Electronics',usdPrice:1299,orig:1599,rating:4.6,reviews:3190,badge:'',badgeT:'',img:'sony-tv-bravia',del:'3-5 days',stock:true,desc:'Perfect blacks, Google TV, Dolby Atmos, HDMI 2.1. Perfect home theatre.',seller:'TechStore Global',sellerId:'s1'},
+  {id:'p4',name:'Dell XPS 15 Laptop i7 16GB',cat:'Electronics',usdPrice:1599,orig:1899,rating:4.5,reviews:1892,badge:'',badgeT:'',img:'dell-xps-15',del:'2-3 days',stock:true,desc:'Intel Core i7, 16GB DDR5, 512GB SSD, RTX 4060, 15.6" OLED display.',seller:'Laptop World',sellerId:'s3'},
+  {id:'p5',name:'Canon EOS R50 Mirrorless 24MP',cat:'Electronics',usdPrice:779,orig:899,rating:4.7,reviews:972,badge:'new',badgeT:'New',img:'canon-eos-r50',del:'3-5 days',stock:true,desc:'24.2MP APS-C, 4K video, Dual Pixel CMOS AF. Perfect for content creators.',seller:'Camera Hub',sellerId:'s4'},
+  {id:'p6',name:'PlayStation 5 Console Disc',cat:'Electronics',usdPrice:499,orig:549,rating:4.8,reviews:45000,badge:'hot',badgeT:'Hot',img:'ps5-console-disc',del:'2-3 days',stock:false,desc:'Haptic feedback, adaptive triggers, 3D Audio, ultra-high speed SSD.',seller:'Games Galaxy',sellerId:'s5'},
+  {id:'p7',name:'Apple MacBook Air M3 13"',cat:'Electronics',usdPrice:1299,orig:1499,rating:4.9,reviews:12300,badge:'bs',badgeT:'Best Seller',img:'macbook-air-m3',del:'Tomorrow',stock:true,desc:'M3 chip, 16GB RAM, 512GB SSD, 18-hour battery, Liquid Retina.',seller:'Apple Zone',sellerId:'s2'},
+  {id:'p8',name:'Samsung 65" QLED 4K Smart TV',cat:'Electronics',usdPrice:997,orig:1299,rating:4.6,reviews:4500,badge:'',badgeT:'',img:'samsung-qled-65',del:'5-7 days',stock:true,desc:'Quantum Matrix Technology, Neo Quantum Processor 4K.',seller:'TechStore Global',sellerId:'s1'},
+  {id:'p9',name:'Dyson V15 Detect Vacuum',cat:'Home',usdPrice:749,orig:899,rating:4.7,reviews:5440,badge:'hot',badgeT:'Hot',img:'dyson-v15-detect',del:'2-3 days',stock:true,desc:'Laser detects dust. HEPA. 60min runtime. Auto-adjusts suction.',seller:'Home Essentials',sellerId:'s6'},
+  {id:'p10',name:'Instant Pot Duo 7-in-1 6Qt',cat:'Home',usdPrice:89,orig:119,rating:4.7,reviews:18500,badge:'bs',badgeT:'Best Seller',img:'instant-pot-duo',del:'Tomorrow',stock:true,desc:'Pressure cooker, slow cooker, rice cooker, steamer, sauté, yogurt, warmer.',seller:'Home Essentials',sellerId:'s6'},
+  {id:'p11',name:'KitchenAid Artisan Stand Mixer',cat:'Home',usdPrice:449,orig:549,rating:4.9,reviews:7210,badge:'',badgeT:'',img:'kitchenaid-artisan',del:'2-3 days',stock:true,desc:'10-speed, 5-quart bowl. Includes beater, dough hook, wire whip.',seller:'Home Essentials',sellerId:'s6'},
+  {id:'p12',name:"Levi's 511 Slim Fit Jeans",cat:'Clothing',usdPrice:59,orig:79,rating:4.5,reviews:34210,badge:'bs',badgeT:'Best Seller',img:'levis-511-jeans',del:'Tomorrow',stock:true,desc:'Classic slim fit, flex fabric. 99% Cotton, 1% Elastane.',seller:'Fashion Hub',sellerId:'s8'},
+  {id:'p13',name:'Nike Air Max 270 Running Shoes',cat:'Clothing',usdPrice:129,orig:159,rating:4.6,reviews:15000,badge:'',badgeT:'',img:'nike-airmax-270',del:'Tomorrow',stock:true,desc:'Max Air heel unit. Mesh upper for breathability. Sizes 6-14.',seller:'Shoes World',sellerId:'s9'},
+  {id:'p14',name:'Adidas Ultraboost 23 Sneakers',cat:'Clothing',usdPrice:179,orig:219,rating:4.7,reviews:8900,badge:'',badgeT:'',img:'adidas-ultraboost23',del:'Today',stock:true,desc:'Boost midsole returns energy. Primeknit+ upper. Continental rubber.',seller:'Shoes World',sellerId:'s9'},
+  {id:'p15',name:'The North Face Thermoball Jacket',cat:'Clothing',usdPrice:229,orig:299,rating:4.6,reviews:3100,badge:'',badgeT:'',img:'northface-thermoball',del:'2-3 days',stock:true,desc:'ThermoBall Eco insulation. Wind-resistant. Packable. Recycled.',seller:'Sports Corner',sellerId:'s10'},
+  {id:'p16',name:'Atomic Habits — James Clear',cat:'Books',usdPrice:16,orig:22,rating:4.8,reviews:92000,badge:'bs',badgeT:'Best Seller',img:'atomic-habits-book',del:'Tomorrow',stock:true,desc:'#1 NYT Bestseller. Tiny Changes, Remarkable Results.',seller:'Book Corner',sellerId:'s11'},
+  {id:'p17',name:'Psychology of Money — M. Housel',cat:'Books',usdPrice:14,orig:19,rating:4.7,reviews:44000,badge:'',badgeT:'',img:'psychology-of-money',del:'Tomorrow',stock:true,desc:'Timeless lessons on wealth, greed, and happiness.',seller:'Book Corner',sellerId:'s11'},
+  {id:'p18',name:'Harry Potter 7-Book Collection',cat:'Books',usdPrice:79,orig:119,rating:4.9,reviews:62000,badge:'hot',badgeT:'Hot',img:'harry-potter-books',del:'2-3 days',stock:true,desc:'Complete hardcover boxed set of all 7 novels by J.K. Rowling.',seller:'Book Corner',sellerId:'s11'},
+  {id:'p19',name:'Garmin Forerunner 265 GPS Watch',cat:'Sports',usdPrice:449,orig:549,rating:4.7,reviews:2300,badge:'new',badgeT:'New',img:'garmin-forerunner265',del:'Tomorrow',stock:true,desc:'AMOLED display, training metrics, heart rate, GPS. 13-day battery.',seller:'Sports Corner',sellerId:'s10'},
+  {id:'p20',name:'Wilson Evolution Basketball Sz7',cat:'Sports',usdPrice:79,orig:99,rating:4.7,reviews:8700,badge:'',badgeT:'',img:'wilson-basketball',del:'Tomorrow',stock:true,desc:'Microfiber Composite leather. Composite channels. Size 7 (29.5").',seller:'Sports Corner',sellerId:'s10'},
+  {id:'p21',name:"L'Oreal Elvive Extraordinary Oil",cat:'Beauty',usdPrice:12,orig:18,rating:4.5,reviews:29000,badge:'bs',badgeT:'Best Seller',img:'loreal-elvive-oil',del:'Tomorrow',stock:true,desc:'6 rare flower oils. Nourishes, reduces frizz, brilliant shine.',seller:'Beauty Bar',sellerId:'s12'},
+  {id:'p22',name:'Neutrogena Hydro Boost Gel 50ml',cat:'Beauty',usdPrice:19,orig:25,rating:4.6,reviews:41000,badge:'',badgeT:'',img:'neutrogena-hydroboost',del:'Today',stock:true,desc:'Hyaluronic acid. Intensely moisturizes. Oil-free. All skin types.',seller:'Beauty Bar',sellerId:'s12'},
+  {id:'p23',name:'Dyson Airwrap Multi-Styler',cat:'Beauty',usdPrice:599,orig:749,rating:4.7,reviews:18900,badge:'hot',badgeT:'Hot',img:'dyson-airwrap',del:'2-3 days',stock:true,desc:'Curl, wave, smooth and dry. No extreme heat. Controlled airflow.',seller:'Beauty Bar',sellerId:'s12'},
+  {id:'p24',name:'Nescafe Classic Instant Coffee',cat:'Grocery',usdPrice:8,orig:11,rating:4.5,reviews:31000,badge:'bs',badgeT:'Best Seller',img:'nescafe-classic',del:'Tomorrow',stock:true,desc:'Rich and aromatic. 200g jar makes ~100 cups.',seller:'Grocery Plus',sellerId:'s13'},
+  {id:'p25',name:'Quaker Oats Original 2kg',cat:'Grocery',usdPrice:6,orig:9,rating:4.4,reviews:15200,badge:'',badgeT:'',img:'quaker-oats-2kg',del:'Today',stock:true,desc:'100% wholegrain oats. High fibre, no additives. Family pack.',seller:'Grocery Plus',sellerId:'s13'},
+  {id:'p26',name:'LEGO Millennium Falcon 7541pcs',cat:'Toys',usdPrice:849,orig:999,rating:4.9,reviews:12400,badge:'bs',badgeT:'Best Seller',img:'lego-millennium-falcon',del:'3-5 days',stock:true,desc:'7,541 pieces, 14 minifigures. Ages 16+. Collector edition.',seller:'Toy Kingdom',sellerId:'s14'},
+  {id:'p27',name:'Barbie Dreamhouse Playset',cat:'Toys',usdPrice:199,orig:249,rating:4.7,reviews:9800,badge:'',badgeT:'',img:'barbie-dreamhouse',del:'2-3 days',stock:true,desc:'3-story, 8-room house with elevator, pool, slide. 75+ pieces.',seller:'Toy Kingdom',sellerId:'s14'},
+  {id:'p28',name:'Hot Wheels Ultimate Garage',cat:'Toys',usdPrice:99,orig:129,rating:4.6,reviews:7200,badge:'hot',badgeT:'Hot',img:'hotwheels-garage',del:'Tomorrow',stock:true,desc:'Multi-level garage, elevator, car wash. Holds 140+ cars.',seller:'Toy Kingdom',sellerId:'s14'},
+  {id:'p29',name:'Philips Hue Smart Bulb Kit 4-Pack',cat:'Home',usdPrice:129,orig:169,rating:4.6,reviews:11200,badge:'',badgeT:'',img:'philips-hue-kit',del:'Tomorrow',stock:true,desc:'16 million colors. Voice/app control. Works with Alexa & Google.',seller:'Smart Home',sellerId:'s7'},
+  {id:'p30',name:'Nespresso Vertuo Plus Machine',cat:'Home',usdPrice:179,orig:229,rating:4.7,reviews:8800,badge:'new',badgeT:'New',img:'nespresso-vertuo',del:'2-3 days',stock:true,desc:'Centrifusion technology, 5 cup sizes, 40oz tank, auto power off.',seller:'Home Essentials',sellerId:'s6'},
+  {id:'p31',name:'Peloton Bike+ Indoor Cycle',cat:'Sports',usdPrice:2495,orig:2995,rating:4.8,reviews:3900,badge:'pm',badgeT:'Premium',img:'peloton-bike-plus',del:'7-14 days',stock:true,desc:'24" HD touchscreen, Apple GymKit, auto-resistance. World-class classes.',seller:'Sports Corner',sellerId:'s10'},
+  {id:'p32',name:'Ralph Lauren Oxford Shirt',cat:'Clothing',usdPrice:89,orig:119,rating:4.5,reviews:4200,badge:'',badgeT:'',img:'ralph-oxford-shirt',del:'Tomorrow',stock:true,desc:'Classic fit, button-down collar. 100% Oxford cotton. Multi colors.',seller:'Fashion Hub',sellerId:'s8'},
+  {id:'p33',name:'Uniqlo Merino Wool Sweater',cat:'Clothing',usdPrice:39,orig:49,rating:4.5,reviews:6200,badge:'new',badgeT:'New',img:'uniqlo-merino-wool',del:'2-3 days',stock:true,desc:'Extra-fine merino. Warm, lightweight, machine washable. 12 colors.',seller:'Fashion Hub',sellerId:'s8'},
+  {id:'p34',name:'Sony WH-1000XM5 Headphones',cat:'Electronics',usdPrice:349,orig:419,rating:4.8,reviews:15600,badge:'bs',badgeT:'Best Seller',img:'sony-headphones',del:'Tomorrow',stock:true,desc:'Industry-leading noise cancellation. 30hr battery. Multipoint connection.',seller:'TechStore Global',sellerId:'s1'},
+  {id:'p35',name:'iPad Pro 11" M4 256GB WiFi',cat:'Electronics',usdPrice:999,orig:1099,rating:4.9,reviews:6800,badge:'new',badgeT:'New',img:'ipad-pro-m4',del:'Tomorrow',stock:true,desc:'M4 chip, Ultra Retina XDR display, ProMotion 120Hz. Thinnest Apple product.',seller:'Apple Zone',sellerId:'s2'},
+  {id:'p36',name:'Cadbury Dairy Milk Gift Box',cat:'Grocery',usdPrice:12,orig:15,rating:4.6,reviews:8700,badge:'',badgeT:'',img:'cadbury-dairy-milk',del:'2-3 days',stock:true,desc:'Classic Dairy Milk in premium gift box. 400g. Perfect for gifting.',seller:'Grocery Plus',sellerId:'s13'},
+];
+
+// ===== INIT =====
+function init() {
+  try {
+    if (!DB.get('products') || DB.get('products').length === 0) DB.set('products', SEEDS);
+    if (!DB.get('users')) DB.set('users', []);
+    if (!DB.get('orders')) DB.set('orders', []);
+    if (!DB.get('cart')) DB.set('cart', []);
+    if (!DB.get('partners')) DB.set('partners', [{id:'pa1',name:'TechRetail Inc.',email:'tech@retail.com',level:'manager',region:'North America',active:true},{id:'pa2',name:'Gulf Commerce',email:'info@gulfcommerce.ae',level:'viewer',region:'Middle East',active:true}]);
+    if (!DB.get('adminPass')) DB.set('adminPass', 'zorix2025');
+  } catch(e) { console.warn('Zorix: localStorage unavailable, using session memory.'); }
+  // DB initialized above
+
+  loadCartBadge();
+  updateAcctUI();
+  renderCatList();
+  applyFilters();
+  renderFooterCurrencies();
+  startTimer();
+  populateCheckoutCountries();
+  updateStats();
+
+  document.getElementById('sInp').addEventListener('keydown', e => { if(e.key==='Enter') doSearch(); });
+  document.getElementById('cmSearch').addEventListener('input', e => filterCountries(e.target.value));
+  document.getElementById('countryModal').addEventListener('click', e => { if(e.target===document.getElementById('countryModal')) closeCountryModal(); });
+  document.getElementById('pdModal').addEventListener('click', e => { if(e.target===document.getElementById('pdModal')) closePD(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') { closePD(); closeCountryModal(); } });
+  // Secret admin access: press Ctrl+Shift+G then type "ZORIXADMIN"
+  let secretBuf = '';
+  document.addEventListener('keydown', function(e) {
+    if(e.ctrlKey && e.shiftKey && e.key === 'G') { secretBuf = ''; }
+    else { secretBuf += e.key; if(secretBuf.length > 10) secretBuf = secretBuf.slice(-10); }
+    if(secretBuf.includes('ZORIXADMIN')) { navigate('admin'); secretBuf = ''; }
+  });
+  // Check URL param: ?admin=1
+  // Admin URL param: navigate to admin if ?admin=zorix2025
+  if(new URLSearchParams(window.location.search).get('admin')==='zorix2025') { navigate('admin'); }
+}
+
+// ===== NAVIGATION =====
+function navigate(view) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById('sellerView').classList.remove('active');
+  document.getElementById('adminView').classList.remove('active');
+
+  const sellerPanels = ['seller-dashboard','seller-products','seller-add','seller-orders','seller-earnings'];
+  if (sellerPanels.includes(view)) {
+    const sess = DB.get('session');
+    if (!sess) { navigate('account'); toast('Please sign in to access Seller Hub','warn'); return; }
+    if (sess.role !== 'seller' && sess.role !== 'admin') { toast('Seller account required','warn'); return; }
+    document.getElementById('sellerView').classList.add('active');
+    const map = {'seller-dashboard':'dashboard','seller-products':'products','seller-add':'add','seller-orders':'orders','seller-earnings':'earnings'};
+    showSP(map[view]||'dashboard');
+    document.getElementById('sellerShopName').textContent = sess.shop || sess.name;
+    window.scrollTo(0,0); return;
+  }
+  if (view === 'admin') {
+    document.getElementById('adminView').classList.add('active');
+    const sess = DB.get('session');
+    if (sess && sess.role==='admin') { document.getElementById('adminLoginBox').style.display='none'; document.getElementById('adminDash').style.display='block'; showAP('overview'); }
+    else { document.getElementById('adminLoginBox').style.display='block'; document.getElementById('adminDash').style.display='none'; }
+    window.scrollTo(0,0); return;
+  }
+
+  const el = document.getElementById(view+'View');
+  if (el) { el.classList.add('active'); }
+  if (view==='cart') renderCart();
+  if (view==='wishlist') renderWishlist();
+  if (view==='myorders') renderMyOrders();
+  if (view==='checkout') renderCheckout();
+  if (view==='account') renderAcct();
+  window.scrollTo(0,0);
+}
+
+function scrollToProducts() {
+  navigate('home');
+  setTimeout(()=>document.getElementById('productsSec').scrollIntoView({behavior:'smooth'}),50);
+}
+
+// ===== SEARCH =====
+let srResults = [];
+function doSearch() {
+  const q = (document.getElementById('sInp').value||'').trim();
+  if (!q) { filterCat(''); navigate('home'); return; }
+  const catF = document.getElementById('sCat').value;
+  const prods = DB.get('products')||[];
+  srResults = prods.filter(p => {
+    const mQ = p.name.toLowerCase().includes(q.toLowerCase())||p.cat.toLowerCase().includes(q.toLowerCase())||(p.desc&&p.desc.toLowerCase().includes(q.toLowerCase()));
+    const mC = !catF||p.cat===catF;
+    return mQ&&mC;
+  });
+  document.getElementById('searchTitle').textContent = `Results for "${q}" — ${srResults.length} item${srResults.length!==1?'s':''}`;
+  renderSearch();
+  navigate('search');
+}
+function renderSearch() {
+  const sort = document.getElementById('searchSort').value;
+  let list = [...srResults];
+  if (sort==='pl') list.sort((a,b)=>a.usdPrice-b.usdPrice);
+  else if (sort==='ph') list.sort((a,b)=>b.usdPrice-a.usdPrice);
+  else if (sort==='rating') list.sort((a,b)=>b.rating-a.rating);
+  const g = document.getElementById('searchGrid');
+  g.innerHTML = list.length ? list.map(p=>pCard(p)).join('') : 
+    `<div style="grid-column:1/-1"><div class="empty-state">
+      <i class="ti ti-search-off" style="font-size:52px;color:var(--text3);display:block;margin-bottom:12px" aria-hidden="true"></i>
+      <h3>No results found</h3>
+      <p>We couldn't find any products matching your search.<br>Try different keywords, check spelling, or browse categories.</p>
+      <button class="btn-prim" onclick="navigate('home')">Browse All Products</button>
+    </div></div>`;
+}
+
+// ===== PRODUCTS =====
+let actCat='', actStar=0;
+function renderCatList() {
+  const cats=[['','All Departments'],['Electronics','📱 Electronics'],['Clothing','👗 Clothing & Fashion'],['Home','🏠 Home & Kitchen'],['Books','📚 Books'],['Sports','⚽ Sports & Outdoors'],['Beauty','💄 Beauty & Personal'],['Grocery','🛒 Grocery & Food'],['Toys','🎮 Toys & Games']];
+  document.getElementById('catList').innerHTML = cats.map(([c,l])=>`<div class="ci ${c===actCat?'active':''}" onclick="filterCat('${c}',this)"><span class="ci-dot"></span>${l}</div>`).join('');
+}
+// filterCat: improved version below
+function setStar(n,el) {
+  actStar=n;
+  document.querySelectorAll('.sr').forEach(e=>e.classList.remove('active'));
+  if(el) el.classList.add('active');
+  applyFilters();
+}
+function applyFilters() {
+  const maxUSD = (parseInt(document.getElementById('priceRange').value, 10)||1000000)/((FX[selCurrency]||1));
+  const inStk = document.getElementById('inStock').checked;
+  const sort = document.getElementById('sortSel').value;
+  const prods = DB.get('products')||[];
+  let list = prods.filter(p=>{
+    if(actCat&&p.cat!==actCat) return false;
+    if(p.usdPrice>maxUSD) return false;
+    if((p.rating||4)<actStar) return false;
+    if(inStk&&!p.stock) return false;
+    return true;
+  });
+  if(sort==='pl') list.sort((a,b)=>a.usdPrice-b.usdPrice);
+  else if(sort==='ph') list.sort((a,b)=>b.usdPrice-a.usdPrice);
+  else if(sort==='rating') list.sort((a,b)=>b.rating-a.rating);
+  // product count hidden
+  renderActiveFilters();
+  renderRecentlyViewed();
+  const g=document.getElementById('pgrid');
+  g.innerHTML = list.length ? list.map(p=>pCard(p)).join('') : `<div style="grid-column:1/-1"><div class="empty-state"><span class="ei">📦</span><h3>No products match</h3><p>Try adjusting your filters</p><button class="btn-prim" onclick="filterCat('')">Clear Filters</button></div></div>`;
+}
+
+function pCard(p) {
+  const dp = formatDual(p.usdPrice); const dorig = p.orig?formatDual(p.orig):'';
+  const disc = p.orig?Math.round((1-p.usdPrice/p.orig)*100):0;
+  const stars = '★'.repeat(Math.round(p.rating||4))+'☆'.repeat(5-Math.round(p.rating||4));
+  const img = `https://picsum.photos/seed/${p.img||p.id}/300/300`;
+  const wished = isWishlisted(p.id);
+  return `<div class="pcard" onclick="openPD('${p.id}')">
+    <button class="pc-wishlist" onclick="toggleWishlist('${p.id}',event)" aria-label="Toggle wishlist" style="${wished?'opacity:1':''}"><i class="ti ti-heart" style="${wished?'color:var(--red)':''}"></i></button>
+    <img class="pc-img" src="${img}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='flex'">
+    <div class="pc-fb" style="display:none">${cEmo(p.cat)}</div>
+    <div class="pcb">
+      ${p.badge?`<span class="badge ${p.badge}">${p.badgeT}</span>`:''}
+      <div class="pname">${p.name}</div>
+      <div class="pstars"><span class="ys">${stars}</span><span class="rcnt">(${Number(p.reviews||0).toLocaleString()})</span></div>
+      <div class="ppr"><span class="pprice">${dp}</span>${dorig?`<span class="porig">${dorig}</span>`:''}</div>
+      ${disc>0?`<div class="pdisc">${disc}% off</div>`:''}
+      <div class="pdel">📦 ${p.del||'2-3 days'}</div>
+      ${!p.stock?'<div class="poos">Out of Stock</div>':''}
+      <button class="acb" ${!p.stock?'disabled style="opacity:.45;cursor:not-allowed"':''} onclick="event.stopPropagation();${p.stock?'addCart(\''+p.id+'\')':''}" aria-label="${p.stock?'Add '+p.name+' to cart':'Unavailable'}">${p.stock?'Add to Cart':'Unavailable'}</button>
+    </div>
+  </div>`;
+}
+function cEmo(cat){return{Electronics:'📱',Clothing:'👕',Home:'🏠',Books:'📚',Sports:'⚽',Beauty:'💄',Grocery:'🛒',Toys:'🎮'}[cat]||'📦';}
+
+// ===== PRODUCT DETAIL =====
+let pdId=null,pdQty=1;
+function openPD(id) {
+  const p=(DB.get('products')||[]).find(x=>x.id===id); if(!p) return;
+  pdId=id; pdQty=1;
+  const disc=p.orig?Math.round((1-p.usdPrice/p.orig)*100):0;
+  const stars='★'.repeat(Math.round(p.rating||4))+'☆'.repeat(5-Math.round(p.rating||4));
+  document.getElementById('pdImg').src=`https://picsum.photos/seed/${p.img||p.id}/400/400`;
+  document.getElementById('pdImg').alt=p.name;
+  document.getElementById('pdCat').textContent=p.cat;
+  document.getElementById('pdTitle').textContent=p.name;
+  document.getElementById('pdStars').textContent=stars;
+  document.getElementById('pdRating').textContent=' '+p.rating;
+  document.getElementById('pdRevs').textContent=' ('+Number(p.reviews||0).toLocaleString()+' reviews)';
+  document.getElementById('pdPrice').innerHTML='USDT '+Number(p.usdPrice).toFixed(2)+' <span style="font-size:14px;color:#888;text-decoration:none;font-weight:400">/ €'+(p.usdPrice*0.92).toFixed(2)+'</span>';
+  document.getElementById('pdOrig').textContent=p.orig?' USDT '+Number(p.orig).toFixed(2):'';
+  document.getElementById('pdDisc').textContent=disc>0?disc+'% off — you save USDT '+(p.orig-p.usdPrice).toFixed(2):'';
+  document.getElementById('pdDel').textContent='📦 Delivery: '+p.del+' · '+selCountry.name;
+  document.getElementById('pdStk').innerHTML=p.stock?'<span style="color:var(--green);font-weight:700">✓ In Stock</span>':'<span style="color:var(--red);font-weight:700">✗ Out of Stock</span>';
+  document.getElementById('pdQ').textContent=1;
+  document.getElementById('pdAddBtn').disabled=!p.stock;
+  document.getElementById('pdBuyBtn').disabled=!p.stock;
+  document.getElementById('pdSellerInfo').innerHTML=`Sold by <strong>${p.seller||'Zorix'}</strong> · Ships to <strong>${selCountry.name}</strong>`;
+  document.getElementById('pdDescEl').textContent=p.desc||'Premium quality product.';
+  trackRecentlyViewed(id);
+  renderReviews(id, p.rating, p.reviews);
+  document.getElementById('pdModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closePD(){document.getElementById('pdModal').classList.remove('open');document.body.style.overflow='';}
+function chPdQ(d){pdQty=Math.max(1,Math.min(10,pdQty+d));document.getElementById('pdQ').textContent=pdQty;}
+function addFromPD(){if(pdId){addCart(pdId,pdQty);closePD();}}
+function buyNow(){if(pdId){addCart(pdId,pdQty);closePD();navigate('checkout');}}
+
+// ===== CART =====
+function getCart(){return DB.get('cart')||[];}
+function saveCart(c){DB.set('cart',c);loadCartBadge();}
+function loadCartBadge(){const c=getCart();document.getElementById('cartBadge').textContent=c.reduce((s,x)=>s+x.qty,0);}
+// addCart: improved version below
+function renderCart(){
+  const cart=getCart()||[],prods=DB.get('products')||[];
+  const ie=document.getElementById('cartItemsEl'),se=document.getElementById('cartSumEl');
+  if(!cart.length){ie.innerHTML=`<div class="empty-state"><span class="ei">🛒</span><h3>Your cart is empty</h3><p>Browse millions of products worldwide</p><button class="btn-prim" onclick="navigate('home')">Start Shopping</button></div>`;se.innerHTML='';return;}
+  let total=0;
+  ie.innerHTML=cart.map(item=>{
+    const p=prods.find(x=>x.id===item.id);if(!p)return '';
+    const sub=p.usdPrice*item.qty;total+=sub;
+    return `<div class="ci-card"><img class="ci-img" src="https://picsum.photos/seed/${p.img||p.id}/150/150" onerror="this.style.display='none'"><div class="ci-info"><div class="ci-name" onclick="openPD('${p.id}')">${p.name}</div><div class="ci-del">📦 ${p.del} · ${selCountry.name}</div><div class="ci-qty-row"><button class="cq" onclick="chCartQ('${p.id}',-1)">−</button><span style="font-size:13px;font-weight:700">${item.qty}</span><button class="cq" onclick="chCartQ('${p.id}',1)">+</button><button class="rm" onclick="rmCart('${p.id}')">Remove</button></div></div><div class="ci-price-col"><div class="ci-total">${formatPrice(sub)}</div><div class="ci-each">${formatPrice(p.usdPrice)} each</div></div></div>`;
+  }).join('');
+  const ship = 0;
+  const coupon=DB.get('activeCoupon');let discount=0;if(coupon)discount=total*(coupon.pct/100);const finalTotal=total-discount;
+  se.innerHTML=`<div class="cs-t">Order Summary</div>
+    <div class="cs-row"><span>Items (${cart.reduce((s,x)=>s+x.qty,0)})</span><span>USDT ${total.toFixed(2)}</span></div>
+    <div class="cs-row"><span>EUR equivalent</span><span>€${(total*0.92).toFixed(2)}</span></div>
+    <div class="cs-row"><span>Shipping</span><span style="color:var(--green)">By Seller</span></div>
+    ${coupon?`<div class="coupon-applied"><span>✓ ${coupon.code} (-${coupon.pct}%)</span><span style="cursor:pointer" onclick="removeCoupon()">✕</span></div>`:`<div class="coupon-box"><input id="couponInput" placeholder="Coupon (try ZORIX10)"><button class="btn-prim" style="padding:8px 14px" onclick="applyCoupon()">Apply</button></div>`}
+    <hr class="cs-hr">
+    ${discount>0?`<div class="cs-row"><span>Discount</span><span style="color:var(--green)">-USDT ${discount.toFixed(2)}</span></div>`:''}
+    <div class="cs-row" style="font-size:16px;font-weight:700"><span>Total</span><span class="cs-total-val">USDT ${finalTotal.toFixed(2)}</span></div>
+    <button class="checkout-btn" onclick="navigate('checkout')">Proceed to Checkout →</button>`;
+}
+function chCartQ(id,d){const c=getCart(),i=c.findIndex(x=>x.id===id);if(i>-1){c[i].qty+=d;if(c[i].qty<=0)c.splice(i,1);}saveCart(c);renderCart();}
+function rmCart(id){saveCart(getCart().filter(x=>x.id!==id));renderCart();}
+
+// ===== CHECKOUT =====
+// renderCheckout: improved version below
+function placeOrder(){
+  const btn=document.getElementById('placeOrderBtn');
+  if(btn){btn.disabled=true;btn.textContent='Processing...';}
+  const name=document.getElementById('coName').value.trim();
+  const phone=document.getElementById('coPhone').value.trim();
+  const addr=document.getElementById('coAddr').value.trim();
+  const city=document.getElementById('coCity').value.trim();
+  if(!name||!phone||!addr||!city){
+    toast('Please fill all required fields (*)','error');
+    if(btn){btn.disabled=false;btn.textContent='Place Order →';}
+    return;
+  }
+  const cart=getCart(),prods=DB.get('products')||[];
+  const pay=document.querySelector('input[name="pay"]:checked').value;
+  let total=0;
+  const items=cart.map(item=>{const p=prods.find(x=>x.id===item.id);if(!p)return null;total+=p.usdPrice*item.qty;return{productId:p.id,name:p.name,usdPrice:p.usdPrice,qty:item.qty,img:p.img||p.id,seller:p.seller||'',sellerId:p.sellerId||''};}).filter(Boolean);
+  const ship = 0;
+  const oid='GM-'+Date.now().toString().slice(-6);
+  const sess=DB.get('session');
+  const order={id:oid,userId:sess?sess.email:'guest',userName:name,phone,address:addr,city,country:document.getElementById('coCountry').value,countryName:selCountry.name,payment:pay,items,usdTotal:total+ship,currency:selCurrency,displayTotal:formatPrice(total+ship),status:'pending',date:new Date().toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'}),timestamp:Date.now()};
+  const orders=DB.get('orders')||[];orders.unshift(order);DB.set('orders',orders);
+  saveCart([]);
+  document.getElementById('sucOrderId').textContent='Order #'+oid;
+  navigate('success');
+}
+
+// ===== MY ORDERS =====
+function renderMyOrders(){
+  const sess=DB.get('session');
+  const el=document.getElementById('myOrdersEl');
+  if(!sess){el.innerHTML=`<div class="empty-state"><span class="ei">🔒</span><h3>Sign in to see orders</h3><p>Create an account to track your orders</p><button class="btn-prim" onclick="navigate('account')">Sign In</button></div>`;return;}
+  const orders=(DB.get('orders')||[]).filter(o=>o.userId===sess.email);
+  if(!orders.length){el.innerHTML=`<div class="empty-state"><span class="ei">📦</span><h3>No orders yet</h3><p>Your orders will appear here</p><button class="btn-prim" onclick="navigate('home')">Shop Now</button></div>`;return;}
+  el.innerHTML=orders.map(o=>`<div class="ord-card"><div class="ord-hd"><div><div style="font-size:14px;font-weight:700;color:var(--navy)">#${o.id}</div><div class="ord-meta">${o.date} · ${o.payment?.toUpperCase()||'COD'} · ${o.countryName||''}</div></div><span class="ord-status ${o.status}">${o.status}</span></div><div class="ord-items-row">${o.items.map(i=>`<div class="oi-row"><img src="https://picsum.photos/seed/${i.img}/80/80" onerror="this.style.display='none'"><div><div style="font-weight:600">${i.name.slice(0,36)}</div><div style="color:#888">×${i.qty}</div></div></div>`).join('')}</div><div class="ord-footer"><div style="font-size:12px;color:var(--text2)">📍 ${o.city}, ${o.countryName||o.country}</div><div class="ord-total">${o.displayTotal||formatPrice(o.usdTotal)}</div></div></div>`).join('');
+}
+
+// ===== AUTH =====
+let selRole_old_unused='buyer';
+function switchTab(t){
+  document.getElementById('tabLogin').classList.toggle('active',t==='login');
+  document.getElementById('tabReg').classList.toggle('active',t==='reg');
+  document.getElementById('loginForm').style.display=t==='login'?'block':'none';
+  document.getElementById('regForm').style.display=t==='reg'?'block':'none';
+}
+// selRole2 replaced
+// selRole defined below
+// doLogin: full version defined below
+// doRegister defined in new functions section
+function doLogout(){DB.set('session',null);updateAcctUI();renderAcct();toast('Signed out');}
+function updateAcctUI(){
+  const sess=DB.get('session');
+  document.getElementById('acctGreet').textContent=sess?'Hello, '+sess.name.split(' ')[0]:'Hello, Sign in';
+}
+function renderAcct(){
+  const sess=DB.get('session');
+  const lf=document.getElementById('loginForm'),rf=document.getElementById('regForm'),ad=document.getElementById('acctDash');
+  const tabs=document.getElementById('authTabsRow');
+  if(sess){
+    lf.style.display='none';rf.style.display='none';tabs.style.display='none';ad.style.display='block';
+    document.getElementById('acctName').textContent=sess.name;
+    document.getElementById('acctEmail').textContent=sess.email;
+    document.getElementById('acctRoleBadge').textContent=sess.role==='seller'?'🏪 Seller':sess.role==='admin'?'🛡 Admin':'🛍 Buyer';
+    document.getElementById('acctRoleBadge').className='tag '+(sess.role==='seller'?'yellow':sess.role==='admin'?'red':'green');
+    document.getElementById('acctAvatar').textContent=sess.role==='seller'?'🏪':sess.role==='admin'?'🛡️':'👤';
+    document.getElementById('sellerBtn').style.display=(sess.role==='seller'||sess.role==='admin')?'flex':'none';
+    document.getElementById('adminBtn').style.display=sess.role==='admin'?'flex':'none';
+  } else {
+    lf.style.display='block';rf.style.display='none';tabs.style.display='flex';ad.style.display='none';
+  }
+}
+
+// ===== SELLER PANEL =====
+function showSP(panel){
+  ['dashboard','products','add','orders','earnings'].forEach(p=>{
+    document.getElementById('sp-'+p).style.display=p===panel?'block':'none';
+    const b=document.getElementById('sn-'+p.charAt(0));
+    if(b)b.classList.toggle('active',p===panel);
+  });
+  document.getElementById('sn-d').classList.toggle('active',panel==='dashboard');
+  document.getElementById('sn-p').classList.toggle('active',panel==='products');
+  document.getElementById('sn-a').classList.toggle('active',panel==='add');
+  document.getElementById('sn-o').classList.toggle('active',panel==='orders');
+  document.getElementById('sn-e').classList.toggle('active',panel==='earnings');
+  if(panel==='dashboard')renderSD();
+  if(panel==='products')renderSP();
+  if(panel==='orders')renderSO();
+  if(panel==='earnings')renderSE();
+  if(panel==='add'){document.getElementById('addPdTitle').textContent='Add New Product';document.getElementById('editId').value='';['spN','spP','spO','spI','spDe'].forEach(id=>document.getElementById(id).value='');document.getElementById('spC').value='';document.getElementById('spS').value='true';}
+}
+function renderSD(){
+  const sess=DB.get('session'),prods=DB.get('products')||[],orders=DB.get('orders')||[];
+  const myP=prods.filter(p=>p.sellerId===sess.id);
+  const myO=orders.filter(o=>o.items&&o.items.some(i=>i.sellerId===sess.id));
+  const rev=myO.reduce((s,o)=>s+o.items.filter(i=>i.sellerId===sess.id).reduce((ss,i)=>ss+i.usdPrice*i.qty,0),0);
+  const pend=myO.filter(o=>o.status==='pending').length;
+  document.getElementById('sdStats').innerHTML=[['💰','Revenue',formatPrice(rev),'All time'],['📦','Products',myP.length,'Listed'],['🛍','Orders',myO.length,'Received'],['⏳','Pending',pend,'Need action']].map(([ico,l,v,s])=>`<div class="stat-card"><div class="stat-label">${ico} ${l}</div><div class="stat-val">${v}</div><div class="stat-sub">${s}</div></div>`).join('');
+  const rec=myO.slice(0,6);
+  document.getElementById('sdOrders').innerHTML=rec.length?`<table class="dt"><thead><tr><th>Order ID</th><th>Customer</th><th>Country</th><th>Amount</th><th>Date</th><th>Status</th></tr></thead><tbody>${rec.map(o=>`<tr><td style="font-weight:700">#${o.id}</td><td>${o.userName}</td><td>${o.countryName||o.country}</td><td>${o.displayTotal||formatPrice(o.usdTotal)}</td><td>${o.date}</td><td><span class="ord-status ${o.status}">${o.status}</span></td></tr>`).join('')}</tbody></table>`:'<div class="empty-state" style="padding:24px"><span class="ei" style="font-size:36px">📋</span><h3>No orders yet</h3><p>Add products to start receiving orders</p></div>';
+}
+function renderSP(){
+  const sess=DB.get('session'),prods=(DB.get('products')||[]).filter(p=>p.sellerId===sess.id);
+  document.getElementById('sProductsT').innerHTML=prods.length?prods.map(p=>`<tr><td><img src="https://picsum.photos/seed/${p.img||p.id}/60/60" style="width:44px;height:44px;object-fit:cover;border-radius:6px" onerror="this.style.display='none'"></td><td style="max-width:180px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${p.name}</td><td><span class="tag grey">${p.cat}</span></td><td style="font-weight:700;color:var(--red)">${formatPrice(p.usdPrice)}</td><td><span class="tag ${p.stock?'green':'red'}">${p.stock?'In Stock':'Out'}</span></td><td><button class="act-b edit" onclick="editProd('${p.id}')">Edit</button> <button class="act-b del" onclick="delProd('${p.id}')">Delete</button></td></tr>`).join(''):`<tr><td colspan="6" style="text-align:center;padding:24px;color:var(--text3)">No products yet. <span style="color:var(--blue);cursor:pointer" onclick="showSP('add')">Add your first product →</span></td></tr>`;
+}
+function editProd(id){
+  const p=(DB.get('products')||[]).find(x=>x.id===id);if(!p)return;
+  showSP('add');document.getElementById('addPdTitle').textContent='Edit Product';
+  document.getElementById('editId').value=id;document.getElementById('spN').value=p.name;document.getElementById('spC').value=p.cat;document.getElementById('spP').value=p.usdPrice;document.getElementById('spO').value=p.orig||'';document.getElementById('spS').value=p.stock?'true':'false';document.getElementById('spD').value=p.del||'2-3 days';document.getElementById('spB').value=p.badge||'';document.getElementById('spI').value=p.img||'';document.getElementById('spDe').value=p.desc||'';document.getElementById('spCur').value=p.currency||'USD';
+}
+function delProd(id){if(!confirm('Delete this product?'))return;DB.set('products',(DB.get('products')||[]).filter(p=>p.id!==id));renderSP();updateStats();toast('Product deleted');}
+function saveProd(){
+  const sess=DB.get('session');
+  const n=document.getElementById('spN').value.trim(),c=document.getElementById('spC').value;
+  const price=parseFloat(document.getElementById('spP').value);const orig=parseFloat(document.getElementById('spO').value)||0;
+  const stock=document.getElementById('spS').value==='true',del=document.getElementById('spD').value;
+  const badge=document.getElementById('spB').value,seed=document.getElementById('spI').value.trim(),desc=document.getElementById('spDe').value.trim();
+  const cur=document.getElementById('spCur').value;
+  if(!n){toast('Product name required','error');return;}if(!c){toast('Select category','error');return;}if(!price||price<=0){toast('Enter valid price','error');return;}
+  const BL={bs:'Best Seller',hot:'Hot',new:'New',pm:'Premium'};
+  const prods=DB.get('products')||[];const eid=document.getElementById('editId').value;
+  // Convert to USD if needed
+  const usdPrice = cur==='USD'?price:(price/(FX[cur]||1));
+  const usdOrig = orig?(cur==='USD'?orig:(orig/(FX[cur]||1))):usdPrice*1.2;
+  if(eid){
+    const i=prods.findIndex(p=>p.id===eid);
+    if(i>-1)prods[i]={...prods[i],name:n,cat:c,usdPrice,orig:usdOrig,stock,del,badge,badgeT:BL[badge]||'',img:seed||prods[i].img,desc,currency:cur};
+    toast('Product updated! ✅');
+  } else {
+    prods.push({id:'p'+Date.now(),name:n,cat:c,usdPrice,orig:usdOrig,stock,del,badge,badgeT:BL[badge]||'',img:seed||n.toLowerCase().replace(/\s+/g,'-').slice(0,30),desc,rating:4.5,reviews:0,seller:sess.shop||sess.name,sellerId:sess.id,currency:cur});
+    toast('Product live on Zorix! 🚀');
+  }
+  DB.set('products',prods);updateStats();applyFilters();showSP('products');
+}
+function renderSO(){
+  const sess=DB.get('session'),orders=(DB.get('orders')||[]).filter(o=>o.items&&o.items.some(i=>i.sellerId===sess.id));
+  document.getElementById('sOrdersT').innerHTML=orders.length?orders.map(o=>{
+    const mi=o.items.filter(i=>i.sellerId===sess.id);
+    return `<tr><td style="font-weight:700">#${o.id}</td><td>${o.userName}<br><small>${o.phone}</small></td><td>${mi.map(i=>i.name.slice(0,18)).join(', ')}</td><td>${o.displayTotal||formatPrice(o.usdTotal)}</td><td>${o.countryName||o.country}</td><td>${o.date}</td><td><span class="ord-status ${o.status}">${o.status}</span></td><td>${o.status==='pending'?`<button class="act-b ship" onclick="updOrdStatus('${o.id}','shipped')">Ship</button>`:''}${o.status==='shipped'?`<button class="act-b ship" onclick="updOrdStatus('${o.id}','delivered')">Delivered</button>`:''}${o.status==='pending'?` <button class="act-b warn" onclick="updOrdStatus('${o.id}','cancelled')">Cancel</button>`:''}</td></tr>`;
+  }).join(''):`<tr><td colspan="8" style="text-align:center;padding:24px;color:var(--text3)">No orders yet</td></tr>`;
+}
+/* renderSE: see below */
+function updOrdStatus(id,status){const orders=DB.get('orders')||[];const i=orders.findIndex(o=>o.id===id);if(i>-1){orders[i].status=status;DB.set('orders',orders);}renderSO();renderSD();toast('Order status → '+status);}
+
+// ===== ADMIN =====
+const ADMIN_DEFAULT = 'zorix2025';
+function doAdminLogin(){
+  const u=document.getElementById('aUser').value.trim(),p=document.getElementById('aPass').value;
+  const admPass=DB.get('adminPass')||ADMIN_DEFAULT;
+  if(u==='admin'&&p===admPass){
+    let sess=DB.get('session');
+    if(!sess){sess={name:'Admin',email:'admin@zorix.com',role:'admin',id:'admin'};DB.set('session',sess);}
+    else if(sess.role!=='admin'){sess.role='admin';}
+    DB.set('session',sess);updateAcctUI();
+    document.getElementById('adminLoginBox').style.display='none';
+    document.getElementById('adminDash').style.display='block';
+    showAP('overview');toast('Admin access granted 🛡️','info');
+  } else toast('Invalid admin credentials','error');
+}
+function changeAdminPass(){
+  const np=document.getElementById('newAdminPass').value,cp=document.getElementById('confAdminPass').value;
+  if(!np){toast('Enter new password','error');return;}if(np!==cp){toast('Passwords do not match','error');return;}
+  DB.set('adminPass',np);toast('Admin password updated ✅');
+}
+function showAP(panel){
+  ['overview','products','orders','users','partners','settings'].forEach(p=>{
+    document.getElementById('ap-'+p).style.display=p===panel?'block':'none';
+    const b=document.getElementById('an-'+p);if(b)b.classList.toggle('active',p===panel);
+  });
+  if(panel==='overview')renderAOverview();
+  if(panel==='products')renderAProducts();
+  if(panel==='orders')renderAOrders();
+  if(panel==='users')renderAUsers();
+  if(panel==='partners')renderAPartners();
+}
+function renderAOverview(){
+  const prods=DB.get('products')||[],orders=DB.get('orders')||[],users=DB.get('users')||[];
+  const rev=orders.reduce((s,o)=>s+(o.usdTotal||0),0);
+  const sellers=users.filter(u=>u.role==='seller');
+  document.getElementById('aStats').innerHTML=[['🌍','Total Revenue',formatPrice(rev),'Platform earnings'],['📦','Products',prods.length,'All listings'],['🛍','Orders',orders.length,'All time'],['👥','Users',users.length,'Registered'],['🏪','Sellers',sellers.length,'Active sellers'],['🌎','Countries',COUNTRIES.length-1,'Supported'],['⭐','Avg Rating','4.6','Platform avg'],['⏳','Pending',orders.filter(o=>o.status==='pending').length,'Need action']].map(([ico,l,v,s])=>`<div class="stat-card"><div class="stat-label">${ico} ${l}</div><div class="stat-val">${v}</div><div class="stat-sub">${s}</div></div>`).join('');
+  document.getElementById('aRecentOrders').innerHTML=orders.slice(0,5).map(o=>`<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;margin-bottom:7px;font-size:12px"><div><div style="font-weight:700">#${o.id}</div><div style="color:#888">${o.userName} · ${o.countryName||o.country||''}</div></div><div><span class="ord-status ${o.status}">${o.status}</span></div><div style="font-weight:700;color:var(--red)">${o.displayTotal||formatPrice(o.usdTotal||0)}</div></div>`).join('')||'<div style="text-align:center;padding:16px;color:#888;font-size:12px">No orders yet</div>';
+  const sellers2=users.filter(u=>u.role==='seller');
+  document.getElementById('aTopSellers').innerHTML=sellers2.slice(0,5).map(u=>`<div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;margin-bottom:7px;font-size:12px"><div style="width:32px;height:32px;border-radius:50%;background:#FFFBEA;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🏪</div><div style="flex:1"><div style="font-weight:700">${u.shop||u.name}</div><div style="color:#888">${u.email}</div></div><span class="tag green">Active</span></div>`).join('')||'<div style="text-align:center;padding:16px;color:#888;font-size:12px">No sellers yet</div>';
+}
+function renderAProducts(){
+  const search=document.getElementById('aProdSearch')?.value?.toLowerCase()||'';
+  const cat=document.getElementById('aProdCat')?.value||'';
+  const prods=(DB.get('products')||[]).filter(p=>(!search||p.name.toLowerCase().includes(search))&&(!cat||p.cat===cat));
+  document.getElementById('aProdCount').textContent=prods.length+' products';
+  document.getElementById('aProductsT').innerHTML=prods.map(p=>`<tr><td><img src="https://picsum.photos/seed/${p.img||p.id}/60/60" style="width:40px;height:40px;object-fit:cover;border-radius:6px" onerror="this.style.display='none'"></td><td style="max-width:200px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${p.name}</td><td><span class="tag grey">${p.cat}</span></td><td style="font-weight:700;color:var(--red)">${formatPrice(p.usdPrice)}</td><td style="color:var(--text2)">${p.seller||'Zorix'}</td><td><span class="tag ${p.stock?'green':'red'}">${p.stock?'In Stock':'Out'}</span></td><td><button class="act-b del" onclick="aDelProd('${p.id}')">Remove</button></td></tr>`).join('');
+}
+function aDelProd(id){if(!confirm('Remove this product from platform?'))return;DB.set('products',(DB.get('products')||[]).filter(p=>p.id!==id));renderAProducts();renderAOverview();toast('Product removed');}
+function renderAOrders(){
+  const orders=DB.get('orders')||[];
+  document.getElementById('aOrdCount').textContent=orders.length+' orders';
+  document.getElementById('aOrdersT').innerHTML=orders.map(o=>`<tr><td style="font-weight:700">#${o.id}</td><td>${o.userName}<br><small style="color:#888">${o.phone}</small></td><td style="font-weight:700;color:var(--red)">${o.displayTotal||formatPrice(o.usdTotal||0)}</td><td>${o.countryName||o.country||'-'}</td><td>${o.date}</td><td><span class="ord-status ${o.status}">${o.status}</span></td><td>${['pending','processing'].includes(o.status)?`<select onchange="aUpdOrd('${o.id}',this.value)" style="padding:4px 8px;border:1px solid var(--border);border-radius:5px;font-size:11px"><option value="">Update</option><option value="processing">Processing</option><option value="shipped">Shipped</option><option value="delivered">Delivered</option><option value="cancelled">Cancelled</option></select>`:''}</td></tr>`).join('');
+}
+function aUpdOrd(id,status){if(!status)return;const orders=DB.get('orders')||[];const i=orders.findIndex(o=>o.id===id);if(i>-1){orders[i].status=status;DB.set('orders',orders);}renderAOrders();toast('Order updated → '+status);}
+// renderAUsers moved below
+function banUser(id){const u=DB.get('users')||[];const i=u.findIndex(x=>x.id===id);if(i>-1){u[i].active=false;DB.set('users',u);}renderAUsers();toast('User banned');}
+function unbanUser(id){const u=DB.get('users')||[];const i=u.findIndex(x=>x.id===id);if(i>-1){u[i].active=true;DB.set('users',u);}renderAUsers();toast('User unbanned');}
+function renderAPartners(){
+  const partners=DB.get('partners')||[];
+  document.getElementById('partnersList').innerHTML=partners.map(p=>`<div class="partner-card"><div class="partner-info"><h4>${p.name} <span class="partner-badge ${p.active?'active':'inactive'}">${p.active?'Active':'Inactive'}</span></h4><p>${p.email} · ${p.region} · Access: <strong>${p.level}</strong></p></div><div style="display:flex;gap:6px">${p.active?`<button class="act-b warn" onclick="togglePartner('${p.id}',false)">Deactivate</button>`:`<button class="act-b ship" onclick="togglePartner('${p.id}',true)">Activate</button>`}<button class="act-b del" onclick="delPartner('${p.id}')">Remove</button></div></div>`).join('');
+}
+function addPartner(){
+  const name=document.getElementById('pName').value.trim(),email=document.getElementById('pEmail').value.trim();
+  const level=document.getElementById('pLevel').value,region=document.getElementById('pRegion').value;
+  if(!name||!email){toast('Fill partner name and email','error');return;}
+  const partners=DB.get('partners')||[];
+  partners.push({id:'pa'+Date.now(),name,email,level,region,active:true});
+  DB.set('partners',partners);renderAPartners();
+  document.getElementById('pName').value='';document.getElementById('pEmail').value='';
+  toast('Partner added with '+level+' access ✅');
+}
+function togglePartner(id,active){const p=DB.get('partners')||[];const i=p.findIndex(x=>x.id===id);if(i>-1){p[i].active=active;DB.set('partners',p);}renderAPartners();}
+function delPartner(id){if(!confirm('Remove this partner?'))return;DB.set('partners',(DB.get('partners')||[]).filter(p=>p.id!==id));renderAPartners();toast('Partner removed');}
+
+// ===== UTILS =====
+// updateStats: improved version below
+// toast: improved version below
+
+let ts=5*3600+42*60+18;
+function startTimer(){
+  setInterval(()=>{ts=Math.max(0,ts-1);const h=Math.floor(ts/3600),m=Math.floor((ts%3600)/60),s=ts%60;const el=document.getElementById('dealTimer');if(el)el.textContent=String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');},1000);
+}
+
+
+// ===== PAYMENT HELPERS =====
+function showCardForm() {
+  const pay = document.querySelector('input[name="pay"]:checked')?.value;
+  const cardBox = document.getElementById('cardFormBox');
+  const payoneerBox = document.getElementById('payoneerBox');
+  const cryptoBox = document.getElementById('cryptoBox');
+  if (cardBox) cardBox.style.display = ['visa','mastercard','amex','unionpay'].includes(pay) ? 'block' : 'none';
+  if (payoneerBox) payoneerBox.style.display = pay==='payoneer' ? 'block' : 'none';
+  if (cryptoBox) cryptoBox.style.display = pay==='crypto' ? 'block' : 'none';
+}
+function formatCard(inp) {
+  let v = inp.value.replace(/\D/g,'').slice(0,16);
+  inp.value = v.replace(/(.{4})/g,'$1 ').trim();
+}
+document.addEventListener('change', function(e) {
+  if(e.target && e.target.name==='pay') showCardForm();
+});
+
+// ===== GMAIL VERIFICATION (demo) =====
+let gmailVerified = false;
+function sendGmailVerify() {
+  const email = document.getElementById('rGmail')?.value?.trim();
+  if(!email || !email.includes('@gmail.com')) { toast('Enter a valid Gmail address','error'); return; }
+  document.getElementById('gmailVerifyBox').style.display = 'block';
+  toast('Verification code sent to ' + email + ' (demo: 123456)','info');
+}
+function verifyGmailOTP() {
+  const code = document.getElementById('gmailOTP')?.value?.trim();
+  if(code === '123456') {
+    gmailVerified = true;
+    document.getElementById('sellerRegBtn').disabled = false;
+    document.getElementById('sellerRegBtn').style.opacity = '1';
+    document.getElementById('gmailVerifiedNote').style.display = 'block';
+    document.getElementById('gmailVerifyBox').style.display = 'none';
+    toast('Gmail verified! ✅');
+  } else { toast('Invalid code. Try 123456 (demo)','error'); }
+}
+
+// ===== SELLER ROLE TOGGLE =====
+function selRole(r) {
+  selRole_val = r;
+  ['buyer','seller'].forEach(x => {
+    const el = document.getElementById('r'+x.charAt(0).toUpperCase()+x.slice(1));
+    if(el) el.classList.toggle('active', x===r);
+  });
+  const bf = document.getElementById('buyerFields');
+  const sf = document.getElementById('sellerKycFields');
+  if(bf) bf.style.display = r==='buyer' ? 'block' : 'none';
+  if(sf) sf.style.display = r==='seller' ? 'block' : 'none';
+  // Populate country dropdown in seller form
+  if(r==='seller') {
+    const sel = document.getElementById('rCountry');
+    if(sel && !sel.options.length) {
+      COUNTRIES.filter(c=>c.code!=='WW').forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c.code; opt.textContent = c.flag + ' ' + c.name;
+        sel.appendChild(opt);
+      });
+    }
+  }
+}
+let selRole_val = 'buyer';
+
+// ===== AFFILIATE =====
+function copyAffiliate() {
+  const sess = DB.get('session');
+  const link = 'https://zorix.com/ref/' + (sess?.id || 'unknown');
+  navigator.clipboard?.writeText(link).then(() => toast('Affiliate link copied!')).catch(() => toast('Copy: ' + link, 'info'));
+}
+function renderSE() {
+  const sess = DB.get('session'), orders = DB.get('orders')||[];
+  const myO = orders.filter(o => o.items && o.items.some(i=>i.sellerId===sess.id));
+  const rev = myO.reduce((s,o)=>s+o.items.filter(i=>i.sellerId===sess.id).reduce((ss,i)=>ss+i.usdPrice*i.qty,0),0);
+  const thisMonth = myO.filter(o=>new Date(o.timestamp).getMonth()===new Date().getMonth());
+  const mrev = thisMonth.reduce((s,o)=>s+o.items.filter(i=>i.sellerId===sess.id).reduce((ss,i)=>ss+i.usdPrice*i.qty,0),0);
+  document.getElementById('seStats').innerHTML = [
+    ['💰','Total Revenue','USDT '+rev.toFixed(2),'All time'],
+    ['📅','This Month','USDT '+mrev.toFixed(2),'Current month'],
+    ['🛍','Total Orders',myO.length,'Received'],
+    ['⭐','Avg. Rating','4.6','Your products']
+  ].map(([ico,l,v,s])=>`<div class="stat-card"><div class="stat-label">${ico} ${l}</div><div class="stat-val">${v}</div><div class="stat-sub">${s}</div></div>`).join('');
+  // Update affiliate display
+  const affLink = document.getElementById('affiliateLinkDisplay');
+  if(affLink) affLink.textContent = 'https://zorix.com/ref/' + sess.id;
+}
+
+// ===== OVERRIDE doRegister to use new fields =====
+function doRegister() {
+  const role = selRole_val || 'buyer';
+  const name = document.getElementById('rName')?.value?.trim();
+  const email = document.getElementById('rEmail')?.value?.trim();
+  const pass = document.getElementById('rPass')?.value;
+  const phone = document.getElementById('rPhone')?.value?.trim() || '';
+
+  if(!name || !email || !pass) { toast('Fill all required fields (*)','error'); return; }
+  if(pass.length < 8) { toast('Password must be at least 8 characters','error'); return; }
+
+  if(role === 'seller') {
+    const shop = document.getElementById('rShop')?.value?.trim();
+    const idNum = document.getElementById('rIdNum')?.value?.trim();
+    const bank = document.getElementById('rBank')?.value?.trim();
+    const bankName = document.getElementById('rBankName')?.value?.trim();
+    if(!shop) { toast('Enter your shop name','error'); return; }
+    if(!idNum) { toast('ID card / passport number required','error'); return; }
+    if(!bank || !bankName) { toast('Bank details are required','error'); return; }
+    if(!gmailVerified) { toast('Please verify your Gmail first','warn'); return; }
+  }
+
+  const users = DB.get('users') || [];
+  if(users.find(u => u.email === email)) { toast('Email already registered','error'); return; }
+
+  const u = {
+    name, email, password: pass, role,
+    phone,
+    shop: document.getElementById('rShop')?.value?.trim() || '',
+    idNum: document.getElementById('rIdNum')?.value?.trim() || '',
+    bankAccount: document.getElementById('rBank')?.value?.trim() || '',
+    bankName: document.getElementById('rBankName')?.value?.trim() || '',
+    payoneer: document.getElementById('rPayoneer')?.value?.trim() || '',
+    paypal: document.getElementById('rPaypal')?.value?.trim() || '',
+    gmail: document.getElementById('rGmail')?.value?.trim() || '',
+    country: document.getElementById('rCountry')?.value || '',
+    id: 'u'+Date.now(),
+    joined: new Date().toLocaleDateString(),
+    active: true,
+    verified: role==='seller' ? gmailVerified : true,
+  };
+  users.push(u);
+  DB.set('users', users);
+  DB.set('session', u);
+  gmailVerified = false;
+  updateAcctUI(); renderAcct();
+  toast(role==='seller' ? '🎉 Seller account created! Welcome to Zorix.' : '🎉 Welcome to Zorix, '+name+'!');
+}
+
+// ===== ADMIN: Show seller details =====
+function renderAUsers() {
+  const users = DB.get('users')||[];
+  document.getElementById('aUsersT').innerHTML = users.map(u => `
+    <tr>
+      <td style="font-weight:600">${u.name}</td>
+      <td>${u.email}</td>
+      <td><span class="tag ${u.role==='seller'?'yellow':u.role==='admin'?'red':'green'}">${u.role}</span></td>
+      <td>${u.shop||'-'}</td>
+      <td>${u.joined||'-'}</td>
+      <td>
+        <span class="tag ${u.active!==false?'green':'red'}">${u.active!==false?'Active':'Banned'}</span>
+        ${u.verified?'<span class="tag blue" style="margin-left:4px">Verified</span>':''}
+      </td>
+      <td style="display:flex;gap:4px;flex-wrap:wrap">
+        ${u.role==='seller'?`<button class="act-b edit" onclick="viewSellerKYC('${u.id}')">KYC</button>`:''}
+        ${u.active!==false?`<button class="act-b del" onclick="banUser('${u.id}')">Ban</button>`:`<button class="act-b ship" onclick="unbanUser('${u.id}')">Unban</button>`}
+      </td>
+    </tr>`).join('');
+}
+
+function viewSellerKYC(id) {
+  const users = DB.get('users')||[];
+  const u = users.find(x=>x.id===id);
+  if(!u) return;
+  const info = [
+    ['Full Name', u.name],
+    ['Email', u.email],
+    ['Phone', u.phone||'-'],
+    ['Shop Name', u.shop||'-'],
+    ['ID Number', u.idNum||'-'],
+    ['Country', u.country||'-'],
+    ['Bank Account', u.bankAccount||'-'],
+    ['Bank Name', u.bankName||'-'],
+    ['Payoneer', u.payoneer||'-'],
+    ['PayPal', u.paypal||'-'],
+    ['Gmail', u.gmail||'-'],
+    ['Status', u.active?'Active':'Banned'],
+    ['Verified', u.verified?'Yes':'No'],
+  ].map(([k,v])=>`<tr><td style="font-weight:600;color:var(--navy);padding:6px 10px;white-space:nowrap">${k}</td><td style="padding:6px 10px;color:var(--text2)">${v}</td></tr>`).join('');
+  
+  // Show in a simple overlay
+  const box = document.createElement('div');
+  box.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:5000;display:flex;align-items:center;justify-content:center;padding:20px';
+  box.innerHTML=`<div style="background:white;border-radius:12px;padding:24px;max-width:500px;width:100%;max-height:80vh;overflow-y:auto;position:relative">
+    <button onclick="this.closest('div[style]').remove()" style="position:absolute;top:12px;right:12px;background:#f3f3f3;border:none;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:16px">✕</button>
+    <div style="font-size:16px;font-weight:800;color:var(--navy);margin-bottom:14px;font-family:Poppins,sans-serif">🏪 Seller KYC Details</div>
+    <table style="width:100%;border-collapse:collapse">${info}</table>
+    <div style="margin-top:14px;display:flex;gap:8px">
+      <button class="act-b ship" style="flex:1;padding:10px" onclick="approveSellerKYC('${id}');this.closest('div[style]').remove()">✅ Approve Seller</button>
+      <button class="act-b del" style="flex:1;padding:10px" onclick="banUser('${id}');this.closest('div[style]').remove()">❌ Reject & Ban</button>
+    </div>
+  </div>`;
+  document.body.appendChild(box);
+}
+
+function approveSellerKYC(id) {
+  const users = DB.get('users')||[];
+  const i = users.findIndex(x=>x.id===id);
+  if(i>-1) { users[i].verified=true; users[i].active=true; DB.set('users',users); }
+  renderAUsers();
+  toast('Seller KYC approved ✅');
+}
+
+
+// ===== BACK TO TOP =====
+window.addEventListener('scroll', function() {
+  const btn = document.getElementById('backToTop');
+  if (btn) btn.classList.toggle('show', window.scrollY > 400);
+});
+
+// ===== SEARCH SUGGESTIONS =====
+let sugTimeout = null;
+document.addEventListener('DOMContentLoaded', function() {
+  const inp = document.getElementById('sInp');
+  const sugBox = document.getElementById('searchSuggestions');
+  if (!inp || !sugBox) return;
+  inp.addEventListener('input', function() {
+    clearTimeout(sugTimeout);
+    const q = this.value.trim();
+    if (q.length < 2) { sugBox.classList.remove('open'); return; }
+    sugTimeout = setTimeout(function() {
+      const prods = DB.get('products') || [];
+      const matches = prods.filter(p => p.name.toLowerCase().includes(q.toLowerCase())).slice(0, 7);
+      if (!matches.length) { sugBox.classList.remove('open'); return; }
+      sugBox.innerHTML = matches.map(p =>
+        `<div class="sug-item" onclick="selectSuggestion('${p.id}','${p.name.replace(/'/g,'\'').slice(0,40)}')">
+          <i class="ti ti-search" aria-hidden="true"></i>
+          <span>${p.name.slice(0,50)}</span>
+          <span style="margin-left:auto;font-size:10px;color:var(--text3)">${p.cat}</span>
+        </div>`
+      ).join('');
+      sugBox.classList.add('open');
+      inp.setAttribute('aria-expanded','true');
+    }, 200);
+  });
+  inp.addEventListener('blur', function() {
+    setTimeout(function() { sugBox.classList.remove('open'); inp.setAttribute('aria-expanded','false'); }, 200);
+  });
+  inp.addEventListener('focus', function() {
+    if (this.value.trim().length >= 2) sugBox.classList.add('open');
+  });
+});
+function selectSuggestion(id, name) {
+  document.getElementById('sInp').value = name;
+  const sugBox = document.getElementById('searchSuggestions');
+  if (sugBox) sugBox.classList.remove('open');
+  openPD(id);
+}
+
+// ===== CART BADGE ANIMATION =====
+function animateCartBadge() {
+  const badge = document.getElementById('cartBadge');
+  if (!badge) return;
+  badge.classList.add('cart-animate');
+  setTimeout(() => badge.classList.remove('cart-animate'), 300);
+}
+
+// ===== IMPROVED TOAST WITH ICONS =====
+function toast(msg, type='success') {
+  const el = document.getElementById('toast');
+  if (!el) return;
+  const icons = { success: 'ti-check', error: 'ti-x', warn: 'ti-alert-triangle', info: 'ti-info-circle' };
+  el.innerHTML = `<i class="ti ${icons[type]||'ti-check'}" aria-hidden="true"></i><span>${msg}</span>`;
+  el.className = 'toast show ' + type;
+  clearTimeout(el._t);
+  el._t = setTimeout(() => el.classList.remove('show'), type === 'error' ? 4000 : 2800);
+}
+
+// ===== BREADCRUMB =====
+function updateBreadcrumb(cat) {
+  const bc = document.getElementById('breadcrumbBar');
+  if (!bc) return;
+  bc.innerHTML = `<span onclick="navigate('home')" style="cursor:pointer;color:var(--blue)">Home</span>
+    ${cat ? `<span class="sep">›</span><span class="current">${cat}</span>` : ''}`;
+}
+
+// ===== FORM VALIDATION HELPERS =====
+function validateField(id, rule, msg) {
+  const el = document.getElementById(id);
+  if (!el) return true;
+  const val = el.value.trim();
+  const grp = el.closest('.fgrp');
+  const ok = rule(val);
+  if (grp) grp.classList.toggle('has-error', !ok);
+  return ok;
+}
+function validateEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+function validatePhone(v) { return v.length >= 7 && /[\d\+\s\-\(\)]+/.test(v); }
+function validatePassword(v) { return v.length >= 8; }
+
+// ===== PASSWORD STRENGTH =====
+function checkPasswordStrength(val) {
+  const bar = document.getElementById('pwStrengthBar');
+  if (!bar) return;
+  let score = 0;
+  if (val.length >= 8) score++;
+  if (/[A-Z]/.test(val)) score++;
+  if (/[0-9]/.test(val)) score++;
+  if (/[^A-Za-z0-9]/.test(val)) score++;
+  bar.className = 'password-strength ' + ['','pw-weak','pw-medium','pw-medium','pw-strong'][score];
+  bar.style.display = val ? 'block' : 'none';
+}
+
+// ===== IMPROVED doLogin with validation =====
+function doLogin() {
+  const email = (document.getElementById('lEmail')?.value || '').trim();
+  const pass = document.getElementById('lPass')?.value || '';
+  if (!email) { toast('Please enter your email', 'error'); return; }
+  if (!validateEmail(email)) { toast('Please enter a valid email address', 'error'); return; }
+  if (!pass) { toast('Please enter your password', 'error'); return; }
+  const users = DB.get('users') || [];
+  const u = users.find(x => x.email === email && x.password === pass);
+  if (!u) { toast('Incorrect email or password', 'error'); return; }
+  if (u.active === false) { toast('Your account has been suspended. Contact support.', 'error'); return; }
+  DB.set('session', u);
+  updateAcctUI();
+  renderAcct();
+  toast('Welcome back, ' + u.name + '! 👋');
+}
+
+// ===== IMPROVED renderCheckout =====
+function renderCheckout() {
+  const cart = getCart(), prods = DB.get('products') || [];
+  if (!cart.length) { navigate('cart'); return; }
+  populateCheckoutCountries();
+  let total = 0;
+  const reviewHtml = cart.map(item => {
+    const p = prods.find(x => x.id === item.id);
+    if (!p) return '';
+    const sub = p.usdPrice * item.qty;
+    total += sub;
+    return `<div style="display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--border);font-size:12px">
+      <img src="https://picsum.photos/seed/${p.img||p.id}/80/80" style="width:42px;height:42px;object-fit:cover;border-radius:6px;flex-shrink:0" alt="${p.name}" loading="lazy" onerror="this.style.display='none'">
+      <div style="flex:1;min-width:0"><div style="font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${p.name}</div><div style="color:var(--text3)">×${item.qty} · ${p.seller||'Zorix'}</div></div>
+      <div style="font-weight:700;color:var(--red);flex-shrink:0">USDT ${sub.toFixed(2)}</div>
+    </div>`;
+  }).join('');
+  const coRev = document.getElementById('coReview');
+  if (coRev) coRev.innerHTML = reviewHtml;
+  const coTot = document.getElementById('coTotals');
+  if (coTot) coTot.innerHTML = `
+    <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px;color:var(--text2)"><span>Subtotal</span><span>USDT ${total.toFixed(2)}</span></div>
+    <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px;color:var(--text2)"><span>EUR equivalent</span><span>€${(total*0.92).toFixed(2)}</span></div>
+    <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:8px;color:var(--green)"><span>Shipping</span><span>By Seller</span></div>
+    <hr style="border:none;border-top:1px solid var(--border);margin:8px 0">
+    <div style="display:flex;justify-content:space-between;font-size:17px;font-weight:700"><span style="color:var(--navy)">Total</span><span style="color:var(--red)">USDT ${total.toFixed(2)}</span></div>`;
+  const sess = DB.get('session');
+  const nameEl = document.getElementById('coName');
+  if (sess && nameEl) nameEl.value = sess.name || '';
+  const coBtn = document.getElementById('placeOrderBtn');
+  if (coBtn) { coBtn.disabled = false; coBtn.textContent = 'Place Order →'; }
+}
+
+// ===== WISHLIST (localStorage) =====
+/* toggleWishlist dup removed */
+/* isWishlisted dup removed */
+
+// ===== IMPROVED addCart =====
+function addCart(id, qty=1) {
+  const p = (DB.get('products')||[]).find(x => x.id===id);
+  if (!p || !p.stock) { toast('Sorry, this product is currently out of stock', 'error'); return; }
+  const cart = getCart(), ex = cart.find(x => x.id===id);
+  if (ex) ex.qty += qty; else cart.push({ id, qty });
+  saveCart(cart);
+  animateCartBadge();
+  toast(p.name.slice(0,28) + '… added to cart');
+}
+
+// ===== CATEGORY FILTER WITH BREADCRUMB =====
+function filterCat(cat, el) {
+  actCat = cat;
+  renderCatList();
+  document.getElementById('secTitle').textContent = cat || 'All Products';
+  applyFilters();
+  updateBreadcrumb(cat);
+  if (document.getElementById('homeView').classList.contains('active')) {
+    setTimeout(() => {
+      const sec = document.getElementById('productsSec');
+      if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  } else navigate('home');
+}
+
+// ===== INIT EXTRAS =====
+function initExtras() {
+  // Password strength listener
+  const rPass = document.getElementById('rPass');
+  if (rPass) rPass.addEventListener('input', function() { checkPasswordStrength(this.value); });
+  
+  // Add breadcrumb bar
+  const mainWrap = document.querySelector('.main-wrap');
+  if (mainWrap) {
+    const bc = document.createElement('nav');
+    bc.id = 'breadcrumbBar';
+    bc.className = 'breadcrumb';
+    bc.setAttribute('aria-label','Breadcrumb');
+    bc.innerHTML = '<span onclick="navigate(\'home\')" style="cursor:pointer;color:var(--blue)">Home</span>';
+    mainWrap.parentNode.insertBefore(bc, mainWrap);
+  }
+  
+  // Add password strength bar after password input in reg form
+  const rPassEl = document.getElementById('rPass');
+  if (rPassEl && rPassEl.parentNode) {
+    const pwBar = document.createElement('div');
+    pwBar.id = 'pwStrengthBar';
+    pwBar.className = 'password-strength';
+    pwBar.style.display = 'none';
+    rPassEl.parentNode.appendChild(pwBar);
+  }
+}
+
+// ===== IMPROVED updateStats =====
+function updateStats() {
+  const p = DB.get('products') || [];
+  const el = document.getElementById('statProds');
+  if (el) el.textContent = p.length >= 1000 ? (p.length/1000).toFixed(1)+'M+' : p.length;
+}
+
+// ===== ACTIVE FILTER CHIPS =====
+function renderActiveFilters() {
+  const el = document.getElementById('activeFilters');
+  if (!el) return;
+  const chips = [];
+  if (actCat) chips.push(`<span class="filter-chip" onclick="filterCat('')"><i class="ti ti-x"></i>${actCat}</span>`);
+  if (actStar > 0) chips.push(`<span class="filter-chip" onclick="setStar(0,null)"><i class="ti ti-x"></i>${actStar}★ & up</span>`);
+  el.innerHTML = chips.join('');
+}
+
+// Override applyFilters to also render chips
+const _origApplyFilters = typeof applyFilters === 'function' ? applyFilters : null;
+
+
+// ===== DARK MODE =====
+
+function renderRecentlyViewed() {
+  const rv = DB.get('recentlyViewed') || [];
+  const prods = DB.get('products') || [];
+  const items = rv.map(id => prods.find(p => p.id === id)).filter(Boolean);
+  const sec = document.getElementById('recentlyViewedSection');
+  const strip = document.getElementById('rvStrip');
+  if (!sec || !strip) return;
+  if (!items.length) { sec.style.display = 'none'; return; }
+  sec.style.display = 'block';
+  strip.innerHTML = items.map(p => `<div class="rv-card" onclick="openPD('${p.id}')">
+    <img src="https://picsum.photos/seed/${p.img||p.id}/200/150" alt="${p.name}" loading="lazy" onerror="this.style.display='none'">
+    <div class="rv-name">${p.name}</div>
+    <div class="rv-price">USDT ${Number(p.usdPrice).toFixed(2)}</div>
+  </div>`).join('');
+}
+
+function toggleTheme() {
+  const isDark = document.body.classList.toggle('dark');
+  DB.set('theme', isDark ? 'dark' : 'light');
+  const icon = document.getElementById('themeIcon');
+  if (icon) icon.className = isDark ? 'ti ti-sun' : 'ti ti-moon';
+}
+function loadTheme() {
+  const theme = DB.get('theme');
+  if (theme === 'dark') {
+    document.body.classList.add('dark');
+    const icon = document.getElementById('themeIcon');
+    if (icon) icon.className = 'ti ti-sun';
+  }
+}
+
+// ===== WISHLIST =====
+function toggleWishlist(productId, e) {
+  if (e) e.stopPropagation();
+  const wl = DB.get('wishlist') || [];
+  const idx = wl.indexOf(productId);
+  if (idx >= 0) { wl.splice(idx, 1); toast('Removed from wishlist'); }
+  else { wl.push(productId); toast('Added to wishlist'); }
+  DB.set('wishlist', wl);
+  if (document.getElementById('wishlistView').classList.contains('active')) renderWishlist();
+  applyFilters();
+}
+function isWishlisted(id) { return (DB.get('wishlist') || []).includes(id); }
+function renderWishlist() {
+  const wl = DB.get('wishlist') || [];
+  const prods = DB.get('products') || [];
+  const items = wl.map(id => prods.find(p => p.id === id)).filter(Boolean);
+  const cnt = document.getElementById('wishlistCount');
+  if (cnt) cnt.textContent = '(' + items.length + ' items)';
+  const g = document.getElementById('wishlistGrid');
+  if (!items.length) {
+    g.innerHTML = `<div style="grid-column:1/-1"><div class="empty-state">
+      <i class="ti ti-heart" style="font-size:52px;color:var(--text3);display:block;margin-bottom:12px" aria-hidden="true"></i>
+      <h3>Your wishlist is empty</h3><p>Save items you love by tapping the heart icon.</p>
+      <button class="btn-prim" onclick="navigate('home')">Browse Products</button></div></div>`;
+    return;
+  }
+  g.innerHTML = items.map(p => pCard(p)).join('');
+}
+
+// ===== COUPON =====
+const COUPONS = { 'ZORIX10': 10, 'WELCOME15': 15, 'SAVE20': 20, 'ZORIX5': 5 };
+function applyCoupon() {
+  const code = (document.getElementById('couponInput')?.value || '').trim().toUpperCase();
+  if (!code) { toast('Enter a coupon code', 'warn'); return; }
+  if (COUPONS[code]) {
+    DB.set('activeCoupon', { code, pct: COUPONS[code] });
+    toast(code + ' applied — ' + COUPONS[code] + '% off!');
+    renderCart();
+  } else {
+    toast('Invalid coupon code', 'error');
+  }
+}
+function removeCoupon() {
+  DB.set('activeCoupon', null);
+  toast('Coupon removed');
+  renderCart();
+}
+
+// ===== RECENTLY VIEWED =====
+function trackRecentlyViewed(id) {
+  let rv = DB.get('recentlyViewed') || [];
+  rv = rv.filter(x => x !== id);
+  rv.unshift(id);
+  rv = rv.slice(0, 8);
+  DB.set('recentlyViewed', rv);
+}
+
+// ===== REVIEWS =====
+function getReviews(productId) {
+  const all = DB.get('reviews') || {};
+  return all[productId] || [];
+}
+let reviewStars = 5;
+function setReviewStars(n) {
+  reviewStars = n;
+  document.querySelectorAll('#reviewStarInput i').forEach((el, i) => {
+    el.classList.toggle('active', i < n);
+  });
+}
+function submitReview() {
+  const sess = DB.get('session');
+  if (!sess) { toast('Please sign in to leave a review', 'warn'); navigate('account'); return; }
+  const text = (document.getElementById('reviewText')?.value || '').trim();
+  if (!text) { toast('Please write your review', 'error'); return; }
+  const all = DB.get('reviews') || {};
+  if (!all[pdId]) all[pdId] = [];
+  all[pdId].unshift({
+    name: sess.name, stars: reviewStars, text,
+    date: new Date().toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' }),
+    verified: true
+  });
+  DB.set('reviews', all);
+  toast('Thank you for your review!');
+  openPD(pdId);
+}
+function renderReviews(productId, baseRating, baseCount) {
+  const reviews = getReviews(productId);
+  const el = document.getElementById('pdReviewsSection');
+  if (!el) return;
+  const avgStars = '★'.repeat(Math.round(baseRating)) + '☆'.repeat(5 - Math.round(baseRating));
+  let html = `<div class="reviews-section">
+    <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:12px">Customer Reviews</div>
+    <div class="review-summary">
+      <div class="rev-score">
+        <div class="rev-score-num">${baseRating}</div>
+        <div class="rev-score-stars">${avgStars}</div>
+        <div class="rev-score-count">${Number(baseCount).toLocaleString()} ratings</div>
+      </div>
+      <div class="rev-bars">`;
+  [5,4,3,2,1].forEach(s => {
+    const pct = s === Math.round(baseRating) ? 60 : s > baseRating ? 8 : 20;
+    html += `<div class="rb-row"><span>${s}★</span><div class="rb-bar"><div class="rb-fill" style="width:${pct}%"></div></div></div>`;
+  });
+  html += `</div></div>`;
+  if (reviews.length) {
+    html += reviews.map(r => `<div class="review-item">
+      <div class="rev-head">
+        <div class="rev-avatar">${r.name.charAt(0).toUpperCase()}</div>
+        <div><div class="rev-name">${r.name}</div><div class="rev-stars">${'★'.repeat(r.stars)}${'☆'.repeat(5-r.stars)}</div></div>
+        ${r.verified?'<span class="rev-verified">✓ Verified Purchase</span>':''}
+      </div>
+      <div class="rev-text">${r.text}</div>
+      <div class="rev-date">${r.date}</div>
+    </div>`).join('');
+  }
+  html += `<div class="write-review">
+    <div style="font-size:13px;font-weight:600;color:var(--navy)">Write a Review</div>
+    <div class="star-input" id="reviewStarInput">
+      ${[1,2,3,4,5].map(i=>`<i class="ti ti-star${i<=5?' active':''}" onclick="setReviewStars(${i})" aria-label="${i} stars"></i>`).join('')}
+    </div>
+    <textarea id="reviewText" placeholder="Share your experience with this product…" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:12px;font-family:inherit;min-height:60px;outline:none"></textarea>
+    <button class="btn-prim" style="margin-top:8px" onclick="submitReview()">Submit Review</button>
+  </div></div>`;
+  el.innerHTML = html;
+}
+
+document.addEventListener('DOMContentLoaded', function(){ init(); initExtras(); loadTheme(); });
+</script>
+</body>
+
+<!-- 
+===================================================
+GRANDMART - DEPLOYMENT GUIDE (READ CAREFULLY)
+===================================================
+
+🌐 HOW TO MAKE IT LIVE ON INTERNET (Like Daraz/Amazon):
+
+OPTION 1 - FREE (Netlify) - EASIEST:
+1. Go to https://app.netlify.com/drop
+2. Drag & Drop this HTML file
+3. You get URL like: https://grandmart-abc123.netlify.app
+4. Custom domain: buy domain from Namecheap ($10/yr)
+   → In Netlify: Site Settings → Custom Domain → Add domain
+   → Point DNS: Add CNAME record to your-site.netlify.app
+
+OPTION 2 - GitHub Pages (Free):
+1. Create GitHub account at github.com
+2. New Repository → name it "grandmart"
+3. Upload this file as "index.html"
+4. Settings → Pages → Deploy from main branch
+5. URL: https://yourusername.github.io/grandmart
+
+OPTION 3 - Vercel (Fast, Free):
+1. https://vercel.com → New Project
+2. Upload file or connect GitHub
+3. Instant deployment
+
+OPTION 4 - VPS Hosting (Professional):
+1. Buy VPS from DigitalOcean/Vultr (~$6/mo)
+2. Install Nginx: sudo apt install nginx
+3. Upload file to /var/www/html/index.html
+4. Point your domain DNS to VPS IP
+5. Free SSL: sudo certbot --nginx
+
+🔑 ADMIN ACCESS (KEEP SECRET):
+- URL param: https://yoursite.com/?admin=zorix2025
+- Keyboard: Press Ctrl+Shift+G then type ZORIXADMIN
+- Default password: zorix2025
+- CHANGE PASSWORD in Admin Panel → Settings after first login!
+
+🔗 AFFILIATE LINKS FORMAT:
+https://yoursite.com/?ref=SELLER_ID
+
+📧 FOR REAL EMAIL VERIFICATION:
+- Use EmailJS (free): https://emailjs.com
+- Or Firebase Auth
+- Replace sendGmailVerify() with real API call
+
+💳 FOR REAL PAYMENTS:
+- Stripe: stripe.com (Cards worldwide)
+- PayPal: developer.paypal.com
+- Payoneer: payoneer.com/partners
+- Crypto (USDT): CoinPayments API
+
+===================================================
+-->
+</html>
