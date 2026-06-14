@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Zorix — Premium E-Commerce Marketplace | Shop Smarter. Live Better.</title>
+<meta name="description" content="Zorix - Worldwide premium e-commerce marketplace. Shop millions of products with AI support, secure payments, fast delivery to 50+ countries.">
+<meta name="keywords" content="Zorix, ecommerce, marketplace, shopping, USDT, worldwide delivery">
+<meta property="og:title" content="Zorix — E-Commerce Marketplace">
+<meta property="og:description" content="Shop smarter with Zorix. AI-powered support, multi-currency, 50+ countries.">
+<meta property="og:type" content="website">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+<!-- Netlify AI Integration -->
+<script src="https://cdn.jsdelivr.net/npm/@netlify/ai-client@latest/dist/index.min.js"></script>
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #1E5BA8;
+  --primary-dark: #1a4a8a;
+  --secondary: #FF9800;
+  --secondary-light: #FFB74D;
+  --white: #FFFFFF;
+  --light-bg: #F5F7FA;
+  --border: #E2E8F0;
+  --text: #1F2937;
+  --text-light: #6B7280;
+  --success: #10B981;
+  --error: #EF4444;
+  --warning: #F59E0B;
+  --gold: #FFD814;
+  
+  --shadow: 0 2px 12px rgba(30, 91, 168, 0.1);
+  --shadow-lg: 0 8px 32px rgba(30, 91, 168, 0.15);
+  --radius: 10px;
+  --radius-lg: 16px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--light-bg);
+  color: var(--text);
+  font-size: 14px;
+  min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-img {
+  width: 45px;
+  height: 45px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="%231E5BA8" width="100" height="100" rx="15"/><text x="50" y="65" font-size="50" font-weight="bold" fill="%23FF9800" text-anchor="middle" font-family="Poppins">Z</text><circle cx="75" cy="25" r="12" fill="%23FF9800"/></svg>') center/contain no-repeat;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.5px;
+}
+
+.logo-text span { color: var(--secondary); }
+
+/* Search Bar */
+.search-bar {
+  flex: 1;
+  display: flex;
+  height: 42px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 0 0 2px transparent;
+  background: var(--white);
+  max-width: 600px;
+}
+
+.search-bar:focus-within { box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.3); }
+
+.search-bar select {
+  background: var(--light-bg);
+  border: none;
+  padding: 0 12px;
+  font-size: 11px;
+  color: var(--text);
+  border-right: 1px solid var(--border);
+  cursor: pointer;
+  min-width: 90px;
+  font-family: 'Inter', sans-serif;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 0 14px;
+  font-size: 13px;
+  outline: none;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+}
+
+.search-bar button {
+  background: var(--secondary);
+  border: none;
+  padding: 0 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+  font-weight: 600;
+  color: white;
+}
+
+.search-bar button:hover { background: var(--secondary-light); }
+
+/* Top Nav Buttons */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.nav-btn {
+  color: var(--white);
+  font-size: 11px;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  line-height: 1.3;
+  white-space: nowrap;
+  transition: background 0.2s;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-btn:hover { background: rgba(255, 255, 255, 0.15); }
+
+.nav-btn small { font-size: 9px; opacity: 0.8; display: block; }
+
+.cart-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--white);
+  font-weight: 600;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#cartBadge {
+  background: var(--secondary);
+  color: var(--white);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+/* ===== CATEGORY NAV ===== */
+.category-nav {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 45px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.category-nav::-webkit-scrollbar { display: none; }
+
+.cat-item {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  padding: 6px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 6px;
+  transition: all 0.2s;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.cat-item:hover, .cat-item.active {
+  color: var(--white);
+  background: rgba(255, 152, 0, 0.2);
+  border-color: var(--secondary);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #0f3a6a 100%);
+  padding: 60px 20px;
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 152, 0, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.hero h1 span { color: var(--secondary); }
+
+.hero p {
+  font-size: 16px;
+  opacity: 0.95;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--secondary);
+  color: var(--white);
+  border: none;
+  padding: 13px 32px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary:hover {
+  background: var(--secondary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 11px 30px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== MAIN GRID ===== */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 28px 20px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 20px;
+}
+
+.sidebar { width: 240px; flex-shrink: 0; }
+
+.content { flex: 1; }
+
+/* ===== SIDEBAR FILTERS ===== */
+.filter-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow);
+}
+
+.filter-card h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--light-bg);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text-light);
+  transition: color 0.2s;
+}
+
+.filter-item:hover { color: var(--primary); }
+
+.filter-item input {
+  accent-color: var(--secondary);
+  cursor: pointer;
+}
+
+/* ===== PRODUCT GRID ===== */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.product-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  border-color: var(--secondary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 152, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(135deg, var(--light-bg), #e8e8e8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-rating {
+  font-size: 11px;
+  color: var(--secondary);
+  margin-bottom: 6px;
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--error);
+  margin-bottom: 6px;
+}
+
+.product-btn {
+  background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+  color: var(--white);
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: auto;
+}
+
+.product-btn:hover { transform: translateY(-1px); }
+
+/* ===== AI CHATBOT ===== */
+.chatbot-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  font-family: 'Inter', sans-serif;
+}
+
+.chat-bubble {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s;
+  border: none;
+}
+
+.chat-bubble:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 40px rgba(30, 91, 168, 0.3);
+}
+
+.chat-bubble.online::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--success);
+  border-radius: 50%;
+  bottom: 4px;
+  right: 4px;
+  border: 2px solid var(--white);
+}
+
+.chat-window {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 380px;
+  height: 500px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.chat-window.active { display: flex; }
+
+.chat-header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--white);
+  padding: 16px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-close {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 85%;
+}
+
+.message.bot {
+  background: var(--light-bg);
+  color: var(--text);
+  align-self: flex-start;
+}
+
+.message.user {
+  background: var(--primary);
+  color: var(--white);
+  align-self: flex-end;
+}
+
+.chat-input-box {
+  padding: 12px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input-box input {
+  flex: 1;
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.chat-input-box input:focus { border-color: var(--secondary); }
+
+.chat-input-box button {
+  background: var(--secondary);
+  color: var(--white);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* ===== BLOG SECTION ===== */
+.blog-section {
+  margin-top: 40px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px 20px;
+  box-shadow: var(--shadow);
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.blog-header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.blog-header p {
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.blog-card {
+  background: var(--light-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid var(--border);
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.blog-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: var(--white);
+}
+
+.blog-content {
+  padding: 16px;
+}
+
+.blog-category {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.blog-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.blog-excerpt {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.blog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-light);
+}
+
+.read-more {
+  color: var(--secondary);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ===== CURRENCY SELECTOR ===== */
+.currency-selector {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: var(--white);
+  border: 2px solid var(--secondary);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  box-shadow: var(--shadow-lg);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 998;
+}
+
+.currency-selector:hover {
+  background: var(--light-bg);
+  transform: translateY(-2px);
+}
+
+.currency-dropdown {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  display: none;
+  z-index: 1000;
+  min-width: 120px;
+}
+
+.currency-dropdown.active { display: block; }
+
+.currency-option {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  transition: background 0.2s;
+  border-bottom: 1px solid var(--border);
+}
+
+.currency-option:hover { background: var(--light-bg); }
+
+.currency-option:last-child { border-bottom: none; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header { flex-wrap: wrap; height: auto; padding: 12px; gap: 12px; }
+  .search-bar { order: 3; width: 100%; max-width: 100%; }
+  .logo-text { font-size: 18px; }
+  .container { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+  .products-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+  .chat-window { width: 100%; right: -20px; bottom: 100px; }
+}
+
+/* ===== UTILITIES ===== */
+.view { display: none; }
+.view.active { display: block; }
+
+.empty-state {
+  text-align: center;
+  padding: 48px 20px;
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.empty-state-icon { font-size: 48px; margin-bottom: 12px; }
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--success);
+  color: var(--white);
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  animation: slideUp 0.3s ease;
+}
+
+.toast.show { display: flex; }
+
+.toast.error { background: var(--error); }
+
+.toast.warning { background: var(--warning); }
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 24px;
+}
+
+.footer-col h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--secondary);
+}
+
+.footer-col a {
+  display: block;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover { color: var(--secondary); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="logo" onclick="navigate('home')">
+    <div class="logo-img"></div>
+    <div>
+      <div class="logo-text">ZO<span>RIX</span></div>
+      <div style="font-size: 9px; opacity: 0.9;">Premium Marketplace</div>
+    </div>
+  </div>
+
+  <div class="search-bar">
+    <select id="searchCat">
+      <option value="">All Categories</option>
+      <option>Electronics</option>
+      <option>Fashion</option>
+      <option>Home & Kitchen</option>
+      <option>Books</option>
+      <option>Sports</option>
+      <option>Beauty</option>
+    </select>
+    <input type="text" id="searchInput" placeholder="Search products worldwide...">
+    <button onclick="searchProducts()">🔍</button>
+  </div>
+
+  <div class="nav-buttons">
+    <div class="nav-btn" onclick="navigate('account')">
+      <small>Hello</small>
+      Account
+    </div>
+    <div class="nav-btn" onclick="navigate('orders')">
+      <small>Your</small>
+      Orders
+    </div>
+    <div class="nav-btn" onclick="navigate('blog')">
+      📚 Blog
+    </div>
+    <div class="cart-btn" onclick="navigate('cart')">
+      🛒 Cart
+      <span id="cartBadge">0</span>
+    </div>
+  </div>
+</header>
+
+<!-- ===== CATEGORY NAV ===== -->
+<nav class="category-nav">
+  <div class="cat-item active" onclick="filterCategory('')">📱 All</div>
+  <div class="cat-item" onclick="filterCategory('Electronics')">💻 Electronics</div>
+  <div class="cat-item" onclick="filterCategory('Fashion')">👗 Fashion</div>
+  <div class="cat-item" onclick="filterCategory('Home')">🏠 Home</div>
+  <div class="cat-item" onclick="filterCategory('Books')">📚 Books</div>
+  <div class="cat-item" onclick="filterCategory('Sports')">⚽ Sports</div>
+  <div class="cat-item" onclick="filterCategory('Beauty')">💄 Beauty</div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Shop <span>Smarter</span>. Live Better. 🌍</h1>
+    <p>Discover millions of products with AI support, secure payments, and fast delivery to 50+ countries</p>
+    <div class="hero-buttons">
+      <button class="btn-primary" onclick="document.querySelector('.products-grid').scrollIntoView({behavior: 'smooth'})">Start Shopping</button>
+      <button class="btn-secondary">Learn More</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="filter-card">
+      <h3>🏷️ Price Range</h3>
+      <input type="range" min="0" max="10000" value="10000" id="priceRange" style="width: 100%; cursor: pointer;">
+      <div style="margin-top: 8px; font-size: 12px; color: var(--primary); font-weight: 700;">
+        Up to $<span id="priceValue">10000</span>
+      </div>
+    </div>
+
+    <div class="filter-card">
+      <h3>⭐ Rating</h3>
+      <div class="filter-item">
+        <input type="checkbox" id="rating5"> <label for="rating5">⭐⭐⭐⭐⭐ 5 Stars</label>
+      </div>
+      <div class="filter-item">
+        <input type="checkbox" id="rating4"> <label for="rating4">⭐⭐⭐⭐ 4+ Stars</label>
+      </div>
+      <div class="filter-item">
+        <input type="checkbox" id="rating3"> <label for="rating3">⭐⭐⭐ 3+ Stars</label>
+      </div>
+    </div>
+
+    <div class="filter-card">
+      <h3>📦 Availability</h3>
+      <div class="filter-item">
+        <input type="checkbox" id="inStock"> <label for="inStock">In Stock Only</label>
+      </div>
+      <div class="filter-item">
+        <input type="checkbox" id="freeShip"> <label for="freeShip">Free Shipping</label>
+      </div>
+    </div>
+
+    <div class="filter-card">
+      <h3>🌍 Delivery</h3>
+      <div class="filter-item">
+        <input type="checkbox" id="fastDel"> <label for="fastDel">Same Day</label>
+      </div>
+      <div class="filter-item">
+        <input type="checkbox" id="standardDel"> <label for="standardDel">Standard</label>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Content -->
+  <main class="content">
+    <!-- ===== HOME VIEW ===== -->
+    <div id="homeView" class="view active">
+      <div class="products-grid" id="productsGrid">
+        <!-- Products will be loaded here -->
+      </div>
+
+      <!-- ===== BLOG SECTION ===== -->
+      <section class="blog-section">
+        <div class="blog-header">
+          <h2>📚 Zorix Blog & Tips</h2>
+          <p>Tips, trends, and stories from our community</p>
+        </div>
+        <div class="blog-grid" id="blogGrid">
+          <!-- Blog posts will be loaded here -->
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== CART VIEW ===== -->
+    <div id="cartView" class="view">
+      <div class="empty-state">
+        <div class="empty-state-icon">🛒</div>
+        <h2>Your cart is empty</h2>
+        <p>Start shopping to add items to your cart</p>
+        <button class="btn-primary" onclick="navigate('home')" style="margin-top: 16px;">Continue Shopping</button>
+      </div>
+    </div>
+
+    <!-- ===== BLOG VIEW ===== -->
+    <div id="blogView" class="view">
+      <div style="background: var(--white); border-radius: var(--radius-lg); padding: 32px 20px;">
+        <h1 style="color: var(--primary); margin-bottom: 24px; font-family: 'Poppins', sans-serif;">📚 Zorix Blog</h1>
+        <div class="blog-grid" id="fullBlogGrid">
+          <!-- Full blog posts will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ACCOUNT VIEW ===== -->
+    <div id="accountView" class="view">
+      <div class="empty-state">
+        <div class="empty-state-icon">👤</div>
+        <h2>Account</h2>
+        <p>Sign in to access your account</p>
+        <button class="btn-primary" style="margin-top: 16px;">Sign In</button>
+      </div>
+    </div>
+
+    <!-- ===== ORDERS VIEW ===== -->
+    <div id="ordersView" class="view">
+      <div class="empty-state">
+        <div class="empty-state-icon">📦</div>
+        <h2>Your Orders</h2>
+        <p>No orders yet. Start shopping!</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- ===== CURRENCY SELECTOR ===== -->
+<div class="currency-selector" onclick="toggleCurrencyDropdown()">
+  💱 <span id="currencyDisplay">USD</span>
+  <div class="currency-dropdown" id="currencyDropdown">
+    <div class="currency-option" onclick="setCurrency('USD', '$')">USD ($)</div>
+    <div class="currency-option" onclick="setCurrency('EUR', '€')">EUR (€)</div>
+    <div class="currency-option" onclick="setCurrency('GBP', '£')">GBP (£)</div>
+    <div class="currency-option" onclick="setCurrency('AED', 'د.إ')">AED (د.إ)</div>
+    <div class="currency-option" onclick="setCurrency('SAR', '﷼')">SAR (﷼)</div>
+    <div class="currency-option" onclick="setCurrency('PKR', '₨')">PKR (₨)</div>
+    <div class="currency-option" onclick="setCurrency('INR', '₹')">INR (₹)</div>
+    <div class="currency-option" onclick="setCurrency('CAD', 'C$')">CAD (C$)</div>
+    <div class="currency-option" onclick="setCurrency('AUD', 'A$')">AUD (A$)</div>
+    <div class="currency-option" onclick="setCurrency('CNY', '¥')">CNY (¥)</div>
+    <div class="currency-option" onclick="setCurrency('JPY', '¥')">JPY (¥)</div>
+  </div>
+</div>
+
+<!-- ===== AI CHATBOT WIDGET ===== -->
+<div class="chatbot-widget">
+  <button class="chat-bubble online" onclick="toggleChat()">💬</button>
+  
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      🤖 Zorix AI Support
+      <button class="chat-close" onclick="toggleChat()">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="message bot">
+        Hi! 👋 I'm Zorix AI. How can I help you today?
+      </div>
+    </div>
+    <div class="chat-input-box">
+      <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="if(event.key==='Enter') sendMessage()">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast"></div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-col">
+      <h4>About Zorix</h4>
+      <a onclick="navigate('blog')">Our Story</a>
+      <a>Careers</a>
+      <a>Press</a>
+      <a>Blog</a>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a>Electronics</a>
+      <a>Fashion</a>
+      <a>Home & Kitchen</a>
+      <a>Books</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a>Help Center</a>
+      <a>Contact Us</a>
+      <a>Returns</a>
+      <a>Track Order</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a>Privacy Policy</a>
+      <a>Terms of Service</a>
+      <a>Cookie Policy</a>
+      <a>Accessibility</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Zorix Inc. | Premium E-Commerce Marketplace | Available in 50+ Countries</p>
+  </div>
+</footer>
+
+<script>
+// ===== PRODUCTS DATABASE =====
+const products = [
+  { id: 1, name: 'Premium Wireless Headphones', category: 'Electronics', price: 89.99, rating: 4.8, reviews: 1200, image: '🎧' },
+  { id: 2, name: 'Smart Watch Pro', category: 'Electronics', price: 199.99, rating: 4.6, reviews: 890, image: '⌚' },
+  { id: 3, name: 'Designer Sunglasses', category: 'Fashion', price: 129.99, rating: 4.7, reviews: 450, image: '😎' },
+  { id: 4, name: 'Organic Cotton T-Shirt', category: 'Fashion', price: 24.99, rating: 4.5, reviews: 320, image: '👕' },
+  { id: 5, name: 'Coffee Maker Deluxe', category: 'Home', price: 149.99, rating: 4.9, reviews: 670, image: '☕' },
+  { id: 6, name: 'LED Smart Bulbs Set', category: 'Home', price: 49.99, rating: 4.7, reviews: 540, image: '💡' },
+  { id: 7, name: 'Python Programming Book', category: 'Books', price: 34.99, rating: 4.8, reviews: 230, image: '📚' },
+  { id: 8, name: 'Yoga Mat Premium', category: 'Sports', price: 39.99, rating: 4.6, reviews: 180, image: '🧘' },
+  { id: 9, name: 'Natural Skincare Set', category: 'Beauty', price: 59.99, rating: 4.7, reviews: 420, image: '💅' },
+];
+
+const blogPosts = [
+  { title: '5 Tips for Smart Online Shopping', category: 'Shopping', excerpt: 'Learn how to get the best deals and avoid common pitfalls...', icon: '🛒' },
+  { title: 'Sustainable Fashion Guide', category: 'Fashion', excerpt: 'Discover eco-friendly brands and sustainable shopping habits...', icon: '♻️' },
+  { title: 'Top 10 Home Tech Gadgets 2025', category: 'Tech', excerpt: 'The latest and greatest smart home devices to transform your space...', icon: '🏠' },
+  { title: 'Healthy Beauty Routines', category: 'Beauty', excerpt: 'Natural skincare routines that actually work wonders...', icon: '✨' },
+  { title: 'Best Fitness Trackers Reviewed', category: 'Sports', excerpt: 'Comprehensive review of the best fitness devices on the market...', icon: '⌚' },
+  { title: 'Books That Changed Our Lives', category: 'Books', excerpt: 'Must-read books recommended by our community members...', icon: '📖' },
+];
+
+// ===== STATE MANAGEMENT =====
+let currentCurrency = 'USD';
+let currentCurrencySymbol = '$';
+let filteredProducts = [...products];
+let chatHistory = [];
+
+// ===== INITIALIZATION =====
+document.addEventListener('DOMContentLoaded', () => {
+  loadProducts();
+  loadBlog();
+  updateCartBadge();
+  initNetlifyAI();
+});
+
+// ===== PRODUCT MANAGEMENT =====
+function loadProducts() {
+  const grid = document.getElementById('productsGrid');
+  if (!grid) return;
+  
+  grid.innerHTML = filteredProducts.map(p => `
+    <div class="product-card" onclick="viewProduct(${p.id})">
+      <div class="product-image">${p.image}</div>
+      <div class="product-info">
+        <div class="product-name">${p.name}</div>
+        <div class="product-rating">⭐ ${p.rating} (${p.reviews} reviews)</div>
+        <div class="product-price">${currentCurrencySymbol}${convertPrice(p.price)}</div>
+        <button class="product-btn" onclick="addToCart(event, ${p.id})">Add to Cart</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterCategory(category) {
+  filteredProducts = category ? products.filter(p => p.category === category) : [...products];
+  loadProducts();
+  document.querySelectorAll('.cat-item').forEach(el => el.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+function searchProducts() {
+  const query = document.getElementById('searchInput').value.toLowerCase();
+  const category = document.getElementById('searchCat').value;
+  
+  filteredProducts = products.filter(p => {
+    const matchQuery = p.name.toLowerCase().includes(query) || query === '';
+    const matchCategory = p.category === category || category === '';
+    return matchQuery && matchCategory;
+  });
+  
+  loadProducts();
+}
+
+function addToCart(event, productId) {
+  event.stopPropagation();
+  const product = products.find(p => p.id === productId);
+  if (!product) return;
+  
+  let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  const existingItem = cart.find(item => item.id === productId);
+  
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({ ...product, quantity: 1 });
+  }
+  
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartBadge();
+  showToast(`${product.name} added to cart! ✅`);
+}
+
+function updateCartBadge() {
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+  document.getElementById('cartBadge').textContent = total;
+}
+
+// ===== BLOG =====
+function loadBlog() {
+  const blogGrid = document.getElementById('blogGrid');
+  const fullBlogGrid = document.getElementById('fullBlogGrid');
+  
+  const blogHTML = blogPosts.map(post => `
+    <div class="blog-card">
+      <div class="blog-image">${post.icon}</div>
+      <div class="blog-content">
+        <span class="blog-category">${post.category}</span>
+        <div class="blog-title">${post.title}</div>
+        <div class="blog-excerpt">${post.excerpt}</div>
+        <div class="blog-footer">
+          <span>Feb 2025</span>
+          <span class="read-more" onclick="showToast('Full article coming soon!')">Read More →</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  
+  if (blogGrid) blogGrid.innerHTML = blogHTML;
+  if (fullBlogGrid) fullBlogGrid.innerHTML = blogHTML;
+}
+
+// ===== CURRENCY MANAGEMENT =====
+function toggleCurrencyDropdown() {
+  const dropdown = document.getElementById('currencyDropdown');
+  dropdown.classList.toggle('active');
+}
+
+function setCurrency(code, symbol) {
+  currentCurrency = code;
+  currentCurrencySymbol = symbol;
+  document.getElementById('currencyDisplay').textContent = code;
+  document.getElementById('currencyDropdown').classList.remove('active');
+  loadProducts();
+  showToast(`Currency changed to ${code} ${symbol}`);
+}
+
+function convertPrice(usdPrice) {
+  const rates = {
+    'USD': 1,
+    'EUR': 0.92,
+    'GBP': 0.79,
+    'AED': 3.67,
+    'SAR': 3.75,
+    'PKR': 277,
+    'INR': 83,
+    'CAD': 1.36,
+    'AUD': 1.52,
+    'CNY': 7.2,
+    'JPY': 149
+  };
+  
+  const converted = usdPrice * (rates[currentCurrency] || 1);
+  return converted.toFixed(2);
+}
+
+// ===== AI CHATBOT WITH NETLIFY AI =====
+function initNetlifyAI() {
+  // Check if Netlify AI is available
+  if (typeof window.netlifyAI !== 'undefined') {
+    console.log('✅ Netlify AI loaded successfully');
+  }
+}
+
+function toggleChat() {
+  const chatWindow = document.getElementById('chatWindow');
+  chatWindow.classList.toggle('active');
+  if (chatWindow.classList.contains('active')) {
+    document.getElementById('chatInput').focus();
+  }
+}
+
+async function sendMessage() {
+  const input = document.getElementById('chatInput');
+  const message = input.value.trim();
+  
+  if (!message) return;
+  
+  // Add user message
+  addChatMessage(message, 'user');
+  input.value = '';
+  
+  // Get AI response
+  const response = await getAIResponse(message);
+  addChatMessage(response, 'bot');
+}
+
+async function getAIResponse(userMessage) {
+  // AI Response System
+  const responses = {
+    'hello': '👋 Hello! How can I help you today?',
+    'help': '📞 I can help you with:\n• Product search\n• Order tracking\n• Payment issues\n• Returns\n• Shipping info',
+    'shipping': '📦 We ship worldwide to 50+ countries with standard and express options available.',
+    'payment': '💳 We accept credit cards, USDT, PayPal, and more currencies (USD, EUR, GBP, etc.)',
+    'return': '↩️ Returns are easy! You have 30 days from delivery to return items in original condition.',
+    'price': '💰 Prices are competitive! Use filters to find products in your budget.',
+    'security': '🔒 Your data is 100% secure with SSL encryption and PCI compliance.',
+    'default': 'Thanks for your message! Our team will respond shortly. For faster answers, try asking about shipping, payments, returns, or security.'
+  };
+  
+  const lowerMessage = userMessage.toLowerCase();
+  
+  for (const [key, value] of Object.entries(responses)) {
+    if (lowerMessage.includes(key)) {
+      return value;
+    }
+  }
+  
+  return responses['default'];
+}
+
+function addChatMessage(message, sender) {
+  const messagesContainer = document.getElementById('chatMessages');
+  const messageEl = document.createElement('div');
+  messageEl.className = `message ${sender}`;
+  messageEl.textContent = message;
+  messagesContainer.appendChild(messageEl);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
+// ===== NAVIGATION =====
+function navigate(view) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById(view + 'View').classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+// ===== UTILITIES =====
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+function viewProduct(productId) {
+  const product = products.find(p => p.id === productId);
+  showToast(`Viewing: ${product.name} - ${currentCurrencySymbol}${convertPrice(product.price)}`);
+}
+
+// Price range slider
+document.getElementById('priceRange').addEventListener('input', (e) => {
+  document.getElementById('priceValue').textContent = e.target.value;
+});
+</script>
+
+</body>
+</html>
